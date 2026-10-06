@@ -291,8 +291,9 @@
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape') document.body.classList.remove('blanked');
     if (menu.open || overview.open || event.ctrlKey || event.metaKey || event.altKey) return;
-    if (event.target.closest('button,a,input,textarea,select,[contenteditable=true]')) return;
     const key = event.key.toLowerCase();
+    if (event.target.closest('input,textarea,select,[contenteditable=true]')) return;
+    if (event.target.closest('button,a') && [' ', 'enter'].includes(key)) return;
     if (['arrowright', 'pagedown'].includes(key) || key === ' ' && !document.body.classList.contains('reading')) { event.preventDefault(); show(current + 1); }
     else if (['arrowleft', 'pageup'].includes(key)) { event.preventDefault(); show(current - 1); }
     else if (key === 'home') { event.preventDefault(); show(0); }

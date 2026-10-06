@@ -45,6 +45,11 @@ def main():
         page.locator('button[data-workflow-step="4"]').tap()
         require(page.locator('[data-step-number]').inner_text()=='05','Touch workflow failed')
         result['touchscreen']=True
+        page.keyboard.press('PageDown')
+        require(page.locator('#counter').inner_text()=='12 / 18','PageDown failed after an interactive control')
+        page.keyboard.press('ArrowRight')
+        require(page.locator('#counter').inner_text()=='13 / 18','Arrow navigation failed after interaction')
+        result['keyboard_after_interaction']=True
         page.evaluate('window.presentation.show(0)')
         page.wait_for_timeout(80)
         toolbar=page.locator('#toolbar').bounding_box()

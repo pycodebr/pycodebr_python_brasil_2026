@@ -128,6 +128,7 @@ docs/          Imagens de apresentação do repositório
 
 - **`v1.0.0`**: arquivos públicos da apresentação original de 34 slides.
 - **`v2.0.0`**: revisão de 18 slides, materiais de estudo e laboratório local.
+- **`v2.0.1`**: preserva a navegação por setas e PageUp/PageDown após usar os controles interativos.
 
 O histórico público começou com os arquivos que já estavam publicados. Nenhum histórico Git da base privada, roteiro de bastidor, dado de aluno, log de produção ou credencial foi importado.
 

@@ -151,8 +151,8 @@
   },
   {
     "path": "assets/presentation.js",
-    "bytes": 18520,
-    "sha256": "56b2a7d57371d36c9be56c5b415f6e91c0dd6d6b52e2a202ae25afe4280a5d0f"
+    "bytes": 18593,
+    "sha256": "88371ac171654bd8ea141d6c37c0a27da9278877407668fc0cfbc68a9b2c3119"
   },
   {
     "path": "assets/prometheus-logo.svg",
@@ -222,6 +222,6 @@
   {
     "path": "index.html",
     "bytes": 46290,
-    "sha256": "6618d06be489e07fc49160ac96d30e8d0b4f9d14c71922dd7736818df8311031"
+    "sha256": "a0b277150490cfe83b2c41b8ade904378f9c69fea4ab0f71ff342bc71e2407be"
   }
 ]
