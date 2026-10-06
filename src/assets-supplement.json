@@ -1,0 +1,26 @@
+[
+  {
+    "filename": "postgresql.svg",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/postgresql/postgresql-original.svg",
+    "source_type": "reprodução Devicon v2.17.0",
+    "license": "MIT da coleção; marcas pertencem aos titulares",
+    "sha256": "f220a436258ed014c512ba4f9c0de6b9e5c2c4b55331a0a29f8c7a1a12c36443",
+    "transformations": []
+  },
+  {
+    "filename": "redis.svg",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/redis/redis-original.svg",
+    "source_type": "reprodução Devicon v2.17.0",
+    "license": "MIT da coleção; marcas pertencem aos titulares",
+    "sha256": "4707378b190878f36f7e6e1c01fa3ee7e7884c76101809d191dddd943a2e6bdb",
+    "transformations": []
+  },
+  {
+    "filename": "rabbitmq.svg",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/v2.17.0/icons/rabbitmq/rabbitmq-original.svg",
+    "source_type": "reprodução Devicon v2.17.0",
+    "license": "MIT da coleção; marcas pertencem aos titulares",
+    "sha256": "3aad30605375d85bd2fc293880be7e1b07def3f7191c8f063feb775cca5b7006",
+    "transformations": []
+  }
+]

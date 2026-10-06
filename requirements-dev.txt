@@ -1,0 +1,6 @@
+playwright==1.63.0
+pillow==12.3.0
+python-pptx==1.0.2
+pymupdf==1.28.2
+opencv-python-headless==5.0.0.93
+ruff==0.16.10

@@ -1,0 +1,1284 @@
+{
+  "assets": [
+    {
+      "bytes": 1313,
+      "sha256": "ed102562e49ca3ea6e7d79ea10d54360dbecc5beb33de6a60fa578b6c0fac803",
+      "filename": "GitHub_Invertocat_White_Clearspace.svg",
+      "transformations": [
+        "ZIP member extraction only; artwork bytes unchanged"
+      ],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "128",
+        "height": "128",
+        "viewBox": "0 0 128 128",
+        "viewBox_width": 128.0,
+        "viewBox_height": 128.0
+      },
+      "colors": {
+        "hex_tokens": [],
+        "paint_attributes": [
+          "none",
+          "white"
+        ],
+        "style_attributes": [],
+        "original_paint_hexes": [],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "GitHub",
+      "url": "https://brand.github.com/GitHub_Logos.zip",
+      "source_page": "https://brand.github.com/foundations/logo",
+      "source_type": "official_publisher_brand_kit",
+      "role": "official_brand_kit_variant",
+      "archive_member": "GitHub Logos/SVG/GitHub_Invertocat_White_Clearspace.svg",
+      "archive_sha256": "e2a67d6cc51d990a52c46c1cf6bcab688db4830982174bca50e0be7a5c2f3194",
+      "license": {
+        "notice": "Arquivo obtido do titular. Direitos de marca e fotografia preservados; disponibilidade pública não equivale a licença livre. Uso identificativo/educacional, sem endosso ou alteração da marca.",
+        "third_party": false,
+        "license_spdx": null
+      },
+      "artwork_transformations": [],
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "brand": "Claude Code",
+      "filename": "claude-code-lobe-color.svg",
+      "url": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.95.1/icons/claudecode-color.svg",
+      "resolved_url": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.95.1/icons/claudecode-color.svg",
+      "source_page": "https://github.com/lobehub/lobe-icons",
+      "source_type": "third_party_licensed_collection",
+      "role": "optional_specific_claude_code_color_icon_fallback",
+      "package": "@lobehub/icons-static-svg",
+      "version": "1.95.1",
+      "http_status": 200,
+      "content_type": "image/svg+xml",
+      "bytes": 424,
+      "sha256": "670b3d8d749d0815ad8f7e62a59d51cb5e2053cb19403f3541a8aed7036a877f",
+      "kind": "svg",
+      "dimensions": {
+        "width": "1em",
+        "height": "1em",
+        "viewBox": "0 0 24 24",
+        "viewBox_width": 24,
+        "viewBox_height": 24
+      },
+      "colors": {
+        "hex_tokens": [
+          "#D97757"
+        ],
+        "paint_attributes": [
+          "#D97757"
+        ],
+        "original_paint_hexes": [
+          "#D97757"
+        ],
+        "stylesheet_elements": []
+      },
+      "transformations": [],
+      "colors_preserved": true,
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "external_refs": []
+      },
+      "notes": "Ícone específico Claude Code da coleção Lobe Icons; opção quando não se quiser usar wordmark oficial que literalmente inclui Docs. Fonte terceira explicitamente rotulada, não promover como artwork direto da Anthropic.",
+      "license": {
+        "third_party": true,
+        "license_spdx": "MIT",
+        "license_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/LICENSE",
+        "license_sha256": "add9d7531d1b21646317a8958e38fc727506fa39d24bdecb44154d943c82753a",
+        "package_metadata_url": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg/package.json",
+        "notice": "Reprodução específica Claude Code pela coleção Lobe Icons, MIT verificada no package.json e LICENSE. Não é artwork baixado da Anthropic; direitos de marca permanecem com o titular."
+      },
+      "recommended_surface": "#FFFFFF plain plate, padding, dark external label"
+    },
+    {
+      "bytes": 3475,
+      "sha256": "4433a5209b51ddce33a9214203733eb47aa61832f70559539ea5913632d18f44",
+      "filename": "django-negative.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "504.09",
+        "height": "215.994",
+        "viewBox": "0 0 504.09 215.994",
+        "viewBox_width": 504.09,
+        "viewBox_height": 215.994
+      },
+      "colors": {
+        "hex_tokens": [
+          "#092E20",
+          "#FFFFFF"
+        ],
+        "paint_attributes": [
+          "#092E20",
+          "#FFFFFF"
+        ],
+        "style_attributes": [],
+        "original_paint_hexes": [
+          "#092E20",
+          "#FFFFFF"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": true
+      },
+      "brand": "Django",
+      "url": "https://www.djangoproject.com/m/img/logos/django-logo-negative.svg",
+      "source_page": "https://www.djangoproject.com/community/logos/",
+      "source_type": "official_publisher_website",
+      "role": "publisher_negative_variant",
+      "license": {
+        "notice": "Arquivo obtido do titular. Direitos de marca e fotografia preservados; disponibilidade pública não equivale a licença livre. Uso identificativo/educacional, sem endosso ou alteração da marca.",
+        "third_party": false,
+        "license_spdx": null
+      },
+      "http_status": 200,
+      "resolved_url": "https://static.djangoproject.com/img/logos/django-logo-negative.svg",
+      "content_type": "image/svg+xml",
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "bytes": 1222,
+      "sha256": "67abdc0a4b48f9ad283e85839c849911af9bdc7e93797a0c477a488687583a0b",
+      "filename": "docker-mark-white.svg",
+      "transformations": [
+        "ZIP member extraction only; artwork bytes unchanged"
+      ],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": null,
+        "height": null,
+        "viewBox": "0 0 340 268",
+        "viewBox_width": 340.0,
+        "viewBox_height": 268.0
+      },
+      "colors": {
+        "hex_tokens": [
+          "#FFF"
+        ],
+        "paint_attributes": [],
+        "style_attributes": [],
+        "original_paint_hexes": [
+          "#FFF"
+        ],
+        "stylesheet_elements": [
+          "\n      .st0 {\n        fill: none;\n      }\n\n      .st1 {\n        fill: #fff;\n      }\n\n      .st2 {\n        clip-path: url(#clippath);\n      }\n    "
+        ]
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "Docker",
+      "url": "https://www.docker.com/static/Docker-Logos-1.zip",
+      "source_page": "https://www.docker.com/company/newsroom/media-resources/",
+      "source_type": "official_publisher_brand_kit",
+      "role": "official_brand_kit_variant",
+      "archive_member": "docker-logos/SVG/docker-mark-white.svg",
+      "archive_sha256": "590790ecdaaa577e55ce3dcad3a6c67a04ca7f8cc53a4a2fa21ac69d6767d476",
+      "license": {
+        "notice": "Arquivo obtido do titular. Direitos de marca e fotografia preservados; disponibilidade pública não equivale a licença livre. Uso identificativo/educacional, sem endosso ou alteração da marca.",
+        "third_party": false,
+        "license_spdx": null
+      },
+      "artwork_transformations": [],
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "bytes": 46610,
+      "sha256": "ee49478535a7f73292c7ed581eb97977adedb8a178e45ba6fdaa8857ddaaf09f",
+      "filename": "felipe-microfone.webp",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "webp",
+      "dimensions": {
+        "width_px": 960,
+        "height_px": 960
+      },
+      "colors": {
+        "most_common_rgba_pixels": [
+          {
+            "rgba": [
+              20,
+              16,
+              27,
+              255
+            ],
+            "count": 8863
+          },
+          {
+            "rgba": [
+              21,
+              17,
+              28,
+              255
+            ],
+            "count": 8030
+          },
+          {
+            "rgba": [
+              19,
+              17,
+              29,
+              255
+            ],
+            "count": 7396
+          },
+          {
+            "rgba": [
+              20,
+              18,
+              30,
+              255
+            ],
+            "count": 6632
+          },
+          {
+            "rgba": [
+              17,
+              16,
+              28,
+              255
+            ],
+            "count": 5766
+          },
+          {
+            "rgba": [
+              1,
+              0,
+              5,
+              255
+            ],
+            "count": 5588
+          },
+          {
+            "rgba": [
+              21,
+              19,
+              31,
+              255
+            ],
+            "count": 5522
+          },
+          {
+            "rgba": [
+              20,
+              17,
+              32,
+              255
+            ],
+            "count": 5512
+          }
+        ],
+        "method": "Counts of original decoded RGBA pixels; no quantization, file not modified"
+      },
+      "validation": {
+        "image_decoded": true,
+        "mode": "RGB",
+        "html_masquerade": false
+      },
+      "brand": "Felipe Azambuja",
+      "url": "https://pycodebr.com.br/ia-master-elite/img/felipe-azambuja-palco-960.webp",
+      "source_page": "https://pycodebr.com.br/ia-master-elite/",
+      "source_type": "official_publisher_website",
+      "role": "authentic_speaker_photo_microphone",
+      "license": {
+        "notice": "Arquivo obtido do titular. Direitos de marca e fotografia preservados; disponibilidade pública não equivale a licença livre. Uso identificativo/educacional, sem endosso ou alteração da marca.",
+        "third_party": false,
+        "license_spdx": null
+      },
+      "http_status": 200,
+      "resolved_url": "https://pycodebr.com.br/ia-master-elite/img/felipe-azambuja-palco-960.webp",
+      "content_type": "image/webp",
+      "visual_validation": {
+        "method": "vision_analyze",
+        "source_html_alt": "Felipe Azambuja em uma apresentação, com o microfone na mão",
+        "microphone_visible": true,
+        "cup_visible": false,
+        "stage_background": "blue-purple, blurred",
+        "identity_basis": "publisher source HTML alt, not face recognition",
+        "result": "speaker holds handheld microphone near mouth; framing includes face, torso and gesturing hand"
+      },
+      "recommended_surface": "Choose published compatible surface, no recoloring"
+    },
+    {
+      "bytes": 9435,
+      "sha256": "d0fbc8a8d751f89876a05f13a1dbf3a31cdcd6a8541f3d35c715f8e5b4d8f1cc",
+      "filename": "grafana-icon.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "84",
+        "height": "90",
+        "viewBox": "0 0 84 90",
+        "viewBox_width": 84.0,
+        "viewBox_height": 90.0
+      },
+      "colors": {
+        "hex_tokens": [
+          "#F05A28",
+          "#FFF100"
+        ],
+        "paint_attributes": [
+          "#F05A28",
+          "#FFF100",
+          "none",
+          "url(#paint0_linear)"
+        ],
+        "style_attributes": [],
+        "original_paint_hexes": [
+          "#F05A28",
+          "#FFF100"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "Grafana",
+      "url": "https://grafana.com/static/img/menu/grafana2.svg",
+      "source_page": "https://grafana.com/",
+      "source_type": "official_publisher_website",
+      "role": "official_product_icon",
+      "license": {
+        "notice": "Arquivo obtido do titular. Direitos de marca e fotografia preservados; disponibilidade pública não equivale a licença livre. Uso identificativo/educacional, sem endosso ou alteração da marca.",
+        "third_party": false,
+        "license_spdx": null
+      },
+      "http_status": 200,
+      "resolved_url": "https://grafana.com/static/img/menu/grafana2.svg",
+      "content_type": "image/svg+xml; charset=utf-8",
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "bytes": 154961,
+      "sha256": "b76ed32dd5ffdf842db696dc6dc0992529acfe12903ec1b2128251a41dfd31d2",
+      "filename": "hermes-logo-dark.png",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "png",
+      "dimensions": {
+        "width_px": 1772,
+        "height_px": 1799
+      },
+      "colors": {
+        "most_common_rgba_pixels": [
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": 2439779
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "count": 711419
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              16
+            ],
+            "count": 3375
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              64
+            ],
+            "count": 2976
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              128
+            ],
+            "count": 2710
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              48
+            ],
+            "count": 2323
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              192
+            ],
+            "count": 2312
+          },
+          {
+            "rgba": [
+              255,
+              255,
+              255,
+              96
+            ],
+            "count": 2286
+          }
+        ],
+        "method": "Counts of original decoded RGBA pixels; no quantization, file not modified"
+      },
+      "validation": {
+        "image_decoded": true,
+        "mode": "RGBA",
+        "html_masquerade": false
+      },
+      "brand": "Hermes Agent",
+      "url": "https://hermes-agent.nousresearch.com/docs/img/logo-dark.png",
+      "source_page": "https://hermes-agent.nousresearch.com/docs",
+      "source_type": "official_publisher_website",
+      "role": "official_docs_logo_dark",
+      "license": {
+        "sha": "56f798641888168173a45f0b6d46c419ee21fbe7",
+        "branch": "main",
+        "repository_license_spdx": "MIT",
+        "repository_license_url": "https://api.github.com/licenses/mit",
+        "notice": "Licença do repositório não elimina direitos de marca nem garante licença específica do logo.",
+        "third_party": false
+      },
+      "commit": "56f798641888168173a45f0b6d46c419ee21fbe7",
+      "repository": "NousResearch/hermes-agent",
+      "retrieval": "byte_identical_copy_from_readonly_original_presentation",
+      "copied_from": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest_sha256_matched": true,
+      "network_retrieved_this_run": false,
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "bytes": 4026,
+      "sha256": "52a940d301023ee2175897bcee546715ee86f968e8a4bf69290f002d330740fa",
+      "filename": "langchain-logo-dark.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "472",
+        "height": "100",
+        "viewBox": "0 0 472 100",
+        "viewBox_width": 472.0,
+        "viewBox_height": 100.0
+      },
+      "colors": {
+        "hex_tokens": [
+          "#161F34",
+          "#7FC8FF"
+        ],
+        "paint_attributes": [
+          "#161F34",
+          "#7FC8FF",
+          "none",
+          "white"
+        ],
+        "style_attributes": [],
+        "original_paint_hexes": [
+          "#161F34",
+          "#7FC8FF"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "LangChain",
+      "url": "https://raw.githubusercontent.com/langchain-ai/langchain/7ca02f333aa6d5e4cf566a2dcc444d06758e2958/.github/images/logo-dark.svg",
+      "source_page": "https://github.com/langchain-ai/langchain/blob/7ca02f333aa6d5e4cf566a2dcc444d06758e2958/.github/images/logo-dark.svg",
+      "source_type": "official_publisher_repository",
+      "role": "publisher_variant_dark",
+      "license": {
+        "sha": "7ca02f333aa6d5e4cf566a2dcc444d06758e2958",
+        "branch": "master",
+        "repository_license_spdx": "MIT",
+        "repository_license_url": "https://api.github.com/licenses/mit",
+        "notice": "Licença do repositório não elimina direitos de marca nem garante licença específica do logo.",
+        "third_party": false
+      },
+      "commit": "7ca02f333aa6d5e4cf566a2dcc444d06758e2958",
+      "repository": "langchain-ai/langchain",
+      "retrieval": "byte_identical_copy_from_readonly_original_presentation",
+      "copied_from": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest_sha256_matched": true,
+      "network_retrieved_this_run": false,
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "bytes": 2029,
+      "sha256": "fd2e8cb873e0de708044b7719417b7220b0a79d5f20087431b87002a56ac9d5b",
+      "filename": "langflow-icon.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "18",
+        "height": "18",
+        "viewBox": "0 0 18 18",
+        "viewBox_width": 18.0,
+        "viewBox_height": 18.0
+      },
+      "colors": {
+        "hex_tokens": [
+          "#7528FC",
+          "#F480FF",
+          "#FF3276"
+        ],
+        "paint_attributes": [
+          "#7528FC",
+          "#F480FF",
+          "#FF3276",
+          "none"
+        ],
+        "style_attributes": [],
+        "original_paint_hexes": [
+          "#7528FC",
+          "#F480FF",
+          "#FF3276"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "Langflow",
+      "url": "https://raw.githubusercontent.com/langflow-ai/langflow/f9b283243d2fdd8502cb4ffd606c3058cff5017e/src/frontend/src/assets/LangflowLogoColor.svg",
+      "source_page": "https://github.com/langflow-ai/langflow/blob/f9b283243d2fdd8502cb4ffd606c3058cff5017e/src/frontend/src/assets/LangflowLogoColor.svg",
+      "source_type": "official_publisher_repository",
+      "role": "publisher_color_logo",
+      "license": {
+        "sha": "f9b283243d2fdd8502cb4ffd606c3058cff5017e",
+        "branch": "main",
+        "repository_license_spdx": "MIT",
+        "repository_license_url": "https://api.github.com/licenses/mit",
+        "notice": "Licença do repositório não elimina direitos de marca nem garante licença específica do logo.",
+        "third_party": false
+      },
+      "commit": "f9b283243d2fdd8502cb4ffd606c3058cff5017e",
+      "repository": "langflow-ai/langflow",
+      "retrieval": "byte_identical_copy_from_readonly_original_presentation",
+      "copied_from": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest_sha256_matched": true,
+      "network_retrieved_this_run": false,
+      "recommended_surface": "#FFFFFF plain plate, padding, dark external label"
+    },
+    {
+      "bytes": 4964,
+      "sha256": "f80204863f46cda4ef4f5da0ced6457358df3773e6599ae2bd12189c9d4e3414",
+      "filename": "loki-logo.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "48",
+        "height": "56",
+        "viewBox": "0 0 48 56",
+        "viewBox_width": 48.0,
+        "viewBox_height": 56.0
+      },
+      "colors": {
+        "hex_tokens": [
+          "#F15B2B",
+          "#FAED1E"
+        ],
+        "paint_attributes": [
+          "#F15B2B",
+          "#FAED1E",
+          "none",
+          "url(#paint0_linear_17931_893)",
+          "url(#paint10_linear_17931_893)",
+          "url(#paint11_linear_17931_893)",
+          "url(#paint12_linear_17931_893)",
+          "url(#paint13_linear_17931_893)",
+          "url(#paint1_linear_17931_893)",
+          "url(#paint2_linear_17931_893)",
+          "url(#paint3_linear_17931_893)",
+          "url(#paint4_linear_17931_893)",
+          "url(#paint5_linear_17931_893)",
+          "url(#paint6_linear_17931_893)",
+          "url(#paint7_linear_17931_893)",
+          "url(#paint8_linear_17931_893)",
+          "url(#paint9_linear_17931_893)"
+        ],
+        "style_attributes": [],
+        "original_paint_hexes": [
+          "#F15B2B",
+          "#FAED1E"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "Loki",
+      "url": "https://grafana.com/static/img/logos/logo-loki.svg",
+      "source_page": "https://grafana.com/oss/loki/",
+      "source_type": "official_publisher_website",
+      "role": "official_product_icon",
+      "license": {
+        "notice": "Arquivo obtido do titular. Direitos de marca e fotografia preservados; disponibilidade pública não equivale a licença livre. Uso identificativo/educacional, sem endosso ou alteração da marca.",
+        "third_party": false,
+        "license_spdx": null
+      },
+      "http_status": 200,
+      "resolved_url": "https://grafana.com/static/img/logos/logo-loki.svg",
+      "content_type": "image/svg+xml; charset=utf-8",
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "bytes": 16772,
+      "sha256": "ae239dea9d037a331575487390bf900d6baacf896991185b3dd861ac4b9941d5",
+      "filename": "mcp-logo-dark.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "1338",
+        "height": "195",
+        "viewBox": "0 0 1338 195",
+        "viewBox_width": 1338.0,
+        "viewBox_height": 195.0
+      },
+      "colors": {
+        "hex_tokens": [],
+        "paint_attributes": [
+          "none",
+          "white"
+        ],
+        "style_attributes": [],
+        "original_paint_hexes": [],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "MCP",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/8e12bf3c8f01f374146acfa19b8ece0018bfc86c/docs/logo/dark.svg",
+      "source_page": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/8e12bf3c8f01f374146acfa19b8ece0018bfc86c/docs/logo/dark.svg",
+      "source_type": "official_publisher_repository",
+      "role": "official_docs_variant_dark",
+      "license": {
+        "sha": "8e12bf3c8f01f374146acfa19b8ece0018bfc86c",
+        "branch": "main",
+        "repository_license_spdx": "NOASSERTION",
+        "repository_license_url": null,
+        "notice": "Licença do repositório não elimina direitos de marca nem garante licença específica do logo.",
+        "third_party": false
+      },
+      "commit": "8e12bf3c8f01f374146acfa19b8ece0018bfc86c",
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "retrieval": "byte_identical_copy_from_readonly_original_presentation",
+      "copied_from": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest_sha256_matched": true,
+      "network_retrieved_this_run": false,
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "bytes": 4354,
+      "sha256": "fea58f324bd105a5d8a054e6cb80940c1e63fc51b606b780b73e9187e5bfdfa9",
+      "filename": "n8n-icon.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "32",
+        "height": "26",
+        "viewBox": "0 0 32 26",
+        "viewBox_width": 32.0,
+        "viewBox_height": 26.0
+      },
+      "colors": {
+        "hex_tokens": [
+          "#EA4B71"
+        ],
+        "paint_attributes": [
+          "#EA4B71",
+          "none"
+        ],
+        "style_attributes": [],
+        "original_paint_hexes": [
+          "#EA4B71"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "n8n",
+      "url": "https://raw.githubusercontent.com/n8n-io/n8n/439e8ba2e70be371268bbdb86f6afb9bc5e50699/packages/frontend/%40n8n/design-system/src/components/N8nLogo/logo-icon.svg",
+      "source_page": "https://github.com/n8n-io/n8n/blob/439e8ba2e70be371268bbdb86f6afb9bc5e50699/packages/frontend/%40n8n/design-system/src/components/N8nLogo/logo-icon.svg",
+      "source_type": "official_publisher_repository",
+      "role": "icon",
+      "license": {
+        "sha": "439e8ba2e70be371268bbdb86f6afb9bc5e50699",
+        "branch": "master",
+        "repository_license_spdx": "NOASSERTION",
+        "repository_license_url": null,
+        "notice": "Licença do repositório não elimina direitos de marca nem garante licença específica do logo.",
+        "third_party": false
+      },
+      "commit": "439e8ba2e70be371268bbdb86f6afb9bc5e50699",
+      "repository": "n8n-io/n8n",
+      "retrieval": "byte_identical_copy_from_readonly_original_presentation",
+      "copied_from": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest_sha256_matched": true,
+      "network_retrieved_this_run": false,
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "bytes": 1687,
+      "sha256": "a595df6b423920c67a7f8f73c063e4bfb72d415948097b6cac063a2366bb5186",
+      "filename": "openai-lobe.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "1em",
+        "height": "1em",
+        "viewBox": "0 0 24 24",
+        "viewBox_width": 24.0,
+        "viewBox_height": 24.0
+      },
+      "colors": {
+        "hex_tokens": [],
+        "paint_attributes": [
+          "currentColor"
+        ],
+        "style_attributes": [
+          "flex:none;line-height:1"
+        ],
+        "original_paint_hexes": [],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "OpenAI",
+      "url": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.95.1/icons/openai.svg",
+      "source_page": "https://github.com/lobehub/lobe-icons",
+      "source_type": "third_party_licensed_collection",
+      "role": "third_party_icon_fallback",
+      "license": {
+        "third_party": true,
+        "license_spdx": "MIT",
+        "license_url": "https://raw.githubusercontent.com/lobehub/lobe-icons/master/LICENSE",
+        "license_sha256": "add9d7531d1b21646317a8958e38fc727506fa39d24bdecb44154d943c82753a",
+        "package_metadata_url": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg/package.json",
+        "notice": "Reprodução pela coleção Lobe Icons, MIT verificada no package.json e LICENSE. Não é artwork baixado da OpenAI; direitos de marca permanecem com o titular."
+      },
+      "http_status": 200,
+      "resolved_url": "https://cdn.jsdelivr.net/npm/@lobehub/icons-static-svg@1.95.1/icons/openai.svg",
+      "content_type": "image/svg+xml",
+      "package": "@lobehub/icons-static-svg",
+      "version": "1.95.1",
+      "recommended_surface": "#FFFFFF plain plate, padding, dark external label"
+    },
+    {
+      "bytes": 593,
+      "sha256": "5dd4abb4de60204510edf140bbe74b3580d07ebdda79fdb0081cd45acb53d44b",
+      "filename": "opencode-logo-dark.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "240",
+        "height": "300",
+        "viewBox": "0 0 240 300",
+        "viewBox_width": 240.0,
+        "viewBox_height": 300.0
+      },
+      "colors": {
+        "hex_tokens": [
+          "#4B4646",
+          "#F1ECEC"
+        ],
+        "paint_attributes": [
+          "#4B4646",
+          "#F1ECEC",
+          "none",
+          "white"
+        ],
+        "style_attributes": [
+          "mask-type:luminance"
+        ],
+        "original_paint_hexes": [
+          "#4B4646",
+          "#F1ECEC"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "OpenCode",
+      "url": "https://raw.githubusercontent.com/anomalyco/opencode/772392050500e0ddcd2ad2193411a22a3824372f/packages/console/app/src/asset/brand/opencode-logo-dark.svg",
+      "source_page": "https://github.com/anomalyco/opencode/blob/772392050500e0ddcd2ad2193411a22a3824372f/packages/console/app/src/asset/brand/opencode-logo-dark.svg",
+      "source_type": "official_publisher_repository",
+      "role": "publisher_variant_dark",
+      "license": {
+        "sha": "772392050500e0ddcd2ad2193411a22a3824372f",
+        "branch": "dev",
+        "repository_license_spdx": "MIT",
+        "repository_license_url": "https://api.github.com/licenses/mit",
+        "notice": "Licença do repositório não elimina direitos de marca nem garante licença específica do logo.",
+        "third_party": false
+      },
+      "commit": "772392050500e0ddcd2ad2193411a22a3824372f",
+      "repository": "anomalyco/opencode",
+      "retrieval": "byte_identical_copy_from_readonly_original_presentation",
+      "copied_from": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest_sha256_matched": true,
+      "network_retrieved_this_run": false,
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "bytes": 1028,
+      "sha256": "dc02224d9e9ded04bbf105770b558880e8b55c04a5209f822be4cd3d103976bc",
+      "filename": "prometheus-logo.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "113.333",
+        "height": "113.331",
+        "viewBox": null,
+        "viewBox_width": null,
+        "viewBox_height": null
+      },
+      "colors": {
+        "hex_tokens": [
+          "#E6522C"
+        ],
+        "paint_attributes": [],
+        "style_attributes": [
+          "fill:#e6522c;fill-opacity:1"
+        ],
+        "original_paint_hexes": [
+          "#E6522C"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "Prometheus",
+      "url": "https://prometheus.io/_next/static/media/prometheus-logo.7aa022e5.svg",
+      "source_page": "https://prometheus.io/",
+      "source_type": "official_publisher_website",
+      "role": "official_product_icon",
+      "license": {
+        "notice": "Arquivo obtido do titular. Direitos de marca e fotografia preservados; disponibilidade pública não equivale a licença livre. Uso identificativo/educacional, sem endosso ou alteração da marca.",
+        "third_party": false,
+        "license_spdx": null
+      },
+      "http_status": 200,
+      "resolved_url": "https://prometheus.io/_next/static/media/prometheus-logo.7aa022e5.svg",
+      "content_type": "image/svg+xml",
+      "recommended_surface": "#FFFFFF plain plate, padding, dark external label"
+    },
+    {
+      "bytes": 8189,
+      "sha256": "98d1ca6204cfd6060e12567d30f36d71a378dcb33dec4f826b9fded6797b86e5",
+      "filename": "pycodebr-icon-official.png",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "png",
+      "dimensions": {
+        "width_px": 512,
+        "height_px": 512
+      },
+      "colors": {
+        "most_common_rgba_pixels": [
+          {
+            "rgba": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": 101730
+          },
+          {
+            "rgba": [
+              255,
+              197,
+              0,
+              255
+            ],
+            "count": 78952
+          },
+          {
+            "rgba": [
+              0,
+              133,
+              196,
+              255
+            ],
+            "count": 78948
+          },
+          {
+            "rgba": [
+              255,
+              197,
+              0,
+              191
+            ],
+            "count": 387
+          },
+          {
+            "rgba": [
+              0,
+              133,
+              196,
+              191
+            ],
+            "count": 276
+          },
+          {
+            "rgba": [
+              0,
+              133,
+              196,
+              128
+            ],
+            "count": 275
+          },
+          {
+            "rgba": [
+              255,
+              197,
+              0,
+              128
+            ],
+            "count": 130
+          },
+          {
+            "rgba": [
+              0,
+              133,
+              196,
+              64
+            ],
+            "count": 106
+          }
+        ],
+        "method": "Counts of original decoded RGBA pixels; no quantization, file not modified"
+      },
+      "validation": {
+        "image_decoded": true,
+        "mode": "RGBA",
+        "html_masquerade": false
+      },
+      "brand": "PycodeBR",
+      "url": "https://pycodebr.com.br/wp-content/uploads/2023/07/Icone-Python.png",
+      "source_page": "https://pycodebr.com.br/",
+      "source_type": "official_publisher_website",
+      "role": "official_higher_resolution_same_symbol_512px",
+      "license": {
+        "notice": "Arquivo obtido do titular. Direitos de marca e fotografia preservados; disponibilidade pública não equivale a licença livre. Uso identificativo/educacional, sem endosso ou alteração da marca.",
+        "third_party": false,
+        "license_spdx": null
+      },
+      "http_status": 200,
+      "resolved_url": "https://pycodebr.com.br/wp-content/uploads/2023/07/Icone-Python.png",
+      "content_type": "image/png",
+      "notes": "512x512 RGBA, origem oficial declarada schema/logo na página principal e versão original do favicon. Mesma identidade visual do ícone antigo da LP, confirmação por visão; NÃO é uma versão 512 referenciada pela LP. Recomendado para marca maior, sem redesenhar/upscale IA.",
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)",
+      "visual_validation": {
+        "method": "vision_analyze + original pixel inspection",
+        "same_semantic_symbol_as_64px_lp_icon": true,
+        "transparent_background_confirmed_by_rgba_pixels": true,
+        "contains_wordmark": false,
+        "core_opaque_colors": [
+          "#0085C4",
+          "#FFC500"
+        ]
+      }
+    },
+    {
+      "bytes": 15467,
+      "sha256": "9e36ee15b95e48e517991c00eb1994da01483a0129aae2dd5e8525c5137bca4b",
+      "filename": "python-brasil-2026-header.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "358",
+        "height": "57",
+        "viewBox": "0 0 358 57",
+        "viewBox_width": 358.0,
+        "viewBox_height": 57.0
+      },
+      "colors": {
+        "hex_tokens": [
+          "#E8F4BA"
+        ],
+        "paint_attributes": [
+          "#E8F4BA",
+          "none",
+          "white"
+        ],
+        "style_attributes": [],
+        "original_paint_hexes": [
+          "#E8F4BA"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "Python Brasil 2026",
+      "url": "https://2026.pythonbrasil.org.br/img/components/header/logo.svg",
+      "source_page": "https://2026.pythonbrasil.org.br/",
+      "source_type": "official_publisher_website",
+      "role": "event_logo_header",
+      "license": {
+        "license_url": null,
+        "notice": "Direitos de marca preservados. Não presumir licença de código para artwork; consultar diretrizes do titular.",
+        "third_party": false
+      },
+      "retrieval": "byte_identical_copy_from_readonly_original_presentation",
+      "copied_from": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest_sha256_matched": true,
+      "network_retrieved_this_run": false,
+      "recommended_surface": "#03090E (preserve published dark-compatible variant)"
+    },
+    {
+      "bytes": 9605,
+      "sha256": "baec8662a1461c2cacc326b54d2727cb2f1ce07ba02d00f5b826d035104f649f",
+      "filename": "python-icon.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "83.371017pt",
+        "height": "101.00108pt",
+        "viewBox": null,
+        "viewBox_width": null,
+        "viewBox_height": null
+      },
+      "colors": {
+        "hex_tokens": [
+          "#306998",
+          "#5A9FD4",
+          "#666666",
+          "#7F7F7F",
+          "#B2B2B2",
+          "#B3B3B3",
+          "#B8B8B8",
+          "#D1D1D1",
+          "#F4F4F4",
+          "#FFD43B",
+          "#FFE873",
+          "#FFFFFF"
+        ],
+        "paint_attributes": [],
+        "style_attributes": [
+          "fill:url(#linearGradient1475);fill-opacity:1",
+          "fill:url(#linearGradient1478);fill-opacity:1",
+          "opacity:0.44382;fill:url(#radialGradient1480);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:15.4174;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1",
+          "stop-color:#306998;stop-opacity:1;",
+          "stop-color:#5a9fd4;stop-opacity:1;",
+          "stop-color:#7f7f7f;stop-opacity:0.5;",
+          "stop-color:#7f7f7f;stop-opacity:0;",
+          "stop-color:#b2b2b2;stop-opacity:0.5;",
+          "stop-color:#b3b3b3;stop-opacity:0;",
+          "stop-color:#b8b8b8;stop-opacity:0.49803922;",
+          "stop-color:#f4f4f4;stop-opacity:1",
+          "stop-color:#ffd43b;stop-opacity:1;",
+          "stop-color:#ffe873;stop-opacity:1",
+          "stop-color:white;stop-opacity:1"
+        ],
+        "original_paint_hexes": [
+          "#306998",
+          "#5A9FD4",
+          "#7F7F7F",
+          "#B2B2B2",
+          "#B3B3B3",
+          "#B8B8B8",
+          "#F4F4F4",
+          "#FFD43B",
+          "#FFE873"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "Python",
+      "url": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg",
+      "source_page": "https://www.python.org/community/logos/",
+      "source_type": "official_publisher_website",
+      "role": "icon",
+      "license": {
+        "license_url": "https://www.python.org/psf/trademarks/",
+        "notice": "Direitos de marca preservados. Não presumir licença de código para artwork; consultar diretrizes do titular.",
+        "third_party": false
+      },
+      "retrieval": "byte_identical_copy_from_readonly_original_presentation",
+      "copied_from": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest": "Arquivo de origem conferido antes da publicação.",
+      "original_manifest_sha256_matched": true,
+      "network_retrieved_this_run": false,
+      "recommended_surface": "#FFFFFF plain plate, padding, dark external label"
+    },
+    {
+      "bytes": 1509,
+      "sha256": "e2885459d44d08f4debd515f1ad0399710902302af1e6691d851544b5ad01bee",
+      "filename": "traefik-proxy.svg",
+      "transformations": [],
+      "colors_preserved": true,
+      "kind": "svg",
+      "dimensions": {
+        "width": "40",
+        "height": "40",
+        "viewBox": null,
+        "viewBox_width": null,
+        "viewBox_height": null
+      },
+      "colors": {
+        "hex_tokens": [
+          "#2AA2C1",
+          "#FFF"
+        ],
+        "paint_attributes": [
+          "#2AA2C1",
+          "#fff",
+          "none"
+        ],
+        "style_attributes": [],
+        "original_paint_hexes": [
+          "#2AA2C1",
+          "#FFF"
+        ],
+        "stylesheet_elements": []
+      },
+      "validation": {
+        "xml_parsed": true,
+        "root_svg": true,
+        "html_masquerade": false,
+        "unsafe_elements": [],
+        "external_refs": [],
+        "external_dtd_declared": false
+      },
+      "brand": "Traefik Proxy",
+      "url": "https://traefik.io/images/header/products/traefik-proxy.svg",
+      "source_page": "https://traefik.io/",
+      "source_type": "official_publisher_website",
+      "role": "official_product_icon_not_generic_reverse_proxy",
+      "license": {
+        "notice": "Arquivo obtido do titular. Direitos de marca e fotografia preservados; disponibilidade pública não equivale a licença livre. Uso identificativo/educacional, sem endosso ou alteração da marca.",
+        "third_party": false,
+        "license_spdx": null
+      },
+      "http_status": 200,
+      "resolved_url": "https://traefik.io/images/header/products/traefik-proxy.svg",
+      "content_type": "image/svg+xml",
+      "recommended_surface": "#FFFFFF plain plate, padding, dark external label"
+    }
+  ],
+  "brands_unmodified": true,
+  "qr_destination": "https://pycodebr.com.br/python-brasil-2026"
+}

@@ -1,0 +1,3 @@
+# Preserve the original bytes of third-party assets and license notices.
+site/assets/django-negative.svg -text -whitespace
+LICENSES/geist-OFL.txt -text -whitespace

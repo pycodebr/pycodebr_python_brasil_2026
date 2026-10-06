@@ -1,0 +1,11 @@
+flowchart TD
+    p1["1. Prompt bruto → Prompt refinado"] --> p2["2. Prompt refinado → PRD.md"]
+    p2 --> p3["3. PRD.md → Start Template"]
+    p3 --> p4["4. Start Template → Sprint"]
+    p4 --> p5["5. Sprint → Review, Correções e Commit"]
+    p5 --> gate{"Código e comportamento validados?"}
+    gate -->|Não| ajuste["Correções e nova revisão"]
+    ajuste --> p5
+    gate -->|Sim| commit["Commit e push autorizados"]
+    commit -->|Próxima sprint| p4
+    commit -.-> release["PR, aprovação e deploy conforme política"]

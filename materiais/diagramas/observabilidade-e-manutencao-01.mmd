@@ -1,0 +1,24 @@
+flowchart LR
+    cliente["Cliente via DNS e HTTPS"] --> proxy["Traefik e TLS"]
+    proxy --> app["Django no Swarm"]
+    app --> banco["PostgreSQL"]
+    app --> broker["RabbitMQ"]
+    beat["Celery Beat"] --> broker
+    worker["Celery Worker"] -->|Consome tarefas| broker
+    worker --> banco
+    worker --> redis["Redis: resultados e cache"]
+    app --> redis
+    repo["Código GitHub"] --> registry["Imagem GHCR"]
+    registry -->|Release autorizada| app
+    prom["Prometheus"] -->|Scrape pull| met["Métricas Django"]
+    app --> met
+    prom -->|Scrape pull| cad["cAdvisor: containers"]
+    prom -->|Scrape pull| node["node-exporter: host"]
+    logs["Logs dos containers"] -.-> alloy["Alloy: atualização recomendada"]
+    alloy -.-> loki["Loki"]
+    grafana["Grafana"] -->|Consulta métricas| prom
+    grafana -->|Consulta logs| loki
+    agente["Agente e cliente MCP"] --> gmcp["Grafana MCP"]
+    gmcp -->|API autorizada| grafana
+    agente --> dmcp["MCP de domínio Django"]
+    dmcp -->|Operações autorizadas| app

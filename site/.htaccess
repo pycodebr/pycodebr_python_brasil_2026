@@ -11,5 +11,9 @@ DirectoryIndex index.html
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   <FilesMatch "\.(pdf|pptx)$">
     Header set Content-Disposition "attachment"
+    Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
+  <Files "index.html">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </Files>
 </IfModule>

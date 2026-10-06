@@ -1,0 +1,10 @@
+flowchart LR
+    pedido["Pedido com objetivo e aceite"] --> agente["Agente no harness"]
+    contexto["Regras e arquivos do projeto"] --> agente
+    memoria["Memória persistente"] --> agente
+    skills["Skills carregadas sob demanda"] --> agente
+    agente --> ferramentas["Terminal, arquivos e clientes MCP"]
+    ferramentas --> resultado["Artefato e saída da execução"]
+    resultado --> conferir["Verificação do alvo"]
+    conferir --> agente
+    agente --> entrega["Entrega com evidências"]

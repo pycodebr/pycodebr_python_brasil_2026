@@ -1,0 +1,227 @@
+[
+  {
+    "path": ".htaccess",
+    "bytes": 658,
+    "sha256": "5738571bdafd62719b8712096e8a7aeb0de12f7cfdf823f4a636bade92cfaa39"
+  },
+  {
+    "path": "assets/Geist-Latin-300.woff2",
+    "bytes": 28388,
+    "sha256": "a29f900a6d603e989449327956e7ac61ea3e6b26ca7426f64e7cccf2cd4aed37"
+  },
+  {
+    "path": "assets/GeistMono-Latin.woff2",
+    "bytes": 14792,
+    "sha256": "825db55e585a137a9f0544a033ba129576efd48b58abba7c871014e9a3b04707"
+  },
+  {
+    "path": "assets/GitHub_Invertocat_White_Clearspace.svg",
+    "bytes": 1313,
+    "sha256": "ed102562e49ca3ea6e7d79ea10d54360dbecc5beb33de6a60fa578b6c0fac803"
+  },
+  {
+    "path": "assets/audience-qr.png",
+    "bytes": 3726,
+    "sha256": "4c9b73f823b87d1ac70b6e66edd6bf7e21890729001a07770788fef32e14590d"
+  },
+  {
+    "path": "assets/claude-code-lobe-color.svg",
+    "bytes": 424,
+    "sha256": "670b3d8d749d0815ad8f7e62a59d51cb5e2053cb19403f3541a8aed7036a877f"
+  },
+  {
+    "path": "assets/claude-simpleicons.svg",
+    "bytes": 1921,
+    "sha256": "2d6fda79eb18ddccca35b799eeb3cece0dfabc22520ce3b10abd25668df9fa93"
+  },
+  {
+    "path": "assets/deck.css",
+    "bytes": 31840,
+    "sha256": "ac3df91b2371ea507c08c0bdafc2382a7efe1913c55b64faff667271acf67eb8"
+  },
+  {
+    "path": "assets/deck.js",
+    "bytes": 10187,
+    "sha256": "c2b45d6253873c2a23e73c282752c3500892337b52b37dd2f9a895826b10bb26"
+  },
+  {
+    "path": "assets/django-negative.svg",
+    "bytes": 3475,
+    "sha256": "4433a5209b51ddce33a9214203733eb47aa61832f70559539ea5913632d18f44"
+  },
+  {
+    "path": "assets/docker-mark-white.svg",
+    "bytes": 1222,
+    "sha256": "67abdc0a4b48f9ad283e85839c849911af9bdc7e93797a0c477a488687583a0b"
+  },
+  {
+    "path": "assets/felipe-microfone.webp",
+    "bytes": 46610,
+    "sha256": "ee49478535a7f73292c7ed581eb97977adedb8a178e45ba6fdaa8857ddaaf09f"
+  },
+  {
+    "path": "assets/felipe.webp",
+    "bytes": 91192,
+    "sha256": "6aabfeb6763cd01444762b8a1697c8642974db2d19273baeffddf79ac14b8416"
+  },
+  {
+    "path": "assets/github-simpleicons.svg",
+    "bytes": 822,
+    "sha256": "3bf8cceead820aec50d4ee825a3fd02c5a1cd6665cc9cf4cbf3d9c8861a204bb"
+  },
+  {
+    "path": "assets/grafana-icon.svg",
+    "bytes": 9435,
+    "sha256": "d0fbc8a8d751f89876a05f13a1dbf3a31cdcd6a8541f3d35c715f8e5b4d8f1cc"
+  },
+  {
+    "path": "assets/hermes-icon.svg",
+    "bytes": 116350,
+    "sha256": "6c4968c1a46f104559684826ed8061fad6052711ff0af9c6b36a6ce674536684"
+  },
+  {
+    "path": "assets/hermes-logo-dark.png",
+    "bytes": 154961,
+    "sha256": "b76ed32dd5ffdf842db696dc6dc0992529acfe12903ec1b2128251a41dfd31d2"
+  },
+  {
+    "path": "assets/instagram-qr.png",
+    "bytes": 3026,
+    "sha256": "65c0be0da04a377087c38611176ba0980d4da7f80782f08e295f17008bfb13fd"
+  },
+  {
+    "path": "assets/instagram-simpleicons.svg",
+    "bytes": 2101,
+    "sha256": "f53af2d1fc5292ba1433b5c1faf50005ce6a997fa302d1816989929f379a59dc"
+  },
+  {
+    "path": "assets/langchain-logo-dark.svg",
+    "bytes": 4026,
+    "sha256": "52a940d301023ee2175897bcee546715ee86f968e8a4bf69290f002d330740fa"
+  },
+  {
+    "path": "assets/langflow-icon.svg",
+    "bytes": 2029,
+    "sha256": "fd2e8cb873e0de708044b7719417b7220b0a79d5f20087431b87002a56ac9d5b"
+  },
+  {
+    "path": "assets/loki-logo.svg",
+    "bytes": 4964,
+    "sha256": "f80204863f46cda4ef4f5da0ced6457358df3773e6599ae2bd12189c9d4e3414"
+  },
+  {
+    "path": "assets/mcp-logo-dark.svg",
+    "bytes": 16772,
+    "sha256": "ae239dea9d037a331575487390bf900d6baacf896991185b3dd861ac4b9941d5"
+  },
+  {
+    "path": "assets/n8n-icon.svg",
+    "bytes": 4354,
+    "sha256": "fea58f324bd105a5d8a054e6cb80940c1e63fc51b606b780b73e9187e5bfdfa9"
+  },
+  {
+    "path": "assets/notion-simpleicons.svg",
+    "bytes": 978,
+    "sha256": "b17d2a2b592a06252efef522d5205f0c7a958f748d40df1011ed081417e42f85"
+  },
+  {
+    "path": "assets/openai-lobe.svg",
+    "bytes": 1687,
+    "sha256": "a595df6b423920c67a7f8f73c063e4bfb72d415948097b6cac063a2366bb5186"
+  },
+  {
+    "path": "assets/openai.svg",
+    "bytes": 1687,
+    "sha256": "a595df6b423920c67a7f8f73c063e4bfb72d415948097b6cac063a2366bb5186"
+  },
+  {
+    "path": "assets/opencode-logo-dark.svg",
+    "bytes": 593,
+    "sha256": "5dd4abb4de60204510edf140bbe74b3580d07ebdda79fdb0081cd45acb53d44b"
+  },
+  {
+    "path": "assets/postgresql.svg",
+    "bytes": 9178,
+    "sha256": "f220a436258ed014c512ba4f9c0de6b9e5c2c4b55331a0a29f8c7a1a12c36443"
+  },
+  {
+    "path": "assets/presentation.css",
+    "bytes": 50136,
+    "sha256": "2e43ed230d9a069da5a7ffe5fdd014f425bab2fde42e296ab4c6bbcfd6bf7afb"
+  },
+  {
+    "path": "assets/presentation.js",
+    "bytes": 18520,
+    "sha256": "56b2a7d57371d36c9be56c5b415f6e91c0dd6d6b52e2a202ae25afe4280a5d0f"
+  },
+  {
+    "path": "assets/prometheus-logo.svg",
+    "bytes": 1028,
+    "sha256": "dc02224d9e9ded04bbf105770b558880e8b55c04a5209f822be4cd3d103976bc"
+  },
+  {
+    "path": "assets/pycodebr-icon-official.png",
+    "bytes": 8189,
+    "sha256": "98d1ca6204cfd6060e12567d30f36d71a378dcb33dec4f826b9fded6797b86e5"
+  },
+  {
+    "path": "assets/pycodebr.webp",
+    "bytes": 806,
+    "sha256": "ee53488761429e63d36cc6da2be1661f8d7078792254722470888a639a829feb"
+  },
+  {
+    "path": "assets/python-brasil-2026-header.svg",
+    "bytes": 15467,
+    "sha256": "9e36ee15b95e48e517991c00eb1994da01483a0129aae2dd5e8525c5137bca4b"
+  },
+  {
+    "path": "assets/python-icon.svg",
+    "bytes": 9605,
+    "sha256": "baec8662a1461c2cacc326b54d2727cb2f1ce07ba02d00f5b826d035104f649f"
+  },
+  {
+    "path": "assets/rabbitmq.svg",
+    "bytes": 634,
+    "sha256": "3aad30605375d85bd2fc293880be7e1b07def3f7191c8f063feb775cca5b7006"
+  },
+  {
+    "path": "assets/radar-news.png",
+    "bytes": 180368,
+    "sha256": "9052dc02b83500ff57c38a1c02af68d48f261607adb091afd25c2e36cda57c21"
+  },
+  {
+    "path": "assets/redis.svg",
+    "bytes": 1728,
+    "sha256": "4707378b190878f36f7e6e1c01fa3ee7e7884c76101809d191dddd943a2e6bdb"
+  },
+  {
+    "path": "assets/slides-qr.png",
+    "bytes": 3660,
+    "sha256": "0bab6937c0d792d7fd9f4946352b1d4635f1449ad2d03990c0617a2cf3d345c6"
+  },
+  {
+    "path": "assets/traefik-proxy.svg",
+    "bytes": 1509,
+    "sha256": "e2885459d44d08f4debd515f1ad0399710902302af1e6691d851544b5ad01bee"
+  },
+  {
+    "path": "assets/whatsapp-simpleicons.svg",
+    "bytes": 1216,
+    "sha256": "8fb209a53a61618c3483594b3e070481a35575d6aaecbe00a6fe386670c8fb1c"
+  },
+  {
+    "path": "downloads/agentes-autonomos-hermes-python-brasil-2026.pdf",
+    "bytes": 7328877,
+    "sha256": "ec0fd4e2a77eba9c75523fd128cedecb1c1787ead0a9ec06b8f30946d331c182"
+  },
+  {
+    "path": "downloads/agentes-autonomos-hermes-python-brasil-2026.pptx",
+    "bytes": 10201944,
+    "sha256": "292de6c5de7b59a71422c28d8fd6251c4c62fc4030524ce5363cc120bb9ff33e"
+  },
+  {
+    "path": "index.html",
+    "bytes": 46290,
+    "sha256": "6618d06be489e07fc49160ac96d30e8d0b4f9d14c71922dd7736818df8311031"
+  }
+]
