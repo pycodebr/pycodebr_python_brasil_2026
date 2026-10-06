@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.pyc
+.ruff_cache/
+node_modules/
+private/
+backups/
+qa/
+output/
+.DS_Store
+*.log
