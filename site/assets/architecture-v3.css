@@ -1,0 +1,104 @@
+/* Project-specific architecture and chronology objects for revision 3. */
+.personal-agent-era{display:grid;grid-template-columns:1fr 1fr;gap:52px;flex:1;min-height:0}
+.personal-agent{border:1px solid #706580;border-radius:23px;background:linear-gradient(140deg,#2c253c,#081925);padding:28px 34px;display:flex;flex-direction:column;gap:20px;min-width:0}
+.openclaw-era{border-color:#b16d59;background:linear-gradient(145deg,#432b2c,#0b1823)}
+.hermes-era{border-color:#63a3a9;background:linear-gradient(145deg,#17434c,#0b1823)}
+.month-tag{font:22px var(--mono);color:var(--muted)}
+.rename-chain{display:flex;align-items:center;gap:15px;flex-wrap:wrap;font-size:31px}
+.rename-chain strong{font-weight:400;color:#ff9e8a}.rename-chain .step-arrow{width:25px;background:#ff9e8a}.rename-chain .step-arrow::after{border-color:#ff9e8a}
+.personal-agent h3{font-size:45px;line-height:1.2;font-weight:400}
+.era-mascot{width:165px;height:165px;object-fit:contain;align-self:center}
+.personal-agent p{font-size:28px;line-height:1.4;color:#d1e5ee}
+.era-capabilities{display:flex;gap:13px;flex-wrap:wrap;margin-top:auto;font-size:21px;color:#c3d5df}
+.era-capabilities span{border-top:1px solid #638293;padding-top:12px;flex:1;min-width:120px}
+.operation-scene{gap:18px}
+.architecture-controls{display:flex;gap:15px;flex-wrap:wrap;flex:none}
+.architecture-controls button{font-size:23px;padding:11px 22px;border-radius:10px}
+.architecture-controls button[aria-pressed=true]{border-color:var(--lime);color:var(--lime);background:#24391c}
+.operation-scene>.network{min-height:470px}
+.operation-grid{display:grid;grid-template-columns:220px minmax(0,1fr) 340px;gap:80px;min-height:470px;align-items:center}
+.access-column,.external-column{display:flex;flex-direction:column;gap:16px;min-width:0}
+.layer-label{font-size:22px;font-weight:400;color:var(--cyan);margin-bottom:4px}
+.arch-node{padding:18px 19px;border-radius:13px;box-shadow:none;min-width:0}
+.arch-node h3{font-size:25px;line-height:1.17}
+.arch-node p{font-size:20px;line-height:1.35;margin-top:9px}
+.vps-boundary,.observer-boundary,.application-boundary,.maintenance-boundary{position:relative;border:1px dashed #638473;border-radius:23px;padding:38px 23px 20px;background:#09251944;min-width:0}
+.boundary-label{position:absolute;left:20px;top:-15px;background:var(--bg);padding:2px 12px;font:21px var(--mono);color:var(--lime);max-width:calc(100% - 30px);line-height:1.35}
+.vps-top{display:flex;justify-content:center;margin-bottom:20px}.vps-top>.arch-node{padding:15px 22px;text-align:center}
+.vps-main{display:grid;grid-template-columns:190px minmax(0,1fr) 215px;gap:27px;align-items:center}
+.vps-bottom{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:20px}
+.operation-core{padding:19px 17px;text-align:center;border-color:#97c764;background:linear-gradient(135deg,#1c452e,#0c2329);box-shadow:0 0 65px #b7ff0610}
+.operation-core>img{width:125px;height:125px;object-fit:contain;margin:0 auto 15px}.operation-core h3{font-size:32px}.operation-core p{font-size:19px;margin-top:10px}
+.external-column .arch-node{padding:23px 25px;border-left:3px solid var(--yellow)}
+.external-column .integration-node:first-child{border-left-color:var(--event-pink)}
+.external-column .output-node{border-left-color:var(--lime)}
+.architecture-explanation{font-size:25px;line-height:1.4;color:#cfdee8;min-height:70px;flex:none}
+.operation-scene>.caption{font-size:23px;line-height:1.4}
+.operation-scene .network .edge{opacity:.42}
+.operation-scene .network[data-focus=access] .edge[data-scope=access],.operation-scene .network[data-focus=context] .edge[data-scope=context],.operation-scene .network[data-focus=integrations] .edge[data-scope=integrations],.operation-scene .network[data-focus=outputs] .edge[data-scope=outputs]{opacity:1;stroke-width:3}
+.operation-scene .network[data-focus=access] .access-node,.operation-scene .network[data-focus=context] .context-node,.operation-scene .network[data-focus=integrations] .integration-node,.operation-scene .network[data-focus=outputs] .output-node{border-color:var(--accent);box-shadow:0 0 25px #b7ff0612}
+.monitoring-architecture{display:grid;grid-template-columns:430px minmax(0,1fr) 370px;gap:75px;align-items:center;min-height:550px}
+.application-boundary{padding:35px 18px 18px;border-color:#8a755c;background:#352a161f;display:flex;flex-direction:column;gap:18px}
+.application-boundary>.boundary-label{color:var(--orange)}
+.monitoring-scene .signals{padding:22px 23px}
+.monitoring-scene .signal-title{font-size:25px}.monitoring-scene .signal-title .logo{width:42px;height:42px}
+.monitoring-scene .signal-tabs{margin-top:15px;gap:9px}.monitoring-scene .signal-tabs button{font-size:19px;padding:11px 13px}
+.monitoring-scene .signal-chart{height:108px;margin-top:14px}.monitoring-scene .signal-legend{font-size:18px;margin-top:5px}
+.monitoring-scene .log-lines{font-size:17px;padding:12px 14px;margin-top:12px;line-height:1.4}
+.telemetry-origin{font-size:19px;line-height:1.35;color:var(--muted);margin-top:14px;border-top:1px solid #345468;padding-top:12px}
+.compact-node{padding:23px;border-radius:14px;box-shadow:none;min-width:0}.compact-node h3{font-size:28px}.compact-node p{font-size:22px;line-height:1.35;margin-top:12px}.compact-node .logo{width:48px;height:48px;object-fit:contain}
+.observer-boundary{border-color:#6980a9;background:#1b244222;padding-top:33px}
+.observer-boundary>.boundary-label{color:var(--purple);font-size:20px}
+.observer-boundary>[data-node-id=trigger]{text-align:center;padding:18px 25px;margin-bottom:29px}
+.observer-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:center}
+.mcp-bridge .node-top{flex-direction:column;align-items:flex-start;gap:20px}
+.observer-core{text-align:center;padding:24px 20px;border-color:#8e75af;background:linear-gradient(140deg,#30294b,#0c2635)}
+.observer-core>img{width:124px;height:124px;object-fit:contain;margin:0 auto 15px}.observer-core h3{font-size:33px}.observer-core>p{font-size:21px;line-height:1.35}
+.runtime-parts{display:flex;flex-direction:column;gap:9px;margin-top:17px}.runtime-parts span{font-size:18px;line-height:1.35;border-top:1px solid #645f82;padding-top:8px}
+.runtime-note{font-size:21px;line-height:1.4;color:var(--muted);margin-top:23px;text-align:center}
+.diagnosis-column{display:flex;flex-direction:column;gap:29px}.diagnosis-result{padding:25px}.diagnosis-result h3{font-size:31px}.diagnosis-result p{font-size:24px;line-height:1.35;margin-top:14px}
+.monitoring-scene .interactive-note,.reports-scene .interactive-note{font-size:20px;line-height:1.4;max-width:1650px}
+.reports-architecture{display:grid;grid-template-columns:365px minmax(0,1fr);gap:95px;align-items:center;min-height:530px}
+.report-source{position:relative;min-width:0;padding-top:45px}.report-source>.boundary-label{color:var(--event-pink);font-size:20px;top:0;left:0}
+.reports-scene .report-card{padding:28px 25px;box-shadow:12px 16px 0 #17213c;transform:rotate(-1deg)}
+.reports-scene .report-kind{margin:24px 0;gap:12px}.reports-scene .report-kind button{font-size:21px;padding:12px 18px}
+.reports-scene .report-card h3{font-size:30px;line-height:1.25;margin:22px 0}.reports-scene .report-card p{font-size:24px;line-height:1.4}.reports-scene .report-card .small{font-size:20px;line-height:1.4}
+.maintenance-boundary{border-color:#836c9d;background:#30223b22;padding:39px 27px 24px}
+.maintenance-boundary>.boundary-label{color:var(--event-pink)}
+.maintenance-entry{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.maintenance-entry .compact-node .node-top{gap:15px}.maintenance-entry .compact-node h3{font-size:27px}
+.maintenance-agent{display:flex;align-items:center;gap:24px;padding:25px;border-color:#9677b7;box-shadow:none;min-width:0}
+.maintenance-agent>img{width:108px;height:108px;object-fit:contain;flex:none}.maintenance-agent h3{font-size:32px}.maintenance-agent p{font-size:23px;line-height:1.4}
+.repository-lanes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:46px;margin-top:65px}
+.repository-lanes .node-top{flex-direction:column;align-items:flex-start;gap:14px}.repository-lanes .compact-node{min-height:180px}.repository-lanes .compact-node h3{font-size:28px}.repository-lanes .compact-node p{font-size:23px}
+.maintenance-gate{display:flex;align-items:center;gap:21px;font-size:25px;line-height:1.4;padding:20px 23px;border-top:1px solid #647a5c;margin-top:27px;background:#1b342b}
+.maintenance-gate .icon{width:35px;height:35px;flex:none;color:var(--lime)}
+.channel-icons .logo.pad,.approval-phone .phone-title .logo.pad{padding:5px}
+.service .logo[alt=Django]{width:86px;height:37px;object-fit:contain}
+/* Reflow the diagrams with readable labels on narrow screens. */
+body.reading .personal-agent-era,body.reading .operation-grid,body.reading .vps-main,body.reading .monitoring-architecture,body.reading .observer-main,body.reading .reports-architecture,body.reading .maintenance-entry,body.reading .repository-lanes{grid-template-columns:minmax(0,1fr);gap:38px;min-height:0}
+body.reading .personal-agent{padding:24px;gap:19px}body.reading .month-tag{font-size:16px;line-height:1.45}body.reading .rename-chain{font-size:23px;gap:13px;justify-content:center}body.reading .rename-chain .step-arrow{width:20px}body.reading .personal-agent h3{font-size:34px}body.reading .era-mascot{width:145px;height:145px}body.reading .personal-agent p{font-size:21px}body.reading .era-capabilities{font-size:16px;gap:15px}
+body.reading .architecture-controls{gap:10px}body.reading .architecture-controls button{font-size:16px;padding:12px 15px}body.reading .operation-scene>.network{min-height:0}body.reading .operation-grid{gap:55px;padding-right:14px}
+body.reading .access-column,body.reading .external-column{gap:20px}body.reading .layer-label{font-size:19px}body.reading .arch-node{padding:22px}body.reading .arch-node h3{font-size:25px}body.reading .arch-node p{font-size:19px}
+body.reading .vps-boundary,body.reading .observer-boundary,body.reading .application-boundary,body.reading .maintenance-boundary{padding:39px 18px 23px;border-radius:18px}body.reading .boundary-label{font-size:16px;left:11px;top:-13px;padding:2px 8px;background:#03090e}
+body.reading .vps-top{margin-bottom:32px}body.reading .vps-top>.arch-node{width:100%;padding:23px 17px}body.reading .vps-bottom{grid-template-columns:minmax(0,1fr);gap:29px;margin-top:32px}
+body.reading .operation-core{padding:24px}body.reading .operation-core>img{width:130px;height:130px}body.reading .operation-core h3{font-size:30px}body.reading .operation-core p{font-size:19px}
+body.reading .architecture-explanation{font-size:19px;line-height:1.45;min-height:0}body.reading .operation-scene>.caption{font-size:17px}
+body.reading .monitoring-architecture{gap:55px;padding-right:13px}body.reading .application-boundary{gap:25px}body.reading .monitoring-scene .signals{padding:21px 18px}body.reading .monitoring-scene .signal-title{font-size:23px}body.reading .monitoring-scene .signal-tabs{gap:9px}body.reading .monitoring-scene .signal-tabs button{font-size:16px;padding:12px}body.reading .monitoring-scene .signal-chart{height:125px}body.reading .monitoring-scene .signal-legend{font-size:16px}body.reading .monitoring-scene .log-lines{font-size:14px;line-height:1.5;padding:14px}body.reading .telemetry-origin{font-size:16px}
+body.reading .compact-node{padding:23px}body.reading .compact-node h3{font-size:25px}body.reading .compact-node p{font-size:18px}.reading .compact-node .logo{width:46px;height:46px}
+body.reading .observer-boundary>.boundary-label{font-size:16px}body.reading .observer-main{gap:40px}body.reading .observer-core>img{width:130px;height:130px}body.reading .observer-core h3{font-size:29px}body.reading .observer-core>p{font-size:19px}body.reading .runtime-parts span{font-size:17px}body.reading .runtime-note{font-size:17px}
+body.reading .diagnosis-result{padding:24px}body.reading .diagnosis-result h3{font-size:26px}body.reading .diagnosis-result p{font-size:19px}body.reading .monitoring-scene .interactive-note,body.reading .reports-scene .interactive-note{font-size:14px}
+body.reading .reports-architecture{gap:55px;padding-right:12px}body.reading .report-source{padding-top:48px}body.reading .report-source>.boundary-label{font-size:16px;left:0}body.reading .reports-scene .report-card{padding:24px 22px;transform:none}body.reading .reports-scene .report-card h3{font-size:27px}body.reading .reports-scene .report-card p{font-size:19px}body.reading .reports-scene .report-card .small{font-size:16px}
+body.reading .maintenance-entry{gap:37px}body.reading .maintenance-entry .compact-node .node-top{flex-direction:column;align-items:flex-start}body.reading .maintenance-agent{padding:22px;gap:20px;flex-wrap:wrap}body.reading .maintenance-agent>img{width:90px;height:90px}body.reading .maintenance-agent p{font-size:18px}body.reading .repository-lanes{margin-top:39px;gap:34px}body.reading .repository-lanes .compact-node{min-height:0}body.reading .repository-lanes .compact-node h3{font-size:25px}body.reading .repository-lanes .compact-node p{font-size:18px}body.reading .maintenance-gate{padding:21px 10px;font-size:18px;gap:17px}body.reading .maintenance-gate .icon{width:29px;height:29px}
+body.reading .channel-icons .logo.pad,body.reading .approval-phone .phone-title .logo.pad{padding:5px}body.reading .service .logo[alt=Django]{width:74px;height:37px}
+body.reading .reuse-evidence .step-arrow{align-self:center;transform:rotate(90deg);margin:8px 0}
+/* Keep the diagram's full intrinsic height separate from its explanation. */
+body:not(.reading) .operation-scene>.network{min-height:520px;flex:none}
+body:not(.reading) .operation-grid{grid-template-columns:260px minmax(0,1fr) 320px;gap:70px;min-height:520px}
+body:not(.reading) .operation-grid .arch-node{padding:14px 16px}
+body:not(.reading) .operation-grid .arch-node h3{font-size:24px;line-height:1.18}
+body:not(.reading) .operation-grid .arch-node p{font-size:18px;line-height:1.35;margin-top:8px}
+body:not(.reading) .operation-core>img{width:108px;height:108px}
+body:not(.reading) .vps-main{grid-template-columns:190px minmax(0,1fr) 215px;gap:27px}
+.architecture-monitoring .connections path.edge,.architecture-reports .connections path.edge{opacity:.88;stroke-width:2.5;stroke-linejoin:round}
+.architecture-monitoring .connections path:not(.edge),.architecture-reports .connections path:not(.edge){stroke-width:3}

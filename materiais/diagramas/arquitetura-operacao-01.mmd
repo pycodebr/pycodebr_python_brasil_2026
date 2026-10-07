@@ -1,0 +1,33 @@
+flowchart LR
+    usuario["Você e sua equipe autorizada"]
+    subgraph acesso["Pontos de acesso configurados"]
+        ssh["SSH e Hermes CLI/TUI"]
+        desktop["Hermes Desktop"]
+        orca["Orca Desktop/Mobile: projetos e terminais"]
+        chat["Canal de mensagens autorizado"]
+    end
+    subgraph ambiente["Ambiente de execução: VPS ou máquina escolhida"]
+        gateway["Gateway e entrada de mensagens"]
+        hermes["Hermes Agent: runtime e harness"]
+        contexto["Memória, base de contexto e skills"]
+        projetos["Repositórios e arquivos de trabalho"]
+        execucao["Terminal, browser e código"]
+        integracao["APIs HTTP, MCPs ou Composio"]
+        entrega["Entregas verificadas"]
+    end
+    modelos["Provedor e modelo selecionados"]
+    sistemas["Sistemas autorizados"]
+    central["Central de Operações: publicação com acesso definido"]
+    usuario --> ssh --> hermes
+    usuario -.-> desktop -.-> hermes
+    usuario -.-> orca -.-> execucao
+    usuario --> chat --> gateway --> hermes
+    contexto --> hermes
+    hermes <--> projetos
+    hermes <--> modelos
+    hermes --> execucao
+    hermes --> integracao --> sistemas
+    execucao --> entrega
+    hermes -->|"Confere o resultado"| entrega
+    entrega -.->|"Publicação autorizada"| central
+    usuario -->|"Consulta por HTTPS"| central

@@ -10,7 +10,9 @@ Os assets são usados para identificar pessoas, projetos e tecnologias na palest
 
 ## Tecnologias
 
-As origens, hashes, licenças declaradas e transformações dos recursos usados na revisão estão em [src/assets.json](src/assets.json) e [src/assets-supplement.json](src/assets-supplement.json).
+As origens, hashes, licenças declaradas e transformações dos recursos usados nas revisões estão em [src/assets.json](src/assets.json), [src/assets-supplement.json](src/assets-supplement.json) e [src/assets-v3.json](src/assets-v3.json).
+
+A revisão 3 usa símbolos em espaços quadrados para evitar comprimir lockups horizontais. MCP, LangChain e LangGraph foram isolados por ajuste do viewport da raiz de seus SVGs oficiais, sem modificar paths, cores ou proporções da arte. A variante histórica do LangChain foi mantida na cronologia. O símbolo OpenClaw veio do favicon do site oficial e não foi transformado.
 
 Foram utilizados assets publicados pelos titulares para Hermes Agent, Python, LangChain, Langflow, n8n, OpenCode, MCP, Grafana, Loki, Prometheus, Docker, Traefik, Django e GitHub. Os logos foram preservados sem recoloração, inversão ou alteração das proporções; fundos de contraste pertencem ao layout.
 

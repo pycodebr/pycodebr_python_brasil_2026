@@ -7,7 +7,7 @@
   const jump = document.querySelector('#jump');
   const overview = document.querySelector('#overview');
   const menu = document.querySelector('#menu');
-  const storageKey = 'pycodebr-python-brasil-2026-v2';
+  const storageKey = 'pycodebr-python-brasil-2026-v3';
   const exportMode = new URLSearchParams(location.search).has('export');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const saved = {
@@ -37,7 +37,7 @@
     svg.setAttribute('viewBox', `0 0 ${network.offsetWidth} ${network.offsetHeight}`);
     svg.replaceChildren();
     const edges = JSON.parse(network.dataset.edges || '[]');
-    edges.forEach(([source, target, color], index) => {
+    edges.forEach(([source, target, color, scope, route], index) => {
       const from = network.querySelector(`[data-node-id="${source}"]`);
       const to = network.querySelector(`[data-node-id="${target}"]`);
       if (!from || !to) return;
@@ -51,24 +51,34 @@
         y1 = (a.top + a.height / 2 - rect.top) * sy;
         x2 = (b.right - rect.left) * sx;
         y2 = (b.top + b.height / 2 - rect.top) * sy;
-        const rail = Math.max(x1, x2) + (document.body.classList.contains('reading') ? 12 : 35);
+        const rail = Math.min(network.offsetWidth - 10, Math.max(x1, x2) + (document.body.classList.contains('reading') ? 12 : 35));
         d = `M ${x1} ${y1} C ${rail} ${y1}, ${rail} ${y2}, ${x2} ${y2}`;
       } else {
-        x1 = (a.right - rect.left) * sx;
+        const forward = b.left + b.width / 2 > a.left + a.width / 2;
+        x1 = ((forward ? a.right : a.left) - rect.left) * sx;
         y1 = (a.top + a.height / 2 - rect.top) * sy;
-        x2 = (b.left - rect.left) * sx;
+        x2 = ((forward ? b.left : b.right) - rect.left) * sx;
         y2 = (b.top + b.height / 2 - rect.top) * sy;
         const bend = (x2 - x1) / 2;
         d = `M ${x1} ${y1} C ${x1 + bend} ${y1}, ${x2 - bend} ${y2}, ${x2} ${y2}`;
+        if (route) {
+          const sign = forward ? 1 : -1;
+          const railY = route === 'above'
+            ? Math.max(14, (Math.min(a.top, b.top) - rect.top) * sy - 22)
+            : Math.min(network.offsetHeight - 12, (Math.max(a.bottom, b.bottom) - rect.top) * sy + 22);
+          d = `M ${x1} ${y1} L ${x1 + sign * 14} ${y1} L ${x1 + sign * 14} ${railY} L ${x2 - sign * 14} ${railY} L ${x2 - sign * 14} ${y2} L ${x2} ${y2}`;
+        }
       }
       const path = document.createElementNS(svgNs, 'path');
       path.setAttribute('d', d);
       path.setAttribute('class', 'edge');
+      if (scope) path.dataset.scope = scope;
       if (color) path.style.setProperty('--edge-color', color);
       path.style.animationDelay = `${index * -0.7}s`;
       svg.append(path);
       const tip = document.createElementNS(svgNs, 'path');
-      tip.setAttribute('d', vertical ? `M${x2 + 10} ${y2 - 6}L${x2} ${y2}L${x2 + 10} ${y2 + 6}` : `M${x2 - 10} ${y2 - 6}L${x2} ${y2}L${x2 - 10} ${y2 + 6}`);
+      const direction = vertical || x2 < x1 ? 1 : -1;
+      tip.setAttribute('d', `M${x2 + direction * 10} ${y2 - 6}L${x2} ${y2}L${x2 + direction * 10} ${y2 + 6}`);
       tip.setAttribute('fill', 'none');
       tip.setAttribute('stroke', color || 'var(--accent)');
       tip.setAttribute('stroke-width', '2');
@@ -141,34 +151,36 @@
     }
     requestLayout();
   }
-  function timeline(year) {
-    const data = scenarios.timeline[year];
-    if (!data) return;
-    const target = document.querySelector('[data-scene="timeline"]');
-    target.querySelectorAll('[data-year]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.year === year)));
-    target.querySelector('[data-history-year]').textContent = year;
-    target.querySelector('[data-history-title]').textContent = data.title;
-    target.querySelector('[data-history-body]').textContent = data.body;
-    target.querySelector('[data-history-source]').href = data.source;
-    target.querySelector('[data-history-source]').textContent = data.sourceLabel;
-    const logos = target.querySelector('[data-history-logos]');
-    logos.replaceChildren();
-    data.logos.forEach(logo => {
-      const img = document.createElement('img');
-      img.src = 'assets/' + logo.file;
-      img.alt = logo.name;
-      if (logo.pad) img.className = 'pad';
-      logos.append(img);
-    });
-    target.dataset.year = year;
+  function architecture(focus) {
+    const target = document.querySelector('[data-scene="architecture"]');
+    if (!scenarios.architecture[focus]) return;
+    target.querySelectorAll('[data-architecture-focus]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.architectureFocus === focus)));
+    target.querySelector('.network').dataset.focus = focus;
+    target.querySelector('[data-architecture-explanation]').textContent = scenarios.architecture[focus];
+    target.dataset.focus = focus;
     requestLayout();
   }
   function learning(stage) {
     const target = document.querySelector('[data-scene="learning"]');
     if (!scenarios.learning[stage]) return;
     target.querySelectorAll('[data-learning]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.learning === stage)));
-    target.querySelector('[data-learning-message]').textContent = scenarios.learning[stage];
+    const data = scenarios.learning[stage];
+    target.querySelector('[data-learning-message]').textContent = data.message;
+    const evidence = target.querySelector('[data-learning-evidence]');
+    evidence.replaceChildren();
+    data.evidence.forEach((label, index) => {
+      if (index) {
+        const arrow = document.createElement('i');
+        arrow.className = 'step-arrow';
+        arrow.setAttribute('aria-hidden', 'true');
+        evidence.append(arrow);
+      }
+      const span = document.createElement('span');
+      span.textContent = label;
+      evidence.append(span);
+    });
     target.dataset.stage = stage;
+    requestLayout();
   }
   function workflow(step) {
     const data = scenarios.workflow[Number(step)];
@@ -236,6 +248,10 @@
     };
     status.textContent = messages[state];
     status.classList.toggle('approved', ['approved', 'completed'].includes(state));
+    const authorized = ['approved', 'executing', 'completed'].includes(state);
+    target.querySelector('[data-merge-label]').textContent = authorized ? 'Merge autorizado' : 'Merge após aprovação';
+    target.querySelector('[data-deploy-label]').textContent = state === 'completed' ? 'Deploy conferido' : 'Deploy após o merge';
+    target.querySelector('[data-verify-label]').textContent = state === 'completed' ? 'Correção conferida' : 'Verificar a entrega';
     target.dataset.approval = state;
   }
   function mergeDemo() {
@@ -278,7 +294,7 @@
   deck.addEventListener('click', event => {
     const button = event.target.closest('button');
     if (!button) return;
-    if (button.dataset.year) timeline(button.dataset.year);
+    if (button.dataset.architectureFocus) architecture(button.dataset.architectureFocus);
     if (button.dataset.learning) learning(button.dataset.learning);
     if (button.dataset.workflowStep !== undefined) workflow(button.dataset.workflowStep);
     if (button.dataset.signal) monitoring(button.dataset.signal);
@@ -322,7 +338,7 @@
   reducedMotion.addEventListener('change', event => { motionOff = event.matches; setMotion(); });
   const exportState = () => {
     document.body.classList.add('motion-off');
-    timeline('2026');
+    architecture('integrations');
     learning('reuse');
     workflow('4');
     monitoring('latency');
@@ -337,7 +353,7 @@
     });
   };
   window.presentation = {
-    show, layout, timeline, workflow, monitoring, report, approve,
+    show, layout, architecture, workflow, monitoring, report, approve,
     get current() { return current; },
     get count() { return slides.length; },
     get reportKind() { return reportKind; },
@@ -345,7 +361,7 @@
   };
   window.addEventListener('beforeprint', exportState);
   setMotion();
-  timeline('2022');
+  architecture('access');
   learning('first');
   workflow('0');
   monitoring('latency');

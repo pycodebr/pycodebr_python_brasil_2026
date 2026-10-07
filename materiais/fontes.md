@@ -2,13 +2,13 @@
 
 Esta bibliografia reúne documentação primária para aprofundar a palestra de Felipe Azambuja, da PycodeBR, na Python Brasil 2026. As referências descrevem mecanismos e capacidades; o estado de uma instalação precisa ser conferido no ambiente correspondente.
 
-Volte ao [guia da palestra](guia-da-palestra.md), ao [workflow de IA assistida](workflow-ia-assistida.md) ou à [observabilidade e manutenção](observabilidade-e-manutencao.md).
+Volte ao [guia da palestra](guia-da-palestra.md), à [arquitetura da operação](arquitetura-operacao.md), ao [workflow de IA assistida](workflow-ia-assistida.md) ou à [observabilidade e manutenção](observabilidade-e-manutencao.md).
 
 ## Como usar as referências
 
 Os números junto das afirmações nos guias apontam para os mesmos documentos listados abaixo. Comece pelo problema que você quer investigar e consulte a seção indicada, em vez de montar uma stack apenas pela lista de ferramentas.
 
-1. Para entender reaproveitamento de contexto, leia memória e skills do Hermes.
+1. Para entender reaproveitamento de contexto, leia memória e skills do Hermes e separe esses recursos da base de documentos consultáveis.
 2. Para conectar um sistema ao agente, leia o guia MCP do Hermes e a especificação de tools.
 3. Para acompanhar a aplicação, leia Prometheus, instrumentação Django e exportadores.
 4. Para centralizar logs, confira o histórico do Promtail e a migração para Alloy.
@@ -19,7 +19,7 @@ Os números junto das afirmações nos guias apontam para os mesmos documentos l
 
 Para os marcos de 2022 a 2026, consulte a [linha do tempo e suas fontes primárias](linha-do-tempo.md).
 
-O workflow adapta os cinco passos ensinados por Felipe na Imersão IA Builders. Os encontros Elite #03 e #04 usam o SCSI para explicar deploy, monitoramento e operação por dois MCPs. Essa atribuição registra a origem didática, sem publicar materiais exclusivos ou links de acesso fechado.
+O workflow adapta os cinco passos ensinados por Felipe na Imersão IA Builders. A arquitetura da operação adapta os componentes ensinados na Imersão Agentes Autônomos, separando interfaces, runtime, modelos, contexto, ferramentas e entregas. Os encontros Elite #03 e #04 usam o SCSI para explicar deploy, monitoramento e operação por dois MCPs. Essa atribuição registra a origem didática, sem publicar materiais exclusivos ou links de acesso fechado.
 
 O encontro #04 apresenta webhook acionando agente como próximo passo. O blueprint de manutenção do MentorIA, com report, branch, testes, PR, mensagem privada a Felipe, aprovação e deploy, é uma proposta ilustrativa desenvolvida para esta palestra. A arquitetura do SCSI não comprova a implantação do MentorIA.
 
@@ -50,13 +50,27 @@ Os templates destes materiais foram escritos para o guia público e usam exemplo
 
 ## Referências
 
+### OpenClaw e Hermes: origem, nomes e lançamento
+
+Leia o anúncio do OpenClaw e a história mantida pelo projeto para distinguir origem em 2025, popularização em janeiro de 2026 e renomeações Clawdbot → Moltbot → OpenClaw. Consulte o catálogo da Nous para a data de lançamento do Hermes Agent, 25/02/2026. Os números da linha do tempo são locais àquele guia, separados da numeração técnica abaixo.
+
+- [Introducing OpenClaw](https://openclaw.ai/blog/introducing-openclaw).
+- [OpenClaw lore](https://docs.openclaw.ai/start/lore).
+- [Releases da Nous Research](https://nousresearch.com/releases).
+- [Repositório oficial do Hermes Agent](https://github.com/NousResearch/hermes-agent).
+
+OpenClaw e Hermes são projetos independentes. A sequência apresentada acompanha seus marcos públicos, sem comparar desempenho nem tratar as renomeações como três lançamentos de ferramentas distintas.
+
 ### Hermes Agent: contexto e integração
 
-Seções de leitura: memória persistente, carregamento progressivo de skills e filtragem de tools MCP.
+Seções de leitura: memória persistente, carregamento progressivo de skills e filtragem de tools MCP. A base versionada descrita no guia é uma organização de documentos da operação, separada desses mecanismos.
 
 [20] https://hermes-agent.nousresearch.com/docs/user-guide/features/skills | Skills System | Hermes Agent\
 [21] https://hermes-agent.nousresearch.com/docs/user-guide/features/memory | Persistent Memory | Hermes Agent\
-[22] https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp | MCP | Hermes Agent
+[22] https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp | MCP | Hermes Agent\
+[23] https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation | Delegation | Hermes Agent\
+[24] https://hermes-agent.nousresearch.com/docs/user-guide/desktop | Hermes Desktop\
+[25] https://hermes-agent.nousresearch.com/docs/user-guide/messaging/ | Messaging | Hermes Agent
 
 ### MCP e operações de domínio
 
@@ -89,6 +103,11 @@ Seções de leitura: contact point webhook, assinatura HMAC, payload, agrupament
 
 [4] https://grafana.com/docs/grafana/latest/alerting/configure-notifications/manage-contact-points/integrations/webhook-notifier | Configure webhook notifications | Grafana\
 [14] https://prometheus.io/docs/alerting/latest/alertmanager | Alertmanager | Prometheus
+
+Para adaptar o acionamento do agente, confira também agendamentos, rotas autenticadas e o tratamento de payloads externos. A existência desses recursos não comprova que um alerta Grafana já acione o Hermes na operação apresentada.
+
+[26] https://hermes-agent.nousresearch.com/docs/user-guide/features/cron | Scheduled Tasks | Hermes Agent\
+[27] https://hermes-agent.nousresearch.com/docs/user-guide/messaging/webhooks | Webhooks | Hermes Agent
 
 ### Deploy, roteamento e segredos
 

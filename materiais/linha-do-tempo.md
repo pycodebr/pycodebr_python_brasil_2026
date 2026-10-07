@@ -17,11 +17,31 @@ A sequência de 2022 a 2026 organiza os marcos usados na palestra. Ela não repr
 | 16/04/2025 | Codex CLI apresentado publicamente | Agente de programação executado pelo terminal. |
 | 22/05/2025 | Claude Code em disponibilidade geral | Marco distinto do preview de fevereiro. |
 | 2025 | Agent Skills | Instruções, scripts e recursos organizados para carregamento sob demanda. |
+| Novembro de 2025 | Origem do projeto que se tornou OpenClaw | Assistente pessoal executado na infraestrutura escolhida pelo usuário; a origem antecede a popularização de 2026. |
+| Janeiro de 2026 | Popularização e renomeações Clawdbot → Moltbot → OpenClaw | Nomes sucessivos do mesmo projeto, com execução por ferramentas e acesso por aplicativos de mensagem. |
 | 25/02/2026 | Hermes Agent no catálogo da Nous Research | Execução por ferramentas combinada com memória, skills, delegação e canais. |
+
+## OpenClaw e Hermes na onda de assistentes pessoais
+
+Se você encontrou referências a Clawdbot, Moltbot e OpenClaw, está lendo sobre nomes sucessivos do mesmo projeto. O criador situa sua origem em novembro de 2025. A popularização e as renomeações ocorreram em janeiro de 2026, quando o acesso por mensagens a um assistente hospedado pelo próprio usuário ganhou atenção. OpenClaw aparece na palestra como **um dos pioneiros desta onda de assistentes pessoais open source**; esse recorte não reivindica a invenção de todos os agentes autônomos.[13][14]
+
+```mermaid
+flowchart LR
+    origem["2025: origem do projeto"] --> claw["Clawdbot"]
+    claw --> molt["Moltbot: janeiro de 2026"]
+    molt --> open["OpenClaw: fim de janeiro"]
+    open -.->|"Depois na cronologia; projeto independente"| hermes["Hermes Agent: 25/02/2026"]
+```
+
+[Abrir a sequência histórica em SVG](diagramas/linha-do-tempo-01.svg).
+
+A seta tracejada indica apenas ordem temporal entre projetos independentes, sem representar uma relação de fork ou sucessão oficial. Hermes é um projeto da Nous Research, que registra seu lançamento em 25 de fevereiro de 2026; seu núcleo em Python reúne execução por ferramentas, memória persistida e procedimentos em skills.[12]
+
+As fontes do OpenClaw têm uma diferença de data que importa se você montar uma cronologia diária: o blog apresenta o anúncio com data editorial de 29 de janeiro, enquanto a documentação situa a migração final em 30 de janeiro. Aqui usamos “fim de janeiro” para preservar o marco sem confundir anúncio e migração. A primeira mudança, para Moltbot, aparece na documentação em 27 de janeiro, após um pedido da Anthropic relacionado à marca; essas fontes não comprovam um processo judicial.[13][14]
 
 ## Por que separar as camadas
 
-O **modelo** produz respostas e chamadas de ferramentas. O **harness** organiza o contexto, o ciclo e a execução dessas ferramentas. Uma **skill** descreve procedimentos e recursos que podem ser reutilizados. O **MCP** padroniza a integração com servidores que oferecem capacidades.
+O **modelo** produz respostas e chamadas de ferramentas. O **harness** organiza o contexto, o ciclo e a execução dessas ferramentas; Claude Code, Codex CLI e OpenCode são exemplos de harnesses de programação. Uma **interface** permite interagir com o runtime escolhido. Uma **skill** descreve procedimentos e recursos que podem ser reutilizados. O **MCP** padroniza a integração com servidores que oferecem capacidades.
 
 Isso ajuda a localizar responsabilidades. Um erro pode estar na especificação, na escolha de uma ferramenta, na autorização, no código executado ou na verificação. Trocar o modelo não corrige automaticamente uma integração sem escopo ou uma regra de negócio incompleta.
 
@@ -49,5 +69,7 @@ Um agente pode usar uma CLI e carregar uma skill para consultar um sistema pelo 
 10. [OpenAI: anúncio do Codex CLI](https://openai.com/index/introducing-o3-and-o4-mini/).
 11. [Agent Skills: especificação](https://agentskills.io/specification) e [explicação técnica](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills).
 12. [Nous Research: catálogo de releases](https://nousresearch.com/releases) e [documentação do Hermes Agent](https://hermes-agent.nousresearch.com/docs/).
+13. [OpenClaw: Introducing OpenClaw](https://openclaw.ai/blog/introducing-openclaw), com relato da origem e das renomeações.
+14. [OpenClaw: história do projeto](https://docs.openclaw.ai/start/lore), com as datas de Moltbot e da migração final.
 
-Para seguir, consulte o [guia da palestra](guia-da-palestra.md), o [workflow de cinco passos](workflow-ia-assistida.md) e a [bibliografia de operação e observabilidade](fontes.md).
+Para seguir, consulte o [guia da palestra](guia-da-palestra.md), a [arquitetura da operação](arquitetura-operacao.md), o [workflow de cinco passos](workflow-ia-assistida.md) e a [bibliografia de operação e observabilidade](fontes.md).

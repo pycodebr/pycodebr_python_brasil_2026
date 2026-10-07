@@ -6,7 +6,7 @@ Slides e materiais da palestra de **Felipe Azambuja**, programador, professor de
 
 ![Capa da palestra](docs/capa.webp)
 
-A palestra mostra como pedidos em linguagem natural podem se transformar em arquivos, comandos, integrações e entregas verificáveis. O percurso combina memória persistida e auto skills com o Workflow de IA Assistida de cinco passos, a observabilidade de sistemas e uma proposta de manutenção com revisão humana.
+A palestra mostra como pedidos em linguagem natural podem se transformar em arquivos, comandos, integrações e entregas verificáveis. A revisão 3 situa OpenClaw e Hermes na linha do tempo, explica a arquitetura conceitual da operação antes dos casos e separa memória, base de contexto e skills. O percurso inclui o Workflow de IA Assistida de cinco passos, a observabilidade de sistemas e uma proposta de manutenção com revisão humana.
 
 **Hermes Agent é um projeto da Nous Research e de sua comunidade.** Felipe utiliza e ensina a ferramenta; não é seu criador.
 
@@ -16,6 +16,7 @@ A palestra mostra como pedidos em linguagem natural podem se transformar em arqu
 |---|---|
 | [Guia da palestra](materiais/guia-da-palestra.md) | Conceitos, contexto reutilizável e exercícios para continuar o estudo. |
 | [Linha do tempo](materiais/linha-do-tempo.md) | Marcos de 2022 a 2026, com distinção entre anúncio, preview e versão. |
+| [Arquitetura da operação](materiais/arquitetura-operacao.md) | Interfaces, runtime, modelos, contexto, ferramentas e entregas, com adaptações para sua operação. |
 | [Workflow de IA Assistida](materiais/workflow-ia-assistida.md) | Os cinco passos, seus artefatos e o ciclo de revisão por sprint. |
 | [Observabilidade e manutenção](materiais/observabilidade-e-manutencao.md) | Stack, métricas, logs, dois MCPs e o fluxo report → PR → aprovação → deploy. |
 | [Fontes públicas](materiais/fontes.md) | Documentação primária organizada por assunto. |
@@ -26,11 +27,11 @@ Os guias foram escritos para quem assistiu à palestra e quer aprofundar o assun
 ## Apresentação e downloads
 
 - [Apresentação interativa](https://pycodebr.com.br/python-brasil-2026/#1)
-- [PDF da revisão atual](https://pycodebr.com.br/python-brasil-2026/downloads/agentes-autonomos-hermes-python-brasil-2026.pdf?v=2)
-- [PowerPoint da revisão atual](https://pycodebr.com.br/python-brasil-2026/downloads/agentes-autonomos-hermes-python-brasil-2026.pptx?v=2)
+- [PDF da revisão 3](https://pycodebr.com.br/python-brasil-2026/downloads/agentes-autonomos-hermes-python-brasil-2026.pdf?v=3)
+- [PowerPoint da revisão 3](https://pycodebr.com.br/python-brasil-2026/downloads/agentes-autonomos-hermes-python-brasil-2026.pptx?v=3)
 - [Arquivos de download no repositório](site/downloads/)
 
-A revisão 2 tem **18 slides**, com planejamento de **40 minutos de conteúdo e 5 minutos para perguntas**. A duração depende da condução e do ensaio do palestrante.
+A revisão 3 tem **23 slides**, com planejamento de **40 minutos de conteúdo e 5 minutos para perguntas**. A duração depende da condução e do ensaio do palestrante. Os arquivos publicados foram conferidos por comparação com a fonte local; os downloads usam `v=3` para evitar uma versão antiga em cache.
 
 O HTML mantém as animações e as demonstrações interativas. O PDF possui texto pesquisável. O PowerPoint preserva o design como **imagens por slide**, com resumos e fontes nas notas; ele não contém texto editável como objetos nem as interações do site.
 
@@ -57,6 +58,10 @@ O workflow tem origem na **Imersão IA Builders** e nos materiais do **IA Master
 5. Sprint → Review, Correções e Commit.
 
 O quinto passo se repete a cada sprint. O deploy é considerado desde o planejamento e acontece após a validação; não substitui revisão, correções e commit.
+
+Clawdbot → Moltbot → OpenClaw identifica renomeações do mesmo projeto, iniciado em 2025 e popularizado em janeiro de 2026. OpenClaw é apresentado como um dos pioneiros desta onda de assistentes pessoais open source, sem reivindicar o primeiro agente autônomo da história. Hermes Agent é um projeto independente da Nous Research, lançado em 25 de fevereiro de 2026. As [fontes da cronologia](materiais/linha-do-tempo.md#fontes-primárias) permitem conferir esses marcos.
+
+A [arquitetura da operação](materiais/arquitetura-operacao.md) adapta o desenho ensinado na Imersão Agentes Autônomos. Modelos, harnesses de programação, interfaces e serviços opcionais têm papéis distintos; o diagrama não atesta que todas as conexões estejam instaladas ou ativas.
 
 Os encontros Elite #03 e #04 usam o SCSI para explicar deploy, monitoramento e operação por MCPs. A proposta de manutenção do MentorIA acrescenta o percurso completo de reports até a aprovação de uma PR e a verificação após o deploy. **Esse fluxo é uma arquitetura de referência, não uma afirmação de automação ativa em produção.**
 
@@ -98,6 +103,7 @@ source .venv/bin/activate
 python -m pip install -r requirements-dev.txt
 python -m playwright install chromium
 python scripts/build.py
+python -B -m unittest discover -s testes -p 'test_*.py' -v
 python scripts/qa_deck.py
 python scripts/export.py
 python scripts/build.py
@@ -129,6 +135,7 @@ docs/          Imagens de apresentação do repositório
 - **`v1.0.0`**: arquivos públicos da apresentação original de 34 slides.
 - **`v2.0.0`**: revisão de 18 slides, materiais de estudo e laboratório local.
 - **`v2.0.1`**: preserva a navegação por setas e PageUp/PageDown após usar os controles interativos.
+- **`v3.0.0`**: 23 slides, cronologia OpenClaw/Hermes, arquitetura da operação, memória e auto skills, monitoria, reports e aprovação. Os logos usam símbolos em espaços quadrados, com proveniência e transformações registradas.
 
 O histórico público começou com os arquivos que já estavam publicados. Nenhum histórico Git da base privada, roteiro de bastidor, dado de aluno, log de produção ou credencial foi importado.
 

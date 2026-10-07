@@ -50,6 +50,9 @@ def main() -> None:
     out = ROOT / 'qa' / args.label / args.engine
     out.mkdir(parents=True, exist_ok=True)
     content = json.loads((ROOT / 'src/content.json').read_text())
+    if content.get('revision', 1) >= 3:
+        from qa_revision import run
+        return run(args)
     count = len(content['slides'])
     report = {'engine': args.engine, 'url': args.url, 'slide_count': count, 'viewports': [], 'errors': []}
     with sync_playwright() as p:

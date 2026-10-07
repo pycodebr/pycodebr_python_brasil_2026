@@ -4,7 +4,7 @@ Uma IA consegue escrever código antes de a equipe terminar de entender a demand
 
 Este material adapta, em texto autoral, o workflow ensinado por Felipe Azambuja na Imersão IA Builders, da PycodeBR. Os cinco passos mantêm a sequência do método; os critérios de passagem descritos aqui são recomendações de engenharia para você aplicá-lo no seu projeto.
 
-Leia também o [guia da palestra](guia-da-palestra.md), a [observabilidade e manutenção](observabilidade-e-manutencao.md) e as [fontes públicas](fontes.md).
+Leia também o [guia da palestra](guia-da-palestra.md), a [arquitetura da operação](arquitetura-operacao.md), a [observabilidade e manutenção](observabilidade-e-manutencao.md) e as [fontes públicas](fontes.md).
 
 ## Os cinco passos
 
@@ -110,7 +110,9 @@ O agente precisa de acesso aos arquivos e ferramentas pertinentes para consultar
 
 Quando outro harness participa, repasse o PRD, o recorte da sprint, as regras locais e o formato da entrega. Compare o diff e os testes recebidos com o aceite antes de integrar a alteração.
 
-Registre procedimentos repetidos como skills: preparação do ambiente, testes obrigatórios, revisão e recuperação de falhas conhecidas. No Hermes, skills podem ser carregadas sob demanda; a memória persistente guarda fatos selecionados e preferências entre sessões.[20][21]
+O Hermes pode executar o workflow e delegar subtarefas delimitadas a filhos temporários. Um filho pode invocar Claude Code, Codex CLI ou OpenCode se a CLI escolhida estiver instalada, autenticada e autorizada. Selecionar um provedor de modelos no Hermes não instala um desses harnesses. Para trabalhar em paralelo, distribua escopos independentes e evite editar os mesmos arquivos sem uma estratégia de integração.[23]
+
+Registre procedimentos repetidos como skills: preparação do ambiente, testes obrigatórios, revisão e recuperação de falhas conhecidas. No Hermes, skills podem ser carregadas sob demanda; a memória persistente guarda fatos selecionados e preferências entre sessões. Mantenha requisitos, decisões detalhadas e referências na base de contexto e no repositório do projeto, sem copiar todo o PRD para a memória.[20][21]
 
 O [template de contexto](guia-da-palestra.md#template-de-contexto-reaproveitável) ajuda a organizar o que será reutilizado. Atualize a especificação quando a regra do produto mudar e teste os procedimentos após mudanças de dependências.
 
@@ -129,4 +131,5 @@ Para projetos em operação, acrescente a triagem, o PR, a aprovação e a verif
 
 [8] https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches | About protected branches | GitHub\
 [20] https://hermes-agent.nousresearch.com/docs/user-guide/features/skills | Skills System | Hermes Agent\
-[21] https://hermes-agent.nousresearch.com/docs/user-guide/features/memory | Persistent Memory | Hermes Agent
+[21] https://hermes-agent.nousresearch.com/docs/user-guide/features/memory | Persistent Memory | Hermes Agent\
+[23] https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation | Delegation | Hermes Agent

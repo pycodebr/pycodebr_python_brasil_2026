@@ -2,7 +2,7 @@
 
 Depois do deploy, um erro precisa ser relacionado ao serviço, ao período e ao comportamento afetado. Métricas e logs ajudam nessa investigação; ferramentas de domínio podem recuperar o contexto do produto e acompanhar a correção até a verificação.
 
-Este guia adapta os ensinamentos dos encontros Elite #03 e #04, da PycodeBR, que usam o projeto SCSI para explicar deploy, monitoramento e operação por dois MCPs. A arquitetura ensinada e os desenhos propostos aparecem separados. Consulte também o [workflow](workflow-ia-assistida.md), o [guia da palestra](guia-da-palestra.md) e as [fontes](fontes.md).
+Este guia adapta os ensinamentos dos encontros Elite #03 e #04, da PycodeBR, que usam o projeto SCSI para explicar deploy, monitoramento e operação por dois MCPs. A arquitetura ensinada e os desenhos propostos aparecem separados. Antes dos casos de monitoria e reports, consulte a [arquitetura da operação](arquitetura-operacao.md); use também o [workflow](workflow-ia-assistida.md), o [guia da palestra](guia-da-palestra.md) e as [fontes](fontes.md).
 
 ## Arquitetura-base e caminho dos dados
 
@@ -47,6 +47,47 @@ Na fonte histórica do encontro #04, o coletor é Promtail. A documentação ofi
 
 Grafana consulta Prometheus e Loki para apresentar painéis. Grafana MCP é um servidor separado, cujo catálogo e poderes dependem da versão, configuração e credenciais. O MCP de domínio oferece operações específicas da aplicação; autenticação, autorização e validação precisam acompanhar cada ferramenta.[1][5][10]
 
+## Onde o Hermes entra na monitoria
+
+O agente consulta sistemas que já coletam e armazenam a telemetria. Para investigar um aumento de erros, você precisa relacionar os sinais ao período, à versão da aplicação e ao contexto do produto. O MCP do Grafana oferece um caminho para a observabilidade, enquanto o MCP do sistema oferece dados do domínio; eles não substituem um ao outro.
+
+```mermaid
+flowchart LR
+    subgraph observado["Aplicação e observabilidade"]
+        app["Aplicação e dados de domínio"]
+        prom["Prometheus: métricas"]
+        loki["Loki: logs"]
+        grafana["Grafana: consulta das fontes"]
+        gmcp["MCP do Grafana"]
+        dmcp["MCP do sistema"]
+        prom -->|"Resultados de consultas"| grafana
+        loki -->|"Resultados de consultas"| grafana
+        gmcp <--> grafana
+        dmcp <--> app
+    end
+    subgraph operacao["Ambiente do Hermes: separado do sistema observado"]
+        entrada["Pedido, agendamento ou evento validado"]
+        fila["Fila e controle de duplicidade"]
+        worker["Worker: chama o Hermes"]
+        contexto["Memória, base e skills pertinentes"]
+        agente["Hermes: investigação autorizada"]
+        diagnostico["Diagnóstico: evidências e hipóteses"]
+        entrada --> fila --> worker --> agente
+        contexto --> agente --> diagnostico
+    end
+    agente <-->|"Consulta de observabilidade"| gmcp
+    agente <-->|"Consulta de domínio"| dmcp
+    diagnostico --> alerta["Report ou alerta no canal autorizado"]
+    diagnostico -.-> proposta["Proposta de mudança em branch e PR"]
+    proposta -.-> revisao["Revisão humana antes de merge e release"]
+```
+
+[Abrir a arquitetura de monitoria em SVG](diagramas/observabilidade-e-manutencao-02.svg).
+
+Este é um desenho de referência, sem afirmação de automação ativada. As ligações de consulta mostram acesso aos dois MCPs; a saída de alerta comunica o diagnóstico, e a trilha tracejada encaminha uma mudança para revisão. Não há uma ligação direta do diagnóstico a uma alteração em produção.
+
+Fila, worker e controles de execução são responsabilidades da integração proposta, não serviços que o simples cadastro de um MCP cria. Verifique o que o seu gateway oferece e o que precisa ser implementado. Um agendamento também pode executar apenas um script determinístico; use o modelo quando houver interpretação ou investigação que justifique essa etapa.[26][27]
+
 ## Como iniciar uma investigação
 
 No encontro #04, alerta do Grafana → webhook → agente aparece como próximo passo. A sequência abaixo é uma proposta ilustrativa de integração, sem afirmação de acionamento automático ativo.
@@ -54,7 +95,7 @@ No encontro #04, alerta do Grafana → webhook → agente aparece como próximo 
 1. Escolha um disparador: pedido humano, job programado ou evento entregue a um receiver.
 2. Para alertas gerenciados pelo Grafana, configure um contact point webhook; para regras Prometheus, uma alternativa é encaminhar por Alertmanager.[4][14]
 3. Valide autenticação/assinatura, schema, tamanho, ambiente e idade do evento quando houver timestamp assinado. Registre e deduplique antes de enfileirar.[4]
-4. O worker chama o agente com serviço, janela temporal, objetivo, orçamento e ferramentas autorizadas. Um MCP de consulta, por si, não inicia o job nem entrega reports automaticamente.[10]
+4. O worker chama o agente com serviço, janela temporal, objetivo, orçamento e ferramentas autorizadas. Um MCP de consulta, por si, não inicia o job nem entrega reports automaticamente. Confira a compatibilidade da assinatura e do payload do emissor com o receiver; Grafana → Hermes pode exigir um adapter autenticado.[10][27]
 5. Descubra ferramentas, datasources e nomes de métricas disponíveis. Consulte erro, latência, saturação e logs do mesmo período; registre última amostra e consultas truncadas.
 6. Separe evidências, hipótese e alternativas. Produza diagnóstico ou proposta de mudança; para intervir, confira o runbook e o executor autorizado.
 7. Depois da ação, leia o alvo e verifique comportamento e telemetria. Registre o resultado ou escale a investigação quando a evidência continuar insuficiente.
@@ -63,7 +104,7 @@ Você pode usar o mesmo procedimento preventivamente para investigar crescimento
 
 ## Reports, PR e aprovação
 
-Blueprint proposto para o MentorIA, com exemplos fictícios. A pilha usada no ensino do SCSI não certifica a implantação do MentorIA. Aqui, um evento implementado no produto ou um job de coleta chama o agente, que consulta o report pelo MCP de domínio.
+Blueprint proposto para o MentorIA, com exemplos fictícios de bugs e melhorias. A pilha usada no ensino do SCSI não certifica a implantação do MentorIA. Aqui, um evento implementado no produto ou um job de coleta chama o agente, que consulta o report pelo MCP de domínio. O fluxo completo até merge, deploy e confirmação não é apresentado como manutenção autônoma ativa em produção.
 
 Para exercitar os gates sem rede, consulte o [laboratório local de revisão](../exemplos/fluxo_revisao.py). Ele simula estados e decisões com dados fictícios, sem autenticar, abrir PRs, enviar mensagens ou executar deploy.
 
@@ -90,7 +131,7 @@ flowchart TD
     verifica -->|Sim| concluir["Atualizar report e reler o alvo"]
 ```
 
-[Abrir o fluxo de reports e aprovação em SVG](diagramas/observabilidade-e-manutencao-02.svg).
+[Abrir o fluxo de reports e aprovação em SVG](diagramas/observabilidade-e-manutencao-03.svg).
 
 Todo o diagrama é uma proposta ilustrativa. A implementação sugerida separa as responsabilidades:
 
@@ -144,4 +185,6 @@ A verificação também deve acompanhar o disparador e a fila. Uma checagem exte
 [16] https://docs.docker.com/engine/swarm/secrets | Manage sensitive data with Docker secrets\
 [17] https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments | Deployments and environments | GitHub\
 [18] https://doc.traefik.io/traefik/v3.5/reference/install-configuration/tls/certificate-resolvers/acme | ACME | Traefik v3.5\
-[19] https://doc.traefik.io/traefik/v3.5/reference/install-configuration/providers/swarm | Traefik & Docker Swarm | Traefik v3.5
+[19] https://doc.traefik.io/traefik/v3.5/reference/install-configuration/providers/swarm | Traefik & Docker Swarm | Traefik v3.5\
+[26] https://hermes-agent.nousresearch.com/docs/user-guide/features/cron | Scheduled Tasks | Hermes Agent\
+[27] https://hermes-agent.nousresearch.com/docs/user-guide/messaging/webhooks | Webhooks | Hermes Agent

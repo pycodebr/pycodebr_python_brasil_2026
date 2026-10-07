@@ -1,0 +1,42 @@
+[
+  {
+    "filename": "mcp-icon-white.svg",
+    "brand": "Model Context Protocol",
+    "source": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/8e12bf3c8f01f374146acfa19b8ece0018bfc86c/docs/logo/dark.svg",
+    "source_type": "símbolo isolado do lockup oficial",
+    "source_sha256": "ae239dea9d037a331575487390bf900d6baacf896991185b3dd861ac4b9941d5",
+    "sha256": "dc621e1ceae70d0a8c82d45f3b31e09af40cf4c754735568cf22eb8f7e4254e2",
+    "transformations": ["Somente width, height e viewBox da raiz foram ajustados para isolar o símbolo; paths, cores e strokes permanecem idênticos."],
+    "license_notice": "Marca pertencente ao titular; a origem pública não concede licença adicional sobre a marca."
+  },
+  {
+    "filename": "langchain-icon-legacy-blue.svg",
+    "brand": "LangChain",
+    "source": "https://raw.githubusercontent.com/langchain-ai/langchain/7ca02f333aa6d5e4cf566a2dcc444d06758e2958/.github/images/logo-dark.svg",
+    "source_type": "símbolo da variante histórica oficial",
+    "source_sha256": "52a940d301023ee2175897bcee546715ee86f968e8a4bf69290f002d330740fa",
+    "sha256": "52b37fe23c0ff710d4ae99949bf17f12981f758f30a51b6768d3386d1ab0510e",
+    "transformations": ["Somente o viewport da raiz foi limitado ao símbolo quadrado; a arte, as cores e a placa originais foram preservadas."],
+    "license_notice": "Marca pertencente ao titular; a origem pública não concede licença adicional sobre a marca."
+  },
+  {
+    "filename": "langgraph-icon-blue.svg",
+    "brand": "LangGraph",
+    "source": "https://cdn.prod.website-files.com/65b8cd72835ceeacd4449a53/6a9998494f7b532d49a38525_langchain-brand-assets.zip",
+    "zip_member": "langchain-brand-assets/:logos:OSS/SVG/Light/LangGraph_OSS Lockup_light.svg",
+    "source_type": "símbolo isolado do kit oficial de marca",
+    "source_sha256": "ae233ae698ba70f316ca6ded63d7d6e7707ab84bc3ccc75c6a5e5a732fb3988f",
+    "sha256": "fbffa86bfa67ede40a4939536b3bf442e06a7ad3a1fb8aa64fa6a07fb3b61a90",
+    "transformations": ["Somente width, height e viewBox da raiz foram limitados à placa 100×100; paths e cores originais foram preservados."],
+    "license_notice": "Marca pertencente ao titular; a origem pública não concede licença adicional sobre a marca."
+  },
+  {
+    "filename": "openclaw-official.svg",
+    "brand": "OpenClaw",
+    "source": "https://openclaw.ai/favicon.svg",
+    "source_type": "favicon do site oficial",
+    "sha256": "fa7e2ec07ebfa696bcc8c27d7e36425cbb7b1772f6f7f04ce390cf5f1c35cf0e",
+    "transformations": [],
+    "license_notice": "Marca pertencente ao titular; usada para identificação didática."
+  }
+]

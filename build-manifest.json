@@ -20,6 +20,11 @@
     "sha256": "ed102562e49ca3ea6e7d79ea10d54360dbecc5beb33de6a60fa578b6c0fac803"
   },
   {
+    "path": "assets/architecture-v3.css",
+    "bytes": 14404,
+    "sha256": "5f98930d5f4507ef6fb156dd9e42b549f58673ece6abbb23a399f30957ae2d4e"
+  },
+  {
     "path": "assets/audience-qr.png",
     "bytes": 3726,
     "sha256": "4c9b73f823b87d1ac70b6e66edd6bf7e21890729001a07770788fef32e14590d"
@@ -95,6 +100,11 @@
     "sha256": "f53af2d1fc5292ba1433b5c1faf50005ce6a997fa302d1816989929f379a59dc"
   },
   {
+    "path": "assets/langchain-icon-legacy-blue.svg",
+    "bytes": 4062,
+    "sha256": "52b37fe23c0ff710d4ae99949bf17f12981f758f30a51b6768d3386d1ab0510e"
+  },
+  {
     "path": "assets/langchain-logo-dark.svg",
     "bytes": 4026,
     "sha256": "52a940d301023ee2175897bcee546715ee86f968e8a4bf69290f002d330740fa"
@@ -105,9 +115,19 @@
     "sha256": "fd2e8cb873e0de708044b7719417b7220b0a79d5f20087431b87002a56ac9d5b"
   },
   {
+    "path": "assets/langgraph-icon-blue.svg",
+    "bytes": 4817,
+    "sha256": "fbffa86bfa67ede40a4939536b3bf442e06a7ad3a1fb8aa64fa6a07fb3b61a90"
+  },
+  {
     "path": "assets/loki-logo.svg",
     "bytes": 4964,
     "sha256": "f80204863f46cda4ef4f5da0ced6457358df3773e6599ae2bd12189c9d4e3414"
+  },
+  {
+    "path": "assets/mcp-icon-white.svg",
+    "bytes": 16835,
+    "sha256": "dc621e1ceae70d0a8c82d45f3b31e09af40cf4c754735568cf22eb8f7e4254e2"
   },
   {
     "path": "assets/mcp-logo-dark.svg",
@@ -135,6 +155,11 @@
     "sha256": "a595df6b423920c67a7f8f73c063e4bfb72d415948097b6cac063a2366bb5186"
   },
   {
+    "path": "assets/openclaw-official.svg",
+    "bytes": 1194,
+    "sha256": "fa7e2ec07ebfa696bcc8c27d7e36425cbb7b1772f6f7f04ce390cf5f1c35cf0e"
+  },
+  {
     "path": "assets/opencode-logo-dark.svg",
     "bytes": 593,
     "sha256": "5dd4abb4de60204510edf140bbe74b3580d07ebdda79fdb0081cd45acb53d44b"
@@ -151,8 +176,8 @@
   },
   {
     "path": "assets/presentation.js",
-    "bytes": 18593,
-    "sha256": "88371ac171654bd8ea141d6c37c0a27da9278877407668fc0cfbc68a9b2c3119"
+    "bytes": 19796,
+    "sha256": "7c080c23faf7664a6d6bcbe35f018e8e772f080efe2e13c135ea8c25bf6b30c3"
   },
   {
     "path": "assets/prometheus-logo.svg",
@@ -195,6 +220,11 @@
     "sha256": "4707378b190878f36f7e6e1c01fa3ee7e7884c76101809d191dddd943a2e6bdb"
   },
   {
+    "path": "assets/revision-v3.css",
+    "bytes": 12132,
+    "sha256": "ba0f84e2f28d90b481049d512370fc0e7d79dac1f59b00aad329899264202bb7"
+  },
+  {
     "path": "assets/slides-qr.png",
     "bytes": 3660,
     "sha256": "0bab6937c0d792d7fd9f4946352b1d4635f1449ad2d03990c0617a2cf3d345c6"
@@ -211,17 +241,17 @@
   },
   {
     "path": "downloads/agentes-autonomos-hermes-python-brasil-2026.pdf",
-    "bytes": 7328877,
-    "sha256": "ec0fd4e2a77eba9c75523fd128cedecb1c1787ead0a9ec06b8f30946d331c182"
+    "bytes": 9081923,
+    "sha256": "02f7b8b046c24bc593234e37bd8abee3717be0706225590a9b0343a2dc6c44ac"
   },
   {
     "path": "downloads/agentes-autonomos-hermes-python-brasil-2026.pptx",
-    "bytes": 10201944,
-    "sha256": "292de6c5de7b59a71422c28d8fd6251c4c62fc4030524ce5363cc120bb9ff33e"
+    "bytes": 13935725,
+    "sha256": "277a81b54ecc265b5c04c42c83b71d9589dcb659e2af5cbb147e7d01376ac769"
   },
   {
     "path": "index.html",
-    "bytes": 46290,
-    "sha256": "a0b277150490cfe83b2c41b8ade904378f9c69fea4ab0f71ff342bc71e2407be"
+    "bytes": 63200,
+    "sha256": "7954dcca826ab5cf86c7e0fa10fafd902c98e260a6804ffe0124da78be174a84"
   }
 ]

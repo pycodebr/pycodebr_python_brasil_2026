@@ -1,0 +1,112 @@
+/* Revision 3 extends the approved visual language without replacing it. */
+.logo{object-fit:contain;flex-shrink:0}
+.brand-wordmark{width:150px!important;height:62px!important;object-fit:contain}
+.year-scene{gap:23px}
+.year-path{display:flex;align-items:center;gap:20px;color:#6e93a8;font:25px var(--mono);flex:none}
+.year-path i{height:1px;flex:1;background:#34576b}
+.year-path span{padding:8px 14px;border-radius:8px;border:1px solid transparent}
+.year-2022 .year-path span:nth-of-type(1),.year-2023 .year-path span:nth-of-type(2),.year-2024 .year-path span:nth-of-type(3),.year-2025 .year-path span:nth-of-type(4),.year-2026 .year-path span:nth-of-type(5){color:var(--accent);border-color:var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--bg))}
+.year-two{display:grid;grid-template-columns:1fr 1fr;gap:50px;flex:1;min-height:0}
+.conversation-object,.application-object,.visual-workflow,.agent-loop-object{padding:32px;border:1px solid #3c6881;border-radius:24px;background:linear-gradient(135deg,#153349,#071520);min-width:0}
+.year-brand{display:flex;align-items:center;gap:24px;min-width:0}
+.year-brand .logo{width:76px;height:76px}
+.year-brand h3{font-size:38px;line-height:1.14;font-weight:400;letter-spacing:-.03em}
+.year-brand span{display:block;color:var(--muted);font-size:23px;line-height:1.3;margin-top:10px}
+.chat-paper{margin-top:35px;display:flex;flex-direction:column;gap:20px}
+.chat-paper p{font-size:30px;line-height:1.4;padding:22px 28px;border-radius:18px;max-width:90%}
+.chat-prompt{background:#244357;align-self:flex-end}
+.chat-response{background:#122923;border:1px solid #386d57}
+.year-caption{font-size:26px;line-height:1.4;color:var(--muted);margin-top:28px}
+.year-chain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:center;padding-top:35px}
+.year-chain .network-node{padding:23px 15px;box-shadow:none;min-width:0}
+.year-chain .network-node h3{font-size:25px}
+.year-chain .network-node p{font-size:21px;margin-top:12px}
+.application-object .network{min-height:190px;flex:none}
+.workflow-vs-agent{display:grid;grid-template-columns:1.12fr 1fr;gap:48px;flex:1;min-height:0}
+.visual-workflow>h3,.agent-loop-object>h3{font-size:38px;line-height:1.2;font-weight:400}
+.flow-brands{display:flex;align-items:center;gap:30px;margin-top:28px}
+.flow-brands img{width:72px;height:72px;object-fit:contain}
+.flow-steps{display:flex;align-items:center;gap:19px;margin:35px 0 28px}
+.flow-steps>div{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:18px;padding:25px 13px;border:1px solid #66899b;border-radius:13px;background:#142d3b;font-size:27px}
+.flow-steps .icon{width:40px;height:40px;color:var(--yellow)}
+.flow-steps .step-arrow{width:24px}
+.visual-workflow>p,.agent-loop-object>p,.protocol-story>div>p{font-size:27px;line-height:1.4;color:var(--muted)}
+.loop-diagram{position:relative;width:100%;height:272px;display:grid;place-items:center;margin:13px 0}
+.loop-diagram svg{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--yellow);stroke-width:2}
+.loop-trace{stroke-dasharray:10 9;animation:packets 7s linear infinite}
+.loop-core{border:1px solid #bca94d;border-radius:50%;width:140px;height:140px;display:grid;place-items:center;background:#343120;font:27px var(--mono);color:var(--yellow)}
+.loop-label{position:absolute;font-size:23px;line-height:1.3;padding:8px 12px;background:#0b1c28;border:1px solid #46677b;border-radius:8px}
+.loop-top{top:7px;left:50%;transform:translateX(-50%)}
+.loop-bottom{bottom:8px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.loop-left{left:0;top:42%}.loop-right{right:0;top:42%}
+.protocol-story{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;flex:1;min-height:0}
+.protocol-story>div{padding:30px;border:1px solid #50738c;border-radius:22px;background:linear-gradient(150deg,#153447,#091720)}
+.protocol-story .year-brand{flex-direction:column;align-items:flex-start;gap:23px}
+.protocol-story .year-brand .logo{width:90px;height:90px}
+.protocol-story .year-brand .brand-wordmark{width:175px!important;height:90px!important;object-position:left center}
+.state-machine{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin:30px 0 25px;font-size:25px}
+.state-machine>span{padding:16px 20px;background:#183d3e;border:1px solid #69918a;border-radius:10px}
+.state-machine .step-arrow{width:25px}
+.return-path{display:flex;align-items:center;gap:15px;width:100%;font-size:22px;color:var(--lime);margin-top:16px}
+.return-path .icon{width:29px;height:29px;flex:none}
+.builder-nodes{display:grid;grid-template-columns:1fr 1fr;gap:20px;position:relative;margin:38px 0 30px}
+.builder-nodes span{padding:17px;text-align:center;border:1px solid #76886b;border-radius:10px;font-size:24px;background:#203531}
+.builder-nodes span:last-child{grid-column:1/-1}
+.protocol-plug{display:flex;gap:20px;align-items:center;margin:40px 0 30px;font-size:25px;line-height:1.4}
+.protocol-plug .icon{width:54px;height:54px;flex:none;color:var(--lime)}
+.project-era{display:grid;grid-template-columns:1.12fr 1fr;gap:65px;flex:1;min-height:0;align-items:center}
+.project-terminal{position:relative;overflow:hidden;border:1px solid #776a99;border-radius:17px;background:#06131f;box-shadow:20px 23px 0 #221e3677}
+.project-terminal .terminal-bar{height:42px;background:#211e33}
+.project-files{font:27px/1.5 var(--mono);color:var(--purple);padding:25px 30px}
+.project-files span{display:block}
+.terminal-task{padding:25px 30px;border-top:1px solid #3e415b;font:26px/1.5 var(--mono);color:#e0e2f4}
+.terminal-task p{font:23px/1.5 var(--font);margin-top:20px;color:var(--muted)}
+.terminal-caption{display:block;font-size:19px;color:#7e9aad;padding:0 30px 24px}
+.cli-milestones{display:flex;flex-direction:column;gap:24px}
+.cli-release,.skill-release{display:flex;align-items:center;gap:25px;padding:25px 28px;border-top:1px solid #8274a4;background:linear-gradient(90deg,#28233e88,transparent)}
+.cli-release .logo,.skill-release .icon{width:70px;height:70px;object-fit:contain;flex:none}
+.skill-release .icon{color:var(--purple)}
+.cli-release h3,.skill-release h3{font-size:34px;line-height:1.15;font-weight:400}
+.cli-release p,.skill-release p{font-size:25px;line-height:1.4;color:var(--muted);margin-top:12px}
+.knowledge-shelf{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;flex:1;min-height:0}
+.knowledge-file{position:relative;padding:31px 34px;border:1px solid #766a97;border-radius:15px 28px 15px 15px;background:linear-gradient(140deg,#292841,#0c1d2b);box-shadow:10px 13px 0 #17162b;min-width:0}
+.knowledge-file[data-memory-kind=context]{border-color:#5a92aa;background:linear-gradient(140deg,#143d4f,#0c1d2b)}
+.knowledge-file[data-memory-kind=skill]{border-color:#a68c4c;background:linear-gradient(140deg,#3d3423,#0c1d2b)}
+.file-tab{display:flex;align-items:center;gap:17px;padding-bottom:22px;border-bottom:1px solid #8194ab66;font:24px var(--mono);color:var(--accent)}
+.file-tab .icon{width:37px;height:37px;flex:none}
+.knowledge-file h3{font-size:34px;line-height:1.15;font-weight:400;letter-spacing:-.02em;margin-top:24px}
+.knowledge-file p{font-size:27px;line-height:1.4;color:#d4e3ed;margin-top:18px}
+.file-example{display:block;font-size:22px;line-height:1.4;color:var(--muted);margin-top:20px}
+.reuse-example{padding:22px 27px;border:1px solid #526682;border-radius:15px;background:#0d2030;display:grid;grid-template-columns:390px 1fr;gap:16px 35px;flex:none}
+.reuse-example .memory-controls{gap:12px;align-items:center}
+.reuse-example .memory-controls button{font-size:22px;padding:14px 19px;white-space:nowrap}
+.reuse-evidence{display:flex;align-items:center;gap:17px;justify-content:space-between;min-width:0}
+.reuse-evidence span{padding:12px 17px;border:1px solid #6c6781;border-radius:10px;font-size:24px;background:#29273e;line-height:1.2;flex:1;text-align:center;min-width:0}
+.reuse-evidence .icon{width:24px;height:24px;flex:none;color:var(--purple)}
+.reuse-example .memory-message{grid-column:1/-1;font-size:27px;line-height:1.38;min-height:0;max-width:none}
+/* Keep new teaching objects readable in the existing vertical reading mode. */
+body.reading .year-path{gap:7px;font-size:14px;max-width:100%}
+body.reading .year-path span{padding:7px 5px}body.reading .year-path i{min-width:3px}
+body.reading .year-two,body.reading .workflow-vs-agent,body.reading .protocol-story,body.reading .project-era,body.reading .knowledge-shelf{grid-template-columns:minmax(0,1fr);gap:28px}
+body.reading .conversation-object,body.reading .application-object,body.reading .visual-workflow,body.reading .agent-loop-object,body.reading .protocol-story>div{padding:23px;min-width:0}
+body.reading .year-brand{gap:17px}body.reading .year-brand h3{font-size:27px}body.reading .year-brand span{font-size:16px;margin-top:8px}body.reading .year-brand .logo{width:55px;height:55px}
+body.reading .brand-wordmark{width:95px!important;height:48px!important}
+body.reading .application-object .year-brand{flex-wrap:wrap}
+body.reading .year-caption{font-size:19px;margin-top:20px}
+body.reading .chat-paper{gap:15px;margin-top:25px}body.reading .chat-paper p{font-size:21px;padding:18px;max-width:95%}
+body.reading .year-chain{grid-template-columns:minmax(0,1fr);gap:22px;padding-top:25px}
+body.reading .year-chain .network-node{padding:20px}body.reading .year-chain .network-node h3{font-size:23px}body.reading .year-chain .network-node p{font-size:18px}
+body.reading .visual-workflow>h3,body.reading .agent-loop-object>h3{font-size:29px}
+body.reading .flow-brands{gap:23px;margin-top:23px}body.reading .flow-brands img{width:48px;height:48px}
+body.reading .flow-steps{gap:10px;flex-wrap:wrap;margin:26px 0 23px}body.reading .flow-steps>div{padding:18px 10px;font-size:17px;gap:13px}body.reading .flow-steps .icon{width:28px;height:28px}body.reading .flow-steps .step-arrow{width:14px}
+body.reading .visual-workflow>p,body.reading .agent-loop-object>p,body.reading .protocol-story>div>p{font-size:19px}
+body.reading .loop-diagram{height:240px}body.reading .loop-label{font-size:16px;padding:8px}body.reading .loop-core{width:100px;height:100px;font-size:21px}
+body.reading .protocol-story .year-brand{flex-direction:row;gap:20px}body.reading .protocol-story .year-brand .brand-wordmark{width:86px!important;height:58px!important}
+body.reading .state-machine{font-size:18px;gap:13px;margin:24px 0}body.reading .state-machine>span{padding:14px}body.reading .return-path{font-size:17px;gap:13px}
+body.reading .builder-nodes{gap:15px;margin:28px 0}body.reading .builder-nodes span{font-size:19px;padding:16px}
+body.reading .protocol-plug{font-size:20px;margin:27px 0;gap:20px}body.reading .protocol-plug .icon{width:40px;height:40px}
+body.reading .project-files{font-size:22px;padding:24px}body.reading .terminal-task{padding:24px;font-size:20px}body.reading .terminal-task p{font-size:18px}body.reading .terminal-caption{font-size:14px;padding:0 24px 24px}
+body.reading .project-terminal{box-shadow:10px 12px 0 #221e3677}
+body.reading .cli-release,body.reading .skill-release{padding:22px 15px;gap:20px}body.reading .cli-release h3,body.reading .skill-release h3{font-size:26px}body.reading .cli-release p,body.reading .skill-release p{font-size:18px}body.reading .cli-release .logo,body.reading .skill-release .icon{width:48px;height:48px}
+body.reading .knowledge-file{padding:25px;box-shadow:6px 9px 0 #17162b}body.reading .file-tab{font-size:20px;gap:15px;padding-bottom:19px}body.reading .file-tab .icon{width:30px;height:30px}body.reading .knowledge-file h3{font-size:28px;margin-top:21px}body.reading .knowledge-file p{font-size:20px;margin-top:15px}body.reading .file-example{font-size:17px;margin-top:17px}
+body.reading .reuse-example{grid-template-columns:minmax(0,1fr);padding:21px;gap:20px}body.reading .reuse-example .memory-controls button{font-size:16px;padding:13px 14px}body.reading .reuse-evidence{flex-direction:column;align-items:stretch;gap:12px}body.reading .reuse-evidence span{font-size:18px;padding:14px 17px}body.reading .reuse-evidence .icon{align-self:center;transform:rotate(90deg)}body.reading .reuse-example .memory-message{font-size:20px}

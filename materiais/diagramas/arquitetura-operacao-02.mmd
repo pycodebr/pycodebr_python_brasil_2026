@@ -1,0 +1,9 @@
+flowchart TD
+    tarefa["Demanda atual"] --> recuperar["Recuperar contexto pertinente"]
+    memoria["Memória: fatos selecionados"] --> recuperar
+    base["Base: documentos e histórico"] --> recuperar
+    skill["Skill: procedimento revisado"] --> recuperar
+    recuperar --> executar["Executar e verificar"]
+    executar --> licao{"Há uma correção validada e reutilizável?"}
+    licao -->|"Sim"| revisar["Revisar a skill e testar o procedimento"]
+    revisar --> skill

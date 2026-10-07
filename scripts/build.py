@@ -9,7 +9,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-from presentation_content import INTERACTIONS, SLIDES
+from presentation_content import (
+    INTERACTIONS,
+    QUESTIONS_SECONDS,
+    REVISION,
+    SCENE_COUNT,
+    SLIDES,
+)
 from scene_helpers import PUBLIC_URL, REPOSITORY, icon
 
 TITLE = "Agentes Autônomos de IA com Hermes Agent"
@@ -22,8 +28,8 @@ def require(condition: bool, message: str) -> None:
 
 
 def main() -> None:
-    require(len(SLIDES) == 18, "The concise deck must have 18 scenes")
-    require(len({s["id"] for s in SLIDES}) == 18, "Duplicate slide IDs")
+    require(len(SLIDES) == SCENE_COUNT, "Unexpected number of scenes")
+    require(len({s["id"] for s in SLIDES}) == SCENE_COUNT, "Duplicate slide IDs")
     require(sum(s["seconds"] for s in SLIDES) == 2700, "Timing must include 40 minutes plus 5 for questions")
     require([s["id"] for s in SLIDES[:4]] == ["capa", "felipe", "pycodebr", "acompanhe"], "Opening order mismatch")
     site = ROOT / "site"
@@ -43,13 +49,15 @@ def main() -> None:
         )
     css_hash = hashlib.sha256((site / "assets/presentation.css").read_bytes()).hexdigest()[:12]
     js_hash = hashlib.sha256((site / "assets/presentation.js").read_bytes()).hexdigest()[:12]
+    revision_css_hash = hashlib.sha256((site / "assets/revision-v3.css").read_bytes()).hexdigest()[:12]
+    architecture_css_hash = hashlib.sha256((site / "assets/architecture-v3.css").read_bytes()).hexdigest()[:12]
     payload = json.dumps(INTERACTIONS, ensure_ascii=False).replace("</", "<\\/")
     markup = f'''<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#03090e">
 <title>{TITLE} | Felipe Azambuja · Python Brasil 2026</title>
 <meta name="description" content="Slides e materiais da palestra de Felipe Azambuja: Hermes Agent, memória, auto skills, workflow de IA assistida e observabilidade com agentes.">
 <link rel="canonical" href="{PUBLIC_URL}"><meta property="og:title" content="{TITLE}"><meta property="og:type" content="website"><meta property="og:url" content="{PUBLIC_URL}"><meta property="og:description" content="Python Brasil 2026 · Felipe Azambuja · PycodeBR"><link rel="icon" href="assets/python-icon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/Geist-Latin-300.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/presentation.css?v={css_hash}">
+<link rel="preload" href="assets/Geist-Latin-300.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="assets/presentation.css?v={css_hash}"><link rel="stylesheet" href="assets/revision-v3.css?v={revision_css_hash}"><link rel="stylesheet" href="assets/architecture-v3.css?v={architecture_css_hash}">
 </head><body>
 <main id="viewport" aria-label="Apresentação da Python Brasil"><div id="frame"><div id="deck">{''.join(sections)}</div></div></main>
 <nav id="toolbar" aria-label="Controles da apresentação"><button id="previous" class="nav-arrow" aria-label="Slide anterior">{icon('back')}</button><span id="counter" aria-live="polite"></span><button id="next" class="nav-arrow" aria-label="Próximo slide">{icon('arrow')}</button><select id="jump" aria-label="Ir para o slide"></select><button id="open-overview">Índice</button><a class="desktop-only" href="{REPOSITORY}#materiais" target="_blank" rel="noopener noreferrer">Materiais</a><button id="timer" class="meter desktop-only" aria-pressed="false" title="Clique para iniciar/pausar; clique duplo zera. Conteúdo: 40 min; perguntas: 5 min.">00:00</button><button id="open-menu" aria-label="Abrir opções e downloads">Opções</button></nav><div id="progress"></div>
@@ -58,12 +66,13 @@ def main() -> None:
 <div id="blank" aria-hidden="true"></div><noscript>Ative o JavaScript para navegar ou baixe o <a href="downloads/{DOWNLOAD_NAME}.pdf">PDF</a>.</noscript>
 <script id="interaction-data" type="application/json">{payload}</script><script src="assets/presentation.js?v={js_hash}"></script></body></html>
 '''
+    markup = markup.replace('.pdf?v=2', f'.pdf?v={REVISION}').replace('.pptx?v=2', f'.pptx?v={REVISION}')
     (site / "index.html").write_text(markup)
-    data = {"title": TITLE, "url": PUBLIC_URL, "repository": REPOSITORY, "revision": 2, "slides": SLIDES, "interactions": INTERACTIONS}
+    data = {"title": TITLE, "url": PUBLIC_URL, "repository": REPOSITORY, "revision": REVISION, "questions_seconds": QUESTIONS_SECONDS, "slides": SLIDES, "interactions": INTERACTIONS}
     (ROOT / "src/content.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
     manifest = [{"path": p.relative_to(site).as_posix(), "bytes": p.stat().st_size, "sha256": hashlib.sha256(p.read_bytes()).hexdigest()} for p in sorted(site.rglob("*")) if p.is_file()]
     (ROOT / "build-manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
-    print(json.dumps({"slides": len(SLIDES), "planned_seconds": sum(s["seconds"] for s in SLIDES), "questions_seconds": 300, "site_files": len(manifest), "revision": 2}, ensure_ascii=False))
+    print(json.dumps({"slides": len(SLIDES), "planned_seconds": sum(s["seconds"] for s in SLIDES), "questions_seconds": QUESTIONS_SECONDS, "site_files": len(manifest), "revision": REVISION}, ensure_ascii=False))
 
 
 if __name__ == "__main__":

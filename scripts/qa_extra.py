@@ -20,7 +20,13 @@ def require(condition, message):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--url', default=(ROOT / 'site/index.html').as_uri())
+    parser.add_argument('--label', default='revision-v3')
     args = parser.parse_args()
+    output = ROOT / 'qa' / args.label
+    output.mkdir(parents=True, exist_ok=True)
+    content = json.loads((ROOT / 'src/content.json').read_text())
+    count = len(content['slides'])
+    workflow_number = next(s['number'] for s in content['slides'] if s['id'] == 'workflow')
     result = {'qr_codes':[], 'touchscreen':False, 'fullscreen':False}
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -38,24 +44,24 @@ def main():
             require(decoded==expected,'Rendered QR failed: '+str(slide_number))
             result['qr_codes'].append({'slide':slide_number,'destination':decoded,'rendered_on_mobile':True})
         page.locator('#next').tap()
-        require(page.locator('#counter').inner_text()=='4 / 18','Touch next failed')
+        require(page.locator('#counter').inner_text()==f'4 / {count}','Touch next failed')
         page.locator('#open-overview').tap()
-        page.locator('#overview-list button').nth(10).tap()
-        require(page.locator('#counter').inner_text()=='11 / 18','Touch overview failed')
+        page.locator('#overview-list button').nth(workflow_number-1).tap()
+        require(page.locator('#counter').inner_text()==f'{workflow_number} / {count}','Touch overview failed')
         page.locator('button[data-workflow-step="4"]').tap()
         require(page.locator('[data-step-number]').inner_text()=='05','Touch workflow failed')
         result['touchscreen']=True
         page.keyboard.press('PageDown')
-        require(page.locator('#counter').inner_text()=='12 / 18','PageDown failed after an interactive control')
+        require(page.locator('#counter').inner_text()==f'{workflow_number+1} / {count}','PageDown failed after an interactive control')
         page.keyboard.press('ArrowRight')
-        require(page.locator('#counter').inner_text()=='13 / 18','Arrow navigation failed after interaction')
+        require(page.locator('#counter').inner_text()==f'{workflow_number+2} / {count}','Arrow navigation failed after interaction')
         result['keyboard_after_interaction']=True
         page.evaluate('window.presentation.show(0)')
         page.wait_for_timeout(80)
         toolbar=page.locator('#toolbar').bounding_box()
         title=page.locator('.slide.active h1').bounding_box()
         require(title['y']>=toolbar['y']+toolbar['height'],'Toolbar covers the first heading')
-        page.screenshot(path=str(ROOT/'qa/mobile-ui-390.png'))
+        page.screenshot(path=str(output/'mobile-ui-390.png'))
         context.close()
         page=browser.new_page(viewport={'width':1440,'height':900})
         page.goto(args.url+'#1',wait_until='networkidle')
@@ -67,7 +73,7 @@ def main():
         result['fullscreen']=True
         browser.close()
     result['passed']=True
-    (ROOT/'qa/extra.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+    (output/'extra.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(result,ensure_ascii=False,indent=2))
 
 

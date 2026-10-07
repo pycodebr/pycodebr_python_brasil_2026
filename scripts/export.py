@@ -1,6 +1,7 @@
 """Export the presentation to searchable PDF and visual PowerPoint."""
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -25,7 +26,11 @@ def require(condition: bool, message: str) -> None:
 def main() -> None:
     content = json.loads((ROOT / 'src/content.json').read_text())
     slides = content['slides']
-    captures = ROOT / 'qa/exports/captures'
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--label', default=f'revision-v{content["revision"]}')
+    args = parser.parse_args()
+    output = ROOT / 'qa' / args.label / 'exports'
+    captures = output / 'captures'
     captures.mkdir(parents=True, exist_ok=True)
     downloads = ROOT / 'site/downloads'
     downloads.mkdir(exist_ok=True)
@@ -68,13 +73,13 @@ def main() -> None:
         pdf_comparisons.append({'slide':i+1,'mean_absolute_error':round(error,4)})
         require(error<5,f'PDF composition differs from the slide at {i+1}: {error}')
     for number in [1,3,4,11,13,16,18]:
-        pdf[number-1].get_pixmap(matrix=pymupdf.Matrix(1,1)).save(ROOT / f'qa/exports/pdf-{number:02d}.png')
+        pdf[number-1].get_pixmap(matrix=pymupdf.Matrix(1,1)).save(output / f'pdf-{number:02d}.png')
     pptx = Presentation()
     pptx.slide_width = Inches(20)
     pptx.slide_height = Inches(11.25)
     pptx.core_properties.title = content['title']
     pptx.core_properties.author = 'Felipe Azambuja · PycodeBR'
-    pptx.core_properties.subject = 'Python Brasil 2026 · revisão 2'
+    pptx.core_properties.subject = f'Python Brasil 2026 · revisão {content["revision"]}'
     pptx.core_properties.comments = 'Versão estática em imagens por slide. Animações e interações estão na apresentação HTML.'
     for i, item in enumerate(slides):
         slide = pptx.slides.add_slide(pptx.slide_layouts[6])
@@ -94,12 +99,12 @@ def main() -> None:
         sheet=Image.new('RGB',(1280,390*((len(paths)+1)//2)),'#03090e');draw=ImageDraw.Draw(sheet)
         for index,path in enumerate(paths):
             img=Image.open(path).convert('RGB');img.thumbnail((640,360));x=index%2*640;y=index//2*390;sheet.paste(img,(x,y));draw.text((x+12,y+365),path.stem,fill='white')
-        sheet.save(ROOT/f'qa/exports/contact-{start//6+1}.jpg',quality=92)
+        sheet.save(output/f'contact-{start//6+1}.jpg',quality=92)
     report={'slides':len(slides),'pdf_pages':len(pdf),'pdf_searchable':True,'pdf_visual_comparisons':pdf_comparisons,'pptx_slides':len(slides),'pptx_mode':'static full-bleed images','qr_codes_decoded':2,'files':[],'passed':True}
     for extension in ['pdf','pptx']:
         file=downloads/(NAME+'.'+extension)
         report['files'].append({'name':file.name,'bytes':file.stat().st_size,'sha256':hashlib.sha256(file.read_bytes()).hexdigest()})
-    (ROOT/'qa/exports/report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+    (output/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     pdf.close()
     print(json.dumps(report,ensure_ascii=False,indent=2))
 

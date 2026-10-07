@@ -1,20 +1,28 @@
-flowchart TD
-    origem["Evento ou job autorizado"] --> report["Report via MCP de domínio"]
-    report --> triagem["Triagem e critérios de aceite"]
-    triagem --> branch["Branch isolada, implementação e testes"]
-    branch --> pr["Review, correções, commit e PR"]
-    pr --> mensagem["Notificação privada a Felipe: PR e head SHA"]
-    mensagem --> aprovacao{"Felipe aprovou o PR e SHA atuais?"}
-    aprovacao -->|Ajustes solicitados| branch
-    aprovacao -->|Pendente| pendente["Aguardar decisão de Felipe"]
-    pendente --> aprovacao
-    aprovacao -->|Sim| checks{"CI e proteções satisfeitas?"}
-    checks -->|Não| branch
-    checks -->|Sim| merge["Merge e leitura de confirmação"]
-    merge --> politica{"Release autorizada para este ambiente?"}
-    politica -->|Não| aguarda["Aguardar autorização"]
-    aguarda --> politica
-    politica -->|Sim| deploy["Deploy do artefato aprovado"]
-    deploy --> verifica{"Versão e comportamento conferidos?"}
-    verifica -->|Não| recuperar["Escalonar e seguir runbook"]
-    verifica -->|Sim| concluir["Atualizar report e reler o alvo"]
+flowchart LR
+    subgraph observado["Aplicação e observabilidade"]
+        app["Aplicação e dados de domínio"]
+        prom["Prometheus: métricas"]
+        loki["Loki: logs"]
+        grafana["Grafana: consulta das fontes"]
+        gmcp["MCP do Grafana"]
+        dmcp["MCP do sistema"]
+        prom -->|"Resultados de consultas"| grafana
+        loki -->|"Resultados de consultas"| grafana
+        gmcp <--> grafana
+        dmcp <--> app
+    end
+    subgraph operacao["Ambiente do Hermes: separado do sistema observado"]
+        entrada["Pedido, agendamento ou evento validado"]
+        fila["Fila e controle de duplicidade"]
+        worker["Worker: chama o Hermes"]
+        contexto["Memória, base e skills pertinentes"]
+        agente["Hermes: investigação autorizada"]
+        diagnostico["Diagnóstico: evidências e hipóteses"]
+        entrada --> fila --> worker --> agente
+        contexto --> agente --> diagnostico
+    end
+    agente <-->|"Consulta de observabilidade"| gmcp
+    agente <-->|"Consulta de domínio"| dmcp
+    diagnostico --> alerta["Report ou alerta no canal autorizado"]
+    diagnostico -.-> proposta["Proposta de mudança em branch e PR"]
+    proposta -.-> revisao["Revisão humana antes de merge e release"]

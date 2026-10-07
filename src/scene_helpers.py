@@ -36,6 +36,13 @@ def icon(name: str, cls: str = "icon") -> str:
 
 
 def image(file: str, name: str, cls: str = "logo") -> str:
+    symbols = {
+        'mcp-logo-dark.svg': 'mcp-icon-white.svg',
+        'langchain-logo-dark.svg': 'langchain-icon-legacy-blue.svg',
+    }
+    if file in symbols:
+        file = symbols[file]
+        cls = cls.replace('brand-wordmark', 'brand-symbol')
     return f'<img class="{cls}" src="assets/{html.escape(file)}" alt="{html.escape(name, quote=True)}" loading="eager">'
 
 

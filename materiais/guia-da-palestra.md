@@ -9,10 +9,12 @@ Este guia acompanha a palestra de Felipe Azambuja, professor de programação e 
 - Veja a [apresentação local do repositório](../site/index.html).
 - Consulte os exports estáticos em [PDF](../site/downloads/agentes-autonomos-hermes-python-brasil-2026.pdf) e [PPTX](../site/downloads/agentes-autonomos-hermes-python-brasil-2026.pptx).
 - Pratique os cinco passos no [workflow de IA assistida](workflow-ia-assistida.md).
+- Entenda os marcos [OpenClaw e Hermes na linha do tempo](linha-do-tempo.md#openclaw-e-hermes-na-onda-de-assistentes-pessoais).
+- Desenhe os componentes e as permissões com o [guia de arquitetura da operação](arquitetura-operacao.md).
 - Estude a arquitetura e o fluxo de reports em [observabilidade e manutenção](observabilidade-e-manutencao.md).
 - Use as [fontes públicas agrupadas](fontes.md) para conferir mecanismos e versões.
 
-A palestra reserva 40 minutos para a exposição e 5 minutos para perguntas. Estes materiais desenvolvem os assuntos para estudo posterior, sem exigir contas ou acesso aos sistemas da PycodeBR.
+A revisão 3 da palestra tem 23 slides e reserva 40 minutos para a exposição e 5 minutos para perguntas. Estes materiais desenvolvem os assuntos para estudo posterior, sem exigir contas ou acesso aos sistemas da PycodeBR. Para executar integrações além do laboratório local, você precisará configurar seus próprios acessos autorizados.
 
 ## O que acontece entre o pedido e a entrega
 
@@ -43,9 +45,13 @@ Ao revisar uma entrega, procure o arquivo produzido, o comando executado ou o es
 
 Uma conversa contém detalhes da demanda atual. As regras do projeto registram convenções que precisam acompanhar outras tarefas. A memória guarda fatos e preferências selecionados entre sessões; no mecanismo nativo do Hermes, esse conteúdo entra no contexto no início da sessão.[21]
 
+A base de contexto conserva o detalhamento: documentos, decisões, fontes e histórico que você organiza em arquivos consultáveis, por exemplo numa base Markdown versionada. Ela precisa de índices e instruções de consulta; guardar um arquivo não garante que ele será recuperado em toda tarefa. Bancos de sessões e dados transacionais também têm funções próprias, separadas dessa documentação.
+
 Já uma skill descreve como realizar uma tarefa recorrente: quando usar, quais entradas reunir, como executar, quais problemas observar e como verificar. O Hermes carrega esse documento quando ele é pertinente, em vez de inserir todo o acervo em cada pedido.[20]
 
 Se você corrigiu um problema de scrape e descobriu uma particularidade do endpoint interno, vale registrar o procedimento validado. Na próxima investigação, a skill pode orientar a consulta e o teste; o estado atual do serviço ainda deve ser consultado.
+
+Por exemplo, uma publicação pode servir um PDF antigo mesmo depois de uma exportação nova. Após corrigir e testar a causa, registre numa skill a comparação entre o arquivo local e o download servido. Na tarefa seguinte, carregue esse procedimento e confira o endereço final antes de concluir. A memória pode guardar sua preferência de formato, enquanto a base conserva as fontes e as decisões da publicação. Esse reaproveitamento melhora o contexto disponível para aquela operação, sem atualizar os pesos do modelo nem garantir melhoria em qualquer tarefa.[20][21]
 
 ### Template de contexto reaproveitável
 
@@ -102,7 +108,7 @@ Proposta ilustrativa para um repositório de estudo, com dados fictícios e sem 
 4. Registre o procedimento que vale repetir e a condição que exige revisá-lo.
 5. Abra outra tarefa semelhante e confira se o contexto reaproveitado orienta a execução.
 
-O exercício permite observar quais instruções ficaram úteis, quais detalhes precisam ser consultados a cada vez e onde a verificação deve melhorar. As decisões de arquitetura e operação têm continuidade no [guia técnico](observabilidade-e-manutencao.md).
+O exercício permite observar quais instruções ficaram úteis, quais detalhes precisam ser consultados a cada vez e onde a verificação deve melhorar. Separe o fato curto que cabe na memória, o documento que pertence à base e o procedimento que vale registrar numa skill. As decisões de infraestrutura têm continuidade na [arquitetura da operação](arquitetura-operacao.md) e no [guia de observabilidade](observabilidade-e-manutencao.md).
 
 ## Origem dos ensinamentos
 

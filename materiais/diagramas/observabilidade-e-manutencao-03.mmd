@@ -1,0 +1,20 @@
+flowchart TD
+    origem["Evento ou job autorizado"] --> report["Report via MCP de domínio"]
+    report --> triagem["Triagem e critérios de aceite"]
+    triagem --> branch["Branch isolada, implementação e testes"]
+    branch --> pr["Review, correções, commit e PR"]
+    pr --> mensagem["Notificação privada a Felipe: PR e head SHA"]
+    mensagem --> aprovacao{"Felipe aprovou o PR e SHA atuais?"}
+    aprovacao -->|Ajustes solicitados| branch
+    aprovacao -->|Pendente| pendente["Aguardar decisão de Felipe"]
+    pendente --> aprovacao
+    aprovacao -->|Sim| checks{"CI e proteções satisfeitas?"}
+    checks -->|Não| branch
+    checks -->|Sim| merge["Merge e leitura de confirmação"]
+    merge --> politica{"Release autorizada para este ambiente?"}
+    politica -->|Não| aguarda["Aguardar autorização"]
+    aguarda --> politica
+    politica -->|Sim| deploy["Deploy do artefato aprovado"]
+    deploy --> verifica{"Versão e comportamento conferidos?"}
+    verifica -->|Não| recuperar["Escalonar e seguir runbook"]
+    verifica -->|Sim| concluir["Atualizar report e reler o alvo"]
