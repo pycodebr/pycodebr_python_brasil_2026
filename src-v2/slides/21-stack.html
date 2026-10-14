@@ -1,0 +1,31 @@
+<section class="slide s-stack" data-id="stack" data-title="Deploy e observabilidade da aplicação" data-chapter="Stack de deploy e observabilidade" data-accent="orange" data-accent2="lime" aria-label="Slide {{N}}: Deploy e observabilidade da aplicação">
+  <h2 class="slide-title">Deploy e observabilidade da aplicação</h2>
+  <div class="stack-stage fill">
+    <div class="st-col">
+      <div class="snode" data-node="code"><img class="logo" src="assets/img/logos/GitHub_Invertocat_White_Clearspace.svg" alt=""><div><b>Código e imagem</b><span>GitHub → registry</span></div></div>
+      <div class="snode" data-node="users"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-7 7-7s7 3 7 7M16 4a4 4 0 0 1 0 8m6 9c0-3-2-6-5-7"/></svg><div><b>Usuários</b><span>requisições HTTPS</span></div></div>
+    </div>
+    <div class="snode edge" data-node="edge"><img class="logo" src="assets/img/logos/traefik-proxy.svg" alt=""><div><b>Traefik</b><span>entrada HTTPS e TLS</span></div></div>
+    <div class="swarm glass" data-node="app">
+      <span class="swarm-label"><img src="assets/img/logos/docker-mark-white.svg" alt="">Docker Swarm · VPS</span>
+      <div class="svc-grid">
+        <div class="svc"><img src="assets/img/logos/django-negative.svg" alt=""><span>Django</span></div>
+        <div class="svc"><img src="assets/img/logos/postgresql.svg" alt=""><span>PostgreSQL</span></div>
+        <div class="svc"><img src="assets/img/logos/rabbitmq.svg" alt=""><span>RabbitMQ</span></div>
+        <div class="svc"><img src="assets/img/logos/redis.svg" alt=""><span>Redis</span></div>
+        <div class="svc wide"><span>Celery Worker + Beat para tarefas</span></div>
+      </div>
+    </div>
+    <div class="st-col">
+      <div class="snode" data-node="prom"><img class="logo" src="assets/img/logos/prometheus-logo.svg" alt=""><div><b>Prometheus</b><span>métricas por scrape</span></div></div>
+      <div class="snode" data-node="loki"><img class="logo" src="assets/img/logos/loki-logo.svg" alt=""><div><b>Loki</b><span>logs enviados pelo coletor</span></div></div>
+    </div>
+    <div class="grafana glass" data-node="grafana">
+      <div class="gf-head"><img src="assets/img/logos/grafana-icon.svg" alt=""><b>Grafana</b></div>
+      <div class="gf-panel"><span class="mono">latência</span><svg viewBox="0 0 200 60" aria-hidden="true"><path class="gf-line l1" d="M0 46 L20 40 L40 44 L60 30 L80 34 L100 22 L120 28 L140 18 L160 24 L180 12 L200 16"/></svg></div>
+      <div class="gf-panel"><span class="mono">erros</span><svg viewBox="0 0 200 60" aria-hidden="true"><path class="gf-line l2" d="M0 50 L20 50 L40 48 L60 50 L80 46 L100 50 L120 20 L140 44 L160 48 L180 50 L200 49"/></svg></div>
+      <div class="gf-panel"><span class="mono">logs</span><div class="gf-logs mono"><i></i><i></i><i></i><i></i></div></div>
+    </div>
+  </div>
+  <p class="foot-note">Base dos encontros Elite #03 e #04. cAdvisor e node-exporter complementam as métricas; Alloy é a recomendação atual para a coleta de logs.</p>
+</section>

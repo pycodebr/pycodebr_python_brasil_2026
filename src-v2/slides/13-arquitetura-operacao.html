@@ -1,0 +1,34 @@
+<section class="slide s-arch" data-id="arquitetura-operacao" data-title="Infraestrutura de IA da PycodeBR" data-chapter="Arquitetura da operação" data-accent="lime" data-accent2="purple" data-tick="1" aria-label="Slide {{N}}: Infraestrutura de IA da PycodeBR">
+  <div class="arch-head">
+    <h2 class="slide-title">Infraestrutura de IA da PycodeBR</h2>
+    <div class="ctl-row arch-ctl" role="group" aria-label="Explorar a arquitetura"><button class="ctl" data-focus="access" aria-pressed="false">Acessos</button><button class="ctl" data-focus="context" aria-pressed="false">Contexto</button><button class="ctl" data-focus="integrations" aria-pressed="false">Integrações</button><button class="ctl" data-focus="outputs" aria-pressed="false">Entregas</button></div>
+  </div>
+  <div class="arch-map fill">
+    <div class="col col-access">
+      <span class="col-label mono">Usuário e equipe</span>
+      <div class="anode" data-node="ssh" data-scope="access"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 17 6-6-6-6M12 19h8"/></svg><div><b>Terminal / SSH</b><span>CLI e acesso técnico</span></div></div>
+      <div class="anode" data-node="desktop" data-scope="access"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><div><b>Interfaces desktop</b><span>Hermes Desktop · Orca Desktop</span></div></div>
+      <div class="anode" data-node="mobile" data-scope="access"><img class="logo" src="assets/img/logos/tailscale-si.svg" alt="" style="filter:invert(1)"><div><b>Acesso móvel</b><span>Orca Mobile · Tailscale VPN</span></div></div>
+      <div class="anode" data-node="chat" data-scope="access"><img class="logo" src="assets/img/logos/whatsapp-color.svg" alt=""><div><b>Mensageria</b><span>Slack e WhatsApp · Telegram como opção</span></div></div>
+    </div>
+    <div class="col col-vps">
+      <span class="col-label mono">VPS · ambiente de execução</span>
+      <div class="vps-grid">
+        <div class="anode" data-node="gateway" data-scope="access"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Gateway e rotinas</b><span>Pedidos, agendas e eventos</span></div></div>
+        <div class="anode" data-node="context" data-scope="context"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7V4h7l3 3h10v14H2z"/></svg><div><b>Base de contexto</b><span>Documentos · memória e skills</span></div></div>
+        <div class="hermes-node" data-node="hermes"><i class="hn-ring" aria-hidden="true"></i><img src="assets/img/logos/hermes-logo-dark.png" alt="Hermes Agent"><b>Hermes Agent</b><span class="mono">observar · executar · verificar</span></div>
+        <div class="anode" data-node="projects" data-scope="context"><img class="logo" src="assets/img/logos/GitHub_Invertocat_White_Clearspace.svg" alt=""><div><b>Projetos e GitHub</b><span>Código e arquivos · CLIs opcionais</span></div></div>
+        <div class="anode" data-node="execution" data-scope="outputs"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="2" width="18" height="9" rx="2"/><rect x="3" y="13" width="18" height="9" rx="2"/><path d="M6 6h1m3 0h8M6 17h1m3 0h8"/></svg><div><b>Ferramentas de execução</b><span>Terminal, browser e código</span></div></div>
+        <div class="anode" data-node="state" data-scope="context"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 2 4 3 8 3s8-1 8-3V5M4 12c0 2 4 3 8 3s8-1 8-3"/></svg><div><b>Estado e dados</b><span>Sessões e bancos operacionais</span></div></div>
+      </div>
+    </div>
+    <div class="col col-out">
+      <span class="col-label mono">Serviços e entregas</span>
+      <div class="anode" data-node="models" data-scope="integrations"><img class="logo light" src="assets/img/logos/openai-lobe.svg" alt=""><div><b>Modelos</b><span>OpenAI e outros provedores · OpenCode Go/Zen como opção</span></div></div>
+      <div class="anode" data-node="integration" data-scope="integrations"><span class="logo-cluster"><img src="assets/img/logos/mcp-icon-white.svg" alt=""><img src="assets/img/logos/notion-simpleicons.svg" alt="" style="filter:invert(1)"><img src="assets/img/logos/clickup-si.svg" alt=""><img src="assets/img/logos/googledrive-si.svg" alt=""></span><div><b>MCPs · APIs · Composio</b><span>Notion, ClickUp, Google Workspace e contas autorizadas</span></div></div>
+      <div class="anode" data-node="central" data-scope="outputs"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg><div><b>Central de Operações</b><span>Dashboards, relatórios e materiais · HTTPS</span></div></div>
+    </div>
+  </div>
+  <p class="arch-explain" aria-live="polite"></p>
+  <p class="foot-note">Essa base pode ser replicada e adaptada a outras operações, conforme sistemas, recursos e permissões.</p>
+</section>

@@ -1,0 +1,23 @@
+<section class="slide s-perm" data-id="permissoes" data-title="Permissões e limites para a execução autônoma" data-chapter="Permissões e autonomia" data-accent="yellow" data-accent2="rose" aria-label="Slide {{N}}: Permissões e limites para a execução autônoma">
+  <h2 class="slide-title">Permissões e limites para a execução autônoma</h2>
+  <div class="perm-stage fill">
+    <div class="pzone free glass">
+      <h3>Dentro do escopo autorizado</h3>
+      <div class="plane"><span class="pitem" data-i="0">Consultar métricas e logs</span><span class="pitem" data-i="1">Investigar e testar em isolamento</span><span class="pitem" data-i="2">Preparar uma branch e uma PR</span></div>
+      <p class="caption">Orçamento, limites de tempo e rastreabilidade.</p>
+    </div>
+    <div class="gate" aria-hidden="true">
+      <div class="gate-arm"></div>
+      <div class="gate-post"><i class="gate-light"></i></div>
+      <span class="key"><svg class="icon" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.5 12.5 9-9M16 7l3 3M14 9l2 2"/></svg></span>
+      <span class="gate-label mono">aprovação</span>
+    </div>
+    <div class="pzone gated glass">
+      <h3>Com aprovação definida</h3>
+      <div class="plane"><span class="pitem" data-i="3">Merge da revisão aprovada</span><span class="pitem" data-i="4">Deploy no ambiente combinado</span><span class="pitem" data-i="5">Mudanças sensíveis de dados e acesso</span></div>
+      <p class="caption">Controles nas ferramentas, além das instruções.</p>
+    </div>
+    <div class="tokens" aria-hidden="true"><i class="tk t1"></i><i class="tk t2"></i><i class="tk t3"></i></div>
+  </div>
+  <p class="foot-note">Mensagens, reports e logs são entradas externas. O conteúdo deles ajuda na investigação e continua sujeito às regras de autorização.</p>
+</section>

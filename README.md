@@ -2,7 +2,9 @@
 
 Slides e materiais da palestra de **Felipe Azambuja**, programador, professor de programação e fundador da **PycodeBR**, na **Python Brasil 2026**.
 
-**[Abrir a apresentação](https://pycodebr.com.br/python-brasil-2026/#1)** · **[Materiais de estudo](#materiais)** · **[Laboratório local](exemplos/README.md)**
+**[Abrir a apresentação](https://pycodebr.com.br/python-brasil-2026/#1)** · **[Começando com Hermes do zero](materiais/comecando-com-hermes-do-zero.md)** · **[Materiais de estudo](#materiais)** · **[Laboratório local](exemplos/README.md)**
+
+> **Versão 2 em avaliação:** uma nova direção visual da mesma palestra, com fluxos animados das automações, linha do tempo imersiva e o caso de edição de vídeo. [Abrir a v2](https://pycodebr.com.br/python-brasil-2026-v2/#1) ou rodar localmente a partir da pasta [`site-v2/`](site-v2/). A apresentação oficial continua sendo a da pasta `site/` até a aprovação.
 
 ![Capa da palestra](docs/capa.webp)
 
@@ -14,6 +16,7 @@ A palestra mostra como pedidos em linguagem natural podem se transformar em arqu
 
 | Material | O que você encontra |
 |---|---|
+| [Começando com Hermes do zero](materiais/comecando-com-hermes-do-zero.md) | Instalação, primeiros prompts, conexão do Composio e de ferramentas e criação da base de contexto, com links oficiais. |
 | [Guia da palestra](materiais/guia-da-palestra.md) | Conceitos, contexto reutilizável e exercícios para continuar o estudo. |
 | [Linha do tempo](materiais/linha-do-tempo.md) | Marcos de 2022 a 2026, com distinção entre anúncio, preview e versão. |
 | [Arquitetura da operação](materiais/arquitetura-operacao.md) | Interfaces, runtime, modelos, contexto, ferramentas e entregas, com adaptações para sua operação. |
@@ -79,6 +82,20 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory site
 
 Abra `http://127.0.0.1:8000`. Os assets e as fontes estão no repositório; os links de documentação e os materiais no GitHub dependem de conexão à internet.
 
+### Versão 2 (em avaliação)
+
+![Capa da versão 2](docs/capa-v2.webp)
+
+A v2 também é estática e roda offline, com fontes, logos, animações e o vídeo de exemplo dentro do repositório:
+
+```bash
+python3 -m http.server 8001 --bind 127.0.0.1 --directory site-v2
+```
+
+Abra `http://127.0.0.1:8001`. No palco, use as setas para navegar, `F` para tela cheia, `R` para recomeçar a animação do slide, `M` para pausar ou retomar as animações e `O` para o índice. Em telas largas o slide mantém 16:9; em celulares e janelas estreitas, cada cena se reorganiza em leitura vertical.
+
+Para editar a v2, altere os arquivos em `src-v2/` (slides e CSS de cenas) e em `site-v2/assets/js/`, depois rode `python scripts/build_v2.py`. O QA em navegador fica em `python scripts/qa_v2.py`, com `--engine firefox` ou `--engine webkit` para outros motores. Proveniência e licenças dos assets novos: [src-v2/ASSETS.md](src-v2/ASSETS.md).
+
 ## Rodar o laboratório
 
 Requer **Python 3.10 ou superior**, apenas com a biblioteca padrão.
@@ -121,7 +138,9 @@ O QA percorre todas as cenas, verifica limites de layout, imagens, estados inter
 
 ```text
 site/          Apresentação pronta, assets e PDF/PPTX
+site-v2/       Versão 2 em avaliação, estática e offline
 src/           Conteúdo, estados interativos e proveniência de assets
+src-v2/        Slides, CSS de cenas e proveniência da versão 2
 materiais/     Guias, diagramas e fontes públicas
 exemplos/      Laboratório local sem rede
 testes/        Testes automatizados do laboratório
@@ -136,6 +155,7 @@ docs/          Imagens de apresentação do repositório
 - **`v2.0.0`**: revisão de 18 slides, materiais de estudo e laboratório local.
 - **`v2.0.1`**: preserva a navegação por setas e PageUp/PageDown após usar os controles interativos.
 - **`v3.0.0`**: 23 slides, cronologia OpenClaw/Hermes, arquitetura da operação, memória e auto skills, monitoria, reports e aprovação. Os logos usam símbolos em espaços quadrados, com proveniência e transformações registradas.
+- **Versão 2 de design (em avaliação, pasta `site-v2/`)**: 26 slides com a mesma base da `v3.0.0`, cenas animadas das automações da PycodeBR, slide de rotinas, caso de edição de vídeo e guia “Começando com Hermes do zero”. A pasta `site/` não foi alterada.
 
 O histórico público começou com os arquivos que já estavam publicados. Nenhum histórico Git da base privada, roteiro de bastidor, dado de aluno, log de produção ou credencial foi importado.
 

@@ -1,0 +1,31 @@
+<section class="slide s-monitor" data-id="monitoria" data-title="Arquitetura de monitoria com Hermes e MCPs" data-chapter="Monitoria com IA · dois MCPs" data-accent="orange" data-accent2="purple" aria-label="Slide {{N}}: Arquitetura de monitoria com Hermes e MCPs">
+  <h2 class="slide-title">Arquitetura de monitoria com Hermes e MCPs</h2>
+  <div class="mon-stage fill">
+    <div class="boundary b-app">
+      <span class="b-label mono">Aplicação e observabilidade</span>
+      <div class="signal glass" data-node="grafana">
+        <div class="sig-head"><b data-sig-title>Latência em alta</b><img src="assets/img/logos/grafana-icon.svg" alt="Grafana"></div>
+        <div class="ctl-row sig-tabs" role="group" aria-label="Escolher o sinal"><button class="ctl" data-signal="latency" aria-pressed="true">Latência</button><button class="ctl" data-signal="queue" aria-pressed="false">Fila</button><button class="ctl" data-signal="errors" aria-pressed="false">Erros</button></div>
+        <svg class="sig-chart" viewBox="0 0 520 210" aria-label="Telemetria ilustrativa"><path class="grid" d="M0 40h520M0 100h520M0 160h520"/><path class="threshold" d="M0 70h520"/><path class="plot" d="M5 180L515 20"/><circle class="alert-dot" cx="0" cy="0" r="9"/></svg>
+        <p class="sig-legend mono" data-sig-legend></p>
+        <p class="sig-log mono" data-sig-log></p>
+      </div>
+      <div class="mnode" data-node="domain"><b>MCP do sistema</b><span>MentorIA como exemplo: estado e dados do domínio</span></div>
+    </div>
+    <div class="boundary b-vps">
+      <span class="b-label mono">VPS · infraestrutura do Hermes</span>
+      <div class="mflow">
+        <div class="mnode" data-node="trigger"><b>Webhook ou rotina</b><span>entrada filtrada e deduplicada</span></div>
+        <div class="mnode" data-node="queue"><b>Fila de trabalho</b><span>uma demanda por vez</span></div>
+        <div class="mnode hermes" data-node="observer"><img src="assets/img/logos/hermes-logo-dark.png" alt=""><div><b>Hermes</b><span>contexto, skills e histórico</span></div></div>
+        <div class="mnode" data-node="gmcp"><img class="logo" src="assets/img/logos/grafana-icon.svg" alt=""><div><b>MCP do Grafana</b><span>consultar métricas e logs</span></div></div>
+      </div>
+      <div class="outcome">
+        <div class="oc" data-node="investigate"><b>Investigar</b><span data-investigation></span></div>
+        <div class="oc" data-node="act"><b>Preparar a ação</b><span data-action></span></div>
+        <div class="oc" data-node="notify"><b>Avisar e conferir</b><span>Diagnóstico e evidências em canal autorizado.</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="foot-note">Arquitetura de referência. O alerta inicia a análise; os MCPs fornecem consultas. Gráficos ilustrativos, sem dados de produção.</p>
+</section>

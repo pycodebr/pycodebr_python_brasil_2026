@@ -1,0 +1,27 @@
+<section class="slide s-approval" data-id="aprovacao" data-title="Aprovação da PR, merge e deploy da correção" data-chapter="Revisão humana e entrega" data-accent="lime" data-accent2="cyan" aria-label="Slide {{N}}: Aprovação da PR, merge e deploy da correção">
+  <h2 class="slide-title">Aprovação da PR, merge e deploy da correção</h2>
+  <div class="approval-stage fill">
+    <div class="pr-panel glass">
+      <div class="pr-top"><img class="logo" src="assets/img/logos/GitHub_Invertocat_White_Clearspace.svg" alt="GitHub"><span class="pr-state mono">Aberta</span></div>
+      <h3 data-pr-title>Corrigir a combinação de filtros</h3>
+      <div class="pr-checks"><p>Teste do comportamento afetado</p><p>Diff revisável e riscos descritos</p><p>Versão vinculada à aprovação</p></div>
+      <div class="pr-diff mono"><p class="minus">- if filtro and termo:</p><p class="plus">+ if filtro is not None and termo:</p></div>
+    </div>
+    <div class="phone ap-phone">
+      <div class="phone-notch" aria-hidden="true"></div>
+      <div class="phone-screen">
+        <div class="wa-head"><img src="assets/img/logos/whatsapp-color.svg" alt=""><div><b>Privado de Felipe</b><span>mensagem do agente</span></div></div>
+        <div class="wa-chat"><div class="wa-msg in ap-msg" data-private-message>Preparei uma PR com a correção, os testes e os riscos. Você aprova esta revisão?</div><div class="wa-msg out ap-answer"></div></div>
+        <div class="ap-buttons"><button class="ap-btn approve" data-approve>Aprovar esta revisão</button><button class="ap-btn reject" data-reject>Pedir ajustes</button></div>
+      </div>
+    </div>
+    <div class="deploy-col">
+      <div class="dstep" data-d="merge"><span class="ds-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="4" r="2"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="4" r="2"/><path d="M6 6v12M18 6v3q0 5-5 5H6"/></svg></span><b data-merge-label>Merge após aprovação</b><i class="lock" aria-hidden="true"></i></div>
+      <div class="dstep" data-d="deploy"><span class="ds-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17v5h18v-5M12 17V2m-6 6 6-6 6 6"/></svg></span><b data-deploy-label>Deploy após o merge</b><i class="lock" aria-hidden="true"></i></div>
+      <div class="dstep" data-d="verify"><span class="ds-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 5"/></svg></span><b data-verify-label>Verificar a entrega</b><i class="lock" aria-hidden="true"></i></div>
+      <div class="ctl-row"><button class="ctl" data-merge disabled>Simular a entrega</button><button class="ctl" data-reset-approval>Recomeçar</button></div>
+      <p class="approval-state" data-approval-state aria-live="polite"></p>
+    </div>
+  </div>
+  <p class="foot-note">Demonstração local, sem enviar mensagens nem alterar repositórios. Uma mudança na PR exige nova revisão.</p>
+</section>

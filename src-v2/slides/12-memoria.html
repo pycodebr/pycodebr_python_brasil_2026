@@ -1,0 +1,37 @@
+<section class="slide s-memory" data-id="memoria" data-title="Memória e auto skills no Hermes" data-chapter="Memória, base de contexto e skills" data-accent="purple" data-accent2="lime" aria-label="Slide {{N}}: Memória e auto skills no Hermes">
+  <span class="ghost" aria-hidden="true">SKILLS</span>
+  <h2 class="slide-title">Memória e auto skills no Hermes</h2>
+  <div class="mem-stage fill">
+    <div class="stores">
+      <article class="store glass" data-node="mem" style="--c:#b9a2f8">
+        <div class="store-top"><span class="store-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4-5-11 0-8 5-5 5 0 12 5 10 1 4 5 3 6 0 6 1 9-6 5-10 2-5-4-9-8-5Zm0 0v15M5 10l4 2m10-2-4 3"/></svg></span><span class="file mono">MEMORY.md</span></div>
+        <h3>Fatos persistidos</h3><p>Informações selecionadas sobre você e sua operação.</p>
+        <span class="ex">Exemplo: formato e regras das entregas.</span>
+      </article>
+      <article class="store glass" data-node="ctx" style="--c:#7dd3fc">
+        <div class="store-top"><span class="store-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7V4h7l3 3h10v14H2z"/></svg></span><span class="file mono">Base de contexto</span></div>
+        <h3>Detalhes consultáveis</h3><p>Documentos, projetos e histórico recuperados quando fazem falta.</p>
+        <span class="ex">Exemplo: fontes e decisões de uma palestra.</span>
+      </article>
+      <article class="store glass skill-store" data-node="skill" style="--c:#b7ff06">
+        <div class="store-top"><span class="store-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/></svg></span><span class="file mono">SKILL.md</span></div>
+        <h3>Procedimentos revisados</h3>
+        <div class="skill-doc mono" aria-label="Trecho ilustrativo de uma skill de publicação">
+          <p>## Publicar uma página</p>
+          <p>1. Gerar os arquivos</p>
+          <p>2. Enviar ao destino autorizado</p>
+          <p class="new-line">3. <span class="t" data-t="Conferir a versão servida antes de concluir"></span></p>
+        </div>
+      </article>
+    </div>
+    <div class="story glass">
+      <div class="ctl-row" role="group" aria-label="Escolher a etapa do exemplo"><button class="ctl" data-phase="first" aria-pressed="true">Primeira tarefa</button><button class="ctl" data-phase="reuse" aria-pressed="false">Próxima tarefa</button></div>
+      <div class="board">
+        <div class="agent" data-node="agent"><img src="assets/img/logos/hermes-logo-dark.png" alt="Hermes Agent"><b>Hermes</b></div>
+        <ol class="steps"></ol>
+      </div>
+      <p class="story-msg" aria-live="polite"></p>
+    </div>
+  </div>
+  <p class="foot-note">O aprendizado fica em arquivos e contexto recuperáveis, sem alterar os pesos do modelo.</p>
+</section>

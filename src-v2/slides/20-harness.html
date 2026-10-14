@@ -1,0 +1,24 @@
+<section class="slide s-harness" data-id="harness" data-title="Hermes como harness e orquestrador de desenvolvimento" data-chapter="Harness e delegação" data-accent="purple" data-accent2="cyan" aria-label="Slide {{N}}: Hermes como harness e orquestrador de desenvolvimento">
+  <h2 class="slide-title">Hermes como harness e orquestrador de desenvolvimento</h2>
+  <div class="harness-stage fill">
+    <div class="h-main glass" data-node="main">
+      <img src="assets/img/logos/hermes-logo-dark.png" alt="Hermes Agent">
+      <h3>Hermes principal</h3><p>PRD, contexto e skills.</p>
+      <code class="mono">delegate_task</code>
+    </div>
+    <div class="h-workers">
+      <div class="worker glass" data-node="w1"><div class="w-head"><span class="logo-tile"><img class="logo" src="assets/img/logos/claude-code-lobe-color.svg" alt="Claude Code"></span><div><b>Implementação</b><span>filho Hermes → Claude Code pela CLI</span></div></div>
+        <div class="w-term mono"><p class="c"><span class="t" data-t='$ claude -p "implemente a sprint 2"'></span></p><p class="o">editando app/filtros/views.py</p><p class="o">worktree: sprint-2</p></div></div>
+      <div class="worker glass" data-node="w2"><div class="w-head"><span class="logo-tile"><img class="logo" src="assets/img/logos/openai-lobe.svg" alt="Codex CLI"></span><div><b>Revisão e testes</b><span>filho Hermes → Codex CLI</span></div></div>
+        <div class="w-term mono"><p class="c"><span class="t" data-t='$ codex exec "revise o diff e rode os testes"'></span></p><p class="o">2 observações de revisão</p><p class="o ok">pytest · 18 passed</p></div></div>
+      <div class="worker glass" data-node="w3"><div class="w-head"><span class="logo-tile dark"><img class="logo" src="assets/img/logos/opencode-logo-dark.svg" alt="OpenCode"></span><div><b>Investigação delimitada</b><span>filho Hermes → OpenCode pela CLI</span></div></div>
+        <div class="w-term mono"><p class="c"><span class="t" data-t='$ opencode run "mapeie as consultas da busca"'></span></p><p class="o">3 consultas encontradas</p><p class="o">relatório entregue ao principal</p></div></div>
+    </div>
+    <div class="h-review glass" data-node="review">
+      <span class="rv-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 5"/></svg></span>
+      <h3>Integração conferida</h3><p>Diff, testes e critérios da sprint.</p>
+      <ul class="checks"><li>diff revisado</li><li>testes passando</li><li>critérios atendidos</li></ul>
+    </div>
+  </div>
+  <p class="foot-note">delegate_task cria filhos Hermes. As CLIs externas são chamadas pelo terminal, com ambientes e acessos preparados.</p>
+</section>

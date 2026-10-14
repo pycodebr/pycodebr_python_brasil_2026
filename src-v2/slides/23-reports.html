@@ -1,0 +1,18 @@
+<section class="slide s-reports" data-id="reports" data-title="Reports de usuários e propostas de correção" data-chapter="MentorIA · eventos, código e PRs" data-accent="rose" data-accent2="lime" aria-label="Slide {{N}}: Reports de usuários e propostas de correção">
+  <h2 class="slide-title">Reports de usuários e propostas de correção</h2>
+  <div class="rep-stage fill">
+    <div class="rep-card glass" data-node="report">
+      <span class="tag mono">Report do usuário · MentorIA como exemplo</span>
+      <div class="ctl-row" role="group" aria-label="Tipo de report"><button class="ctl" data-report="bug" aria-pressed="true">Bug</button><button class="ctl" data-report="feature" aria-pressed="false">Melhoria</button></div>
+      <h3 data-report-title></h3>
+      <p data-report-description></p>
+      <span class="triage mono" data-report-triage></span>
+    </div>
+    <div class="rnode" data-node="entry"><img class="logo" src="assets/img/logos/mcp-icon-white.svg" alt=""><div><b>Evento + MCP do sistema</b><span>receber o sinal, consultar o report e verificar duplicidade</span></div></div>
+    <div class="rnode hermes" data-node="maint"><img src="assets/img/logos/hermes-logo-dark.png" alt=""><div><b>Hermes</b><span>fila, contexto, skills e critérios de aceite</span></div></div>
+    <div class="rnode" data-node="branch"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="4" r="2"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 6v12M18 10q0 5-6 6H6"/></svg><div><b>Branch / worktree</b><span>reproduzir o bug ou delimitar a melhoria</span></div></div>
+    <div class="rnode tests" data-node="tests"><div class="test-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><b>Código e testes</b><span>implementar, revisar e corrigir sem alterar produção</span></div></div>
+    <div class="rnode pr" data-node="pr"><img class="logo" src="assets/img/logos/GitHub_Invertocat_White_Clearspace.svg" alt=""><div><b>Pull Request</b><span data-pr-line>diff, testes e riscos para a revisão de Felipe</span></div></div>
+  </div>
+  <p class="foot-note">Arquitetura de referência proposta. Eventos e consultas são mecanismos separados; a cena não cria PRs nem altera serviços.</p>
+</section>

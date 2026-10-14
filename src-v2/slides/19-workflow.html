@@ -1,0 +1,50 @@
+<section class="slide s-workflow" data-id="workflow" data-title="Workflow de IA Assistida em cinco passos" data-chapter="Workflow de IA Assistida · PycodeBR" data-accent="yellow" data-accent2="lime" data-tick="1" aria-label="Slide {{N}}: Workflow de IA Assistida em cinco passos">
+  <h2 class="slide-title">Workflow de IA Assistida em cinco passos</h2>
+  <div class="wf-steps" role="group" aria-label="Etapas do Workflow de IA Assistida">
+    <i class="wf-rail" aria-hidden="true"><i class="wf-fill"></i></i>
+    <button class="wf-step" data-step="0" aria-pressed="false"><span class="n mono">01</span><strong>Refinar o pedido</strong></button>
+    <button class="wf-step" data-step="1" aria-pressed="false"><span class="n mono">02</span><strong>Gerar o PRD.md</strong></button>
+    <button class="wf-step" data-step="2" aria-pressed="false"><span class="n mono">03</span><strong>Preparar o template</strong></button>
+    <button class="wf-step" data-step="3" aria-pressed="false"><span class="n mono">04</span><strong>Executar a sprint</strong></button>
+    <button class="wf-step" data-step="4" aria-pressed="false"><span class="n mono">05</span><strong>Revisar, corrigir e versionar</strong></button>
+  </div>
+  <div class="wf-stage fill">
+    <div class="wf-art glass">
+      <div class="art a0">
+        <p class="raw mono">quero salvar filtro de busca pra usar depois</p>
+        <div class="refined"><p><b>Objetivo</b>salvar e recuperar filtros de busca</p><p><b>Usuários</b>cada pessoa vê os próprios filtros</p><p><b>Regras</b>nome único por pessoa</p><p><b>Restrições</b>a busca atual continua igual</p></div>
+      </div>
+      <div class="art a1 doc mono">
+        <p class="h1"># PRD · Filtros salvos</p>
+        <p class="h2">## Requisitos</p><p>- salvar as condições da busca</p><p>- listar e aplicar um filtro salvo</p>
+        <p class="h2">## Critérios de aceite</p><p>- salvar e recuperar conserva as condições</p>
+        <p class="h2">## Sprints</p><p class="sprints"><span>S1 modelo</span><span>S2 telas</span><span>S3 testes de ponta a ponta</span></p>
+      </div>
+      <div class="art a2 tree2 mono">
+        <p>projeto/</p><p>├ app/filtros/</p><p>├ templates/</p><p>├ static/design-system.css</p><p>├ tests/</p><p class="hl">├ PRD.md</p><p class="hl">└ AGENTS.md</p>
+      </div>
+      <div class="art a3 code mono">
+        <p><span class="k">def</span> <span class="f">salvar_filtro</span>(usuario, nome, condicoes):</p>
+        <p>    filtro = FiltroSalvo(dono=usuario, nome=nome)</p>
+        <p>    filtro.condicoes = condicoes</p>
+        <p>    filtro.full_clean()</p>
+        <p>    filtro.save()</p>
+        <p>    <span class="k">return</span> filtro</p>
+      </div>
+      <div class="art a4 review mono">
+        <p class="minus">- condicoes = request.GET</p><p class="plus">+ condicoes = filtrar_campos(request.GET)</p>
+        <p class="ok">pytest · 18 passed</p>
+        <p class="git">$ git commit -m "feat: salva filtros de busca"</p>
+        <p class="git">$ git push</p>
+        <p class="next">↺ próxima sprint</p>
+      </div>
+    </div>
+    <div class="wf-detail">
+      <span class="big-n mono" data-step-number>01</span>
+      <h3 data-step-title></h3>
+      <p class="body" data-step-body></p>
+      <div class="artifact-card"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/></svg><div><b data-step-file></b><span data-step-output></span></div></div>
+    </div>
+  </div>
+  <p class="foot-note">O quinto passo se repete a cada sprint. O deploy é planejado no pedido e no PRD e acontece depois da validação.</p>
+</section>

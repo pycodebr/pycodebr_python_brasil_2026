@@ -1,0 +1,30 @@
+<section class="slide s-exec" data-id="pedido-execucao" data-title="Linguagem natural para executar tarefas com o Hermes" data-chapter="Linguagem natural e ferramentas" data-accent="cyan" data-accent2="lime" aria-label="Slide {{N}}: Linguagem natural para executar tarefas com o Hermes">
+  <span class="ghost" aria-hidden="true">LOOP</span>
+  <h2 class="slide-title">Linguagem natural para executar tarefas com o Hermes</h2>
+  <div class="exec-stage fill">
+    <div class="req glass" data-node="req">
+      <span class="tag mono">Pedido em linguagem natural</span>
+      <p class="req-text">“<span class="t" data-t="Crie uma apresentação, publique no site e adicione os downloads."></span>”</p>
+      <div class="chips"><span class="chip"><i class="dot"></i>Contexto</span><span class="chip"><i class="dot"></i>Regras</span><span class="chip"><i class="dot"></i>Permissões</span></div>
+    </div>
+    <div class="core" data-node="core">
+      <svg class="core-ring" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="150"/><g class="ring-arrows"><path d="M200 50 l-12 -8 M200 50 l-12 8"/><path d="M350 200 l-8 -12 M350 200 l8 -12"/><path d="M200 350 l12 -8 M200 350 l12 8"/><path d="M50 200 l-8 12 M50 200 l8 12"/></g><circle class="arc" cx="200" cy="200" r="150"/></svg>
+      <span class="phase ph0">Observar</span><span class="phase ph1">Decidir</span><span class="phase ph2">Executar</span><span class="phase ph3">Verificar</span>
+      <div class="core-face"><img src="assets/img/logos/hermes-logo-dark.png" alt="Hermes Agent"><b>Hermes Agent</b></div>
+    </div>
+    <div class="trace glass" data-node="trace">
+      <div class="window-bar"><i></i><i></i><i></i><span>execução · ferramentas</span></div>
+      <ol class="trace-lines mono">
+        <li data-k="files"><span class="tool">read_file</span><span class="arg">conteúdo e estrutura do projeto</span><span class="st"></span></li>
+        <li data-k="term"><span class="tool">terminal</span><span class="arg">gerar a versão do site</span><span class="st"></span></li>
+        <li data-k="term" data-fail="1"><span class="tool">terminal</span><span class="arg">gerar o PDF</span><span class="st"></span></li>
+        <li data-k="term"><span class="tool">terminal</span><span class="arg">instalar a dependência que faltava</span><span class="st"></span></li>
+        <li data-k="term"><span class="tool">terminal</span><span class="arg">gerar o PDF de novo</span><span class="st"></span></li>
+        <li data-k="api"><span class="tool">publicar</span><span class="arg">site e downloads no destino autorizado</span><span class="st"></span></li>
+        <li data-k="check"><span class="tool">verificar</span><span class="arg">endereço final e versão servida</span><span class="st"></span></li>
+      </ol>
+      <div class="tool-legend"><span data-r="files"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/></svg>Arquivos e código</span><span data-r="term"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="2" width="18" height="9" rx="2"/><rect x="3" y="13" width="18" height="9" rx="2"/><path d="M6 6h1m3 0h8M6 17h1m3 0h8"/></svg>Terminal e APIs</span><span data-r="check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 5"/></svg>Testes e conferência</span></div>
+    </div>
+  </div>
+  <p class="foot-note">O runtime executa as ferramentas e devolve os resultados; o modelo participa da escolha da próxima ação.</p>
+</section>

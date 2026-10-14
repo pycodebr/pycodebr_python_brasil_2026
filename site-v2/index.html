@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#03060c">
+<title>Agentes Autônomos de IA com Hermes Agent · v2 | Felipe Azambuja · Python Brasil 2026</title>
+<meta name="description" content="Versão 2 da palestra de Felipe Azambuja na Python Brasil 2026: Hermes Agent, memória, auto skills, automações da PycodeBR, workflow de IA assistida e observabilidade com agentes.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://pycodebr.com.br/python-brasil-2026-v2/">
+<meta property="og:title" content="Agentes Autônomos de IA com Hermes Agent · v2">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pycodebr.com.br/python-brasil-2026-v2/">
+<meta property="og:description" content="Python Brasil 2026 · Felipe Azambuja · PycodeBR">
+<link rel="icon" href="assets/img/logos/python-icon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/Anton-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Geist-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/deck.css?v=9a0dba0ed8b7">
+<link rel="stylesheet" href="assets/css/scenes.css?v=30d335937369">
+</head>
+<body>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div id="bg-glow" aria-hidden="true"></div>
+<div id="bg-noise" aria-hidden="true"></div>
+<div id="reading-bar" aria-hidden="true"><span class="rb-chapter"></span><b class="rb-count"></b><i class="rb-progress"></i></div>
+<main id="viewport" aria-label="Apresentação da Python Brasil 2026, versão 2">
+<div id="frame"><div id="deck">
+<section class="slide s-cover" data-id="capa" data-title="Agentes Autônomos de IA com Hermes Agent" data-chapter="Python Brasil 2026" data-accent="cyan" data-transition="iris" data-tick="1" aria-label="Slide 1: Agentes Autônomos de IA com Hermes Agent">
+  <div class="boot mono" aria-hidden="true">
+    <p><span class="prompt">$</span> <span data-boot="hermes --palestra python-brasil-2026"></span></p>
+    <p><i class="ok"></i> <span data-boot="memória · base de contexto · skills · ferramentas"></span></p>
+    <p><i class="ok"></i> <span data-boot="tudo pronto para começar"></span></p>
+  </div>
+  <div class="cover-grid">
+    <div class="cover-copy">
+      <img class="event-logo" src="assets/img/logos/python-brasil-2026-header.svg" alt="Python Brasil 2026">
+      <h1 class="cover-title" aria-label="Agentes Autônomos de IA com Hermes Agent">
+        <span class="ct-line l1" aria-hidden="true">AGENTES</span>
+        <span class="ct-line l2" aria-hidden="true">AUTÔNOMOS</span>
+        <span class="cover-sub" aria-hidden="true">de IA com <span class="grad">Hermes Agent</span></span>
+      </h1>
+      <p class="cover-desc">Linguagem natural, memória e ferramentas conectadas à operação.</p>
+      <div class="cover-author"><b>Felipe Azambuja</b><span>Hermes Agent · Nous Research e comunidade</span></div>
+    </div>
+    <div class="orbit3d" aria-hidden="true">
+      <div class="o-halo"></div>
+      <div class="o-ring r1" style="--tilt:-14deg;--dur:30s;--r:310px">
+        <div class="o-spin">
+          <span class="o-node" style="--a:0deg"><span class="o-unspin"><span class="o-face"><img src="assets/img/logos/python-icon.svg" alt=""></span></span></span>
+          <span class="o-node" style="--a:120deg"><span class="o-unspin"><span class="o-face"><img src="assets/img/logos/mcp-icon-white.svg" alt=""></span></span></span>
+          <span class="o-node" style="--a:240deg"><span class="o-unspin"><span class="o-face"><img src="assets/img/logos/n8n-icon.svg" alt=""></span></span></span>
+        </div>
+      </div>
+      <div class="o-ring r2" style="--tilt:20deg;--dur:40s;--r:385px">
+        <div class="o-spin rev">
+          <span class="o-node" style="--a:60deg"><span class="o-unspin"><span class="o-face"><img src="assets/img/logos/langflow-icon.svg" alt=""></span></span></span>
+          <span class="o-node" style="--a:180deg"><span class="o-unspin"><span class="o-face"><img src="assets/img/logos/claude-code-lobe-color.svg" alt=""></span></span></span>
+          <span class="o-node" style="--a:300deg"><span class="o-unspin"><span class="o-face light"><img src="assets/img/logos/openai-lobe.svg" alt=""></span></span></span>
+        </div>
+      </div>
+      <div class="o-core"><img src="assets/img/logos/hermes-logo-dark.png" alt=""></div>
+    </div>
+  </div>
+</section>
+<section class="slide s-speaker" data-id="felipe" data-title="Felipe Azambuja" data-chapter="Apresentação" data-accent="cyan" aria-label="Slide 2: Felipe Azambuja">
+  <div class="marquee mq1 layer" aria-hidden="true"><div class="mq-track"><span>FELIPE AZAMBUJA · PROGRAMADOR · PROFESSOR · FUNDADOR DA PYCODEBR · </span><span>FELIPE AZAMBUJA · PROGRAMADOR · PROFESSOR · FUNDADOR DA PYCODEBR · </span></div></div>
+  <div class="marquee mq2 layer" aria-hidden="true"><div class="mq-track"><span>PYTHON · SOFTWARE · INTELIGÊNCIA ARTIFICIAL · PYTHON BRASIL 2026 · </span><span>PYTHON · SOFTWARE · INTELIGÊNCIA ARTIFICIAL · PYTHON BRASIL 2026 · </span></div></div>
+  <div class="speaker-grid fill">
+    <div class="speaker-copy">
+      <h2 class="speaker-name" data-split>Felipe<br>Azambuja</h2>
+      <p class="bio">Programador, professor de programação e fundador da <b>PycodeBR</b></p>
+      <div class="chips speaker-chips"><span class="chip"><i class="dot"></i>Python</span><span class="chip"><i class="dot"></i>Software</span><span class="chip"><i class="dot"></i>Inteligência Artificial</span></div>
+    </div>
+    <div class="badge-wrap">
+      <svg class="lanyard" viewBox="0 0 220 300" aria-hidden="true"><path d="M30 0 C40 120 90 220 110 300" /><path d="M190 0 C180 120 130 220 110 300" /></svg>
+      <div class="badge">
+        <div class="badge-photo"><img class="ph" src="assets/img/photos/felipe-microfone.webp" alt="Felipe Azambuja em palco, segurando um microfone"></div>
+        <div class="badge-clip" aria-hidden="true"></div>
+        <div class="badge-pop" aria-hidden="true"><img src="assets/img/photos/felipe-microfone-cutout.webp" alt=""></div>
+        <div class="badge-body">
+          <div class="badge-role mono">PALESTRANTE</div>
+          <b class="badge-name">Felipe Azambuja</b>
+          <span class="badge-org">PycodeBR</span>
+          <div class="badge-foot">
+            <img src="assets/img/logos/python-brasil-2026-header.svg" alt="">
+            <svg class="barcode" viewBox="0 0 120 34" aria-hidden="true"><path d="M2 0v34M6 0v34M9 0v34M14 0v34M16 0v34M21 0v34M26 0v34M28 0v34M33 0v34M37 0v34M39 0v34M44 0v34M49 0v34M51 0v34M55 0v34M60 0v34M63 0v34M67 0v34M71 0v34M73 0v34M78 0v34M83 0v34M85 0v34M90 0v34M93 0v34M98 0v34M101 0v34M105 0v34M109 0v34M112 0v34M117 0v34"/></svg>
+          </div>
+        </div>
+        <i class="holo" aria-hidden="true"></i>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide s-school" data-id="pycodebr" data-title="Uma escola de programação e IA" data-chapter="PycodeBR" data-accent="lime" data-accent2="cyan" aria-label="Slide 3: Uma escola de programação e IA">
+  <canvas class="globe layer" aria-hidden="true"></canvas>
+  <div class="school-grid fill">
+    <div class="school-copy">
+      <div class="school-id"><img src="assets/img/logos/pycodebr-icon-official.png" alt="Símbolo oficial da PycodeBR"><h2 class="school-word" data-split>PycodeBR</h2></div>
+      <p class="school-quote">Escola online de programação<br>e Inteligência Artificial.</p>
+      <div class="disciplines">
+        <span class="discipline" style="--c:#7dd3fc"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5-6 7 6 7m8-14 6 7-6 7M14 3l-4 18"/></svg>Programação</span>
+        <span class="discipline" style="--c:#ffd343"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m2 7 10-5 10 5-10 5zm0 5 10 5 10-5M2 17l10 5 10-5"/></svg>Sistemas</span>
+        <span class="discipline" style="--c:#b7ff06"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4-5-11 0-8 5-5 5 0 12 5 10 1 4 5 3 6 0 6 1 9-6 5-10 2-5-4-9-8-5Zm0 0v15M5 10l4 2m10-2-4 3"/></svg>IA aplicada</span>
+      </div>
+      <div class="reach"><span class="sr-only">+8 mil</span><span class="reach-plus" aria-hidden="true">+</span><span class="reach-digit" aria-hidden="true"><span class="reach-roll">0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8</span></span><span class="reach-mil" aria-hidden="true">mil</span><span class="reach-text">alunos ativos no Brasil e no mundo</span></div>
+    </div>
+    <div class="phone ig-phone">
+      <div class="phone-notch" aria-hidden="true"></div>
+      <div class="phone-screen">
+        <div class="ig-head"><img src="assets/img/logos/instagram-simpleicons.svg" alt="" class="ig-logo"><b>@pycodebr</b><span class="ig-follow">Seguir</span></div>
+        <div class="qr-card">
+          <img src="assets/img/qr/qr-instagram.svg" alt="QR Code para o Instagram da PycodeBR">
+          <i class="scan-line" aria-hidden="true"></i>
+          <i class="vf tl" aria-hidden="true"></i><i class="vf tr" aria-hidden="true"></i><i class="vf bl" aria-hidden="true"></i><i class="vf br" aria-hidden="true"></i>
+        </div>
+        <p class="ig-caption">Conteúdo novo todos os dias.</p>
+        <div class="ig-grid" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="slide s-follow" data-id="acompanhe" data-title="Acompanhe os slides no seu dispositivo" data-chapter="Acesso aos materiais" data-accent="lime" data-accent2="yellow" aria-label="Slide 4: Acompanhe os slides no seu dispositivo">
+  <div class="follow-grid fill">
+    <div class="follow-copy">
+      <h2 class="slide-title follow-title">Acompanhe os slides<br>no seu dispositivo.</h2>
+      <p class="lead">Aponte a câmera para o código e navegue no seu ritmo.</p>
+      <a class="follow-url mono" href="https://pycodebr.com.br/python-brasil-2026"><span class="fu-text">pycodebr.com.br/python-brasil-2026</span><i class="caret" aria-hidden="true"></i></a>
+      <p class="caption">Apresentação, downloads e materiais de estudo.</p>
+    </div>
+    <div class="qr-stage">
+      <i class="pulse p1" aria-hidden="true"></i><i class="pulse p2" aria-hidden="true"></i><i class="pulse p3" aria-hidden="true"></i>
+      <div class="qr-big">
+        <img src="assets/img/qr/qr-slides.svg" alt="QR Code: https://pycodebr.com.br/python-brasil-2026">
+        <i class="scan-line" aria-hidden="true"></i>
+      </div>
+      <i class="vf tl" aria-hidden="true"></i><i class="vf tr" aria-hidden="true"></i><i class="vf bl" aria-hidden="true"></i><i class="vf br" aria-hidden="true"></i>
+    </div>
+  </div>
+</section>
+<section class="slide s-year" data-id="ano-2022" data-year="2022" data-title="2022: ChatGPT e aplicações com modelos de linguagem" data-chapter="2022 · conversa e aplicações" data-accent="cyan" data-accent2="lime" data-transition="warp" data-tick="1" aria-label="Slide 5: 2022, ChatGPT e aplicações com modelos de linguagem">
+  <div class="year-giant layer" aria-hidden="true"><span class="yg-fixed">202</span><span class="yg-digit"><span class="yg-roll"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></div>
+  <div class="year-rail" aria-hidden="true"><span class="yr" data-y="2022">2022</span><i></i><span class="yr" data-y="2023">2023</span><i></i><span class="yr" data-y="2024">2024</span><i></i><span class="yr" data-y="2025">2025</span><i></i><span class="yr" data-y="2026">2026</span><b class="traveler"></b></div>
+  <header class="year-head"><h2 class="slide-title">2022: ChatGPT e aplicações<br>com modelos de linguagem</h2></header>
+  <div class="year-stage fill y22">
+    <article class="obj glass chatgpt">
+      <div class="obj-head"><span class="logo-tile"><img class="logo" src="assets/img/logos/openai-lobe.svg" alt="OpenAI"></span><div><h3>ChatGPT</h3><span class="date">30 de novembro</span></div></div>
+      <div class="chat-body">
+        <div class="msg user"><span class="t" data-t="Explique este código em Python."></span><code class="mono">for item in range(3): print(item)</code></div>
+        <div class="msg bot"><i class="avatar" aria-hidden="true"></i><span class="t" data-t="O laço percorre 0, 1 e 2 e imprime cada valor. Quer ver uma variação com lista?"></span></div>
+        <div class="msg user u2"><span class="t" data-t="Sim, agora com uma lista de nomes."></span></div>
+      </div>
+      <p class="obj-caption">A interface de conversa chega ao cotidiano.</p>
+    </article>
+    <article class="obj glass chain">
+      <div class="obj-head"><span class="logo-tile"><img class="logo" src="assets/img/logos/langchain-icon-legacy-blue.svg" alt="LangChain"></span><div><h3>LangChain</h3><span class="date">Primeiro pacote Python: 24 de outubro</span></div></div>
+      <div class="term-line mono"><span class="p">$</span> <span class="t" data-t="pip install langchain"></span></div>
+      <div class="chain-flow">
+        <div class="node" data-node="app"><b>Aplicação</b><span>Seu código e suas regras</span></div>
+        <div class="node" data-node="model"><b>Modelo</b><span>Uma chamada por API</span></div>
+        <div class="node" data-node="data"><b>Dados</b><span>Documentos e ferramentas</span></div>
+      </div>
+      <p class="obj-caption">O desenvolvedor conecta o modelo à aplicação.</p>
+    </article>
+  </div>
+  <p class="foot-note">Marcos de acesso e composição, não o início da pesquisa em inteligência artificial.</p>
+</section>
+<section class="slide s-year" data-id="ano-2023" data-year="2023" data-title="2023: frameworks, fluxos visuais e agentes" data-chapter="2023 · composição e execução" data-accent="yellow" data-accent2="cyan" data-transition="warp" aria-label="Slide 6: 2023, frameworks, fluxos visuais e agentes">
+  <div class="year-giant layer" aria-hidden="true"><span class="yg-fixed">202</span><span class="yg-digit"><span class="yg-roll"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></div>
+  <div class="year-rail" aria-hidden="true"><span class="yr" data-y="2022">2022</span><i></i><span class="yr" data-y="2023">2023</span><i></i><span class="yr" data-y="2024">2024</span><i></i><span class="yr" data-y="2025">2025</span><i></i><span class="yr" data-y="2026">2026</span><b class="traveler"></b></div>
+  <header class="year-head"><h2 class="slide-title">2023: frameworks, fluxos<br>visuais e agentes</h2></header>
+  <div class="year-stage fill y23">
+    <article class="obj glass builder">
+      <div class="obj-head"><div class="logo-row"><span class="logo-tile"><img class="logo" src="assets/img/logos/langchain-icon-legacy-blue.svg" alt="LangChain"></span><span class="logo-tile"><img class="logo" src="assets/img/logos/langflow-icon.svg" alt="Langflow"></span><span class="logo-tile"><img class="logo" src="assets/img/logos/n8n-icon.svg" alt="n8n"></span></div><h3>Construir um fluxo</h3></div>
+      <div class="canvas-grid">
+        <div class="fnode" data-node="in"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/></svg><b>Entrada</b></div>
+        <div class="fnode" data-node="llm"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4-5-11 0-8 5-5 5 0 12 5 10 1 4 5 3 6 0 6 1 9-6 5-10 2-5-4-9-8-5Zm0 0v15M5 10l4 2m10-2-4 3"/></svg><b>Modelo</b></div>
+        <div class="fnode" data-node="out"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 5"/></svg><b>Saída</b></div>
+      </div>
+      <p class="obj-caption">LangChain e Langflow ajudam a compor aplicações. O n8n integra LangChain em outubro.</p>
+    </article>
+    <article class="obj glass autogpt">
+      <div class="obj-head"><h3>Experimentar agentes</h3></div>
+      <div class="loop-stage">
+        <svg class="loop-ring" viewBox="0 0 420 420" aria-hidden="true"><circle cx="210" cy="210" r="160"/><g class="ring-arrows"><path d="M323 75 l14 2 -2 14"/><path d="M345 323 l-2 14 -14 -2"/><path d="M97 345 l-14 -2 2 -14"/><path d="M75 97 l2 -14 14 2"/></g><circle class="loop-glow" cx="210" cy="210" r="160"/></svg>
+        <span class="station st0">Objetivo</span>
+        <span class="station st1">Escolher a<br>próxima ação</span>
+        <span class="station st2">Executar</span>
+        <span class="station st3">Observar</span>
+        <b class="loop-core">AutoGPT</b>
+        <i class="loop-token" aria-hidden="true"></i>
+      </div>
+      <p class="obj-caption">O modelo participa da escolha das ações e recebe os resultados das ferramentas.</p>
+    </article>
+  </div>
+  <p class="foot-note">Workflows e agentes podem coexistir. O n8n já existia desde 2019.</p>
+</section>
+<section class="slide s-year" data-id="ano-2024" data-year="2024" data-title="2024: estado, ciclos e integrações com MCP" data-chapter="2024 · estado e integrações" data-accent="lime" data-accent2="purple" data-transition="warp" aria-label="Slide 7: 2024, estado, ciclos e integrações com MCP">
+  <div class="year-giant layer" aria-hidden="true"><span class="yg-fixed">202</span><span class="yg-digit"><span class="yg-roll"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></div>
+  <div class="year-rail" aria-hidden="true"><span class="yr" data-y="2022">2022</span><i></i><span class="yr" data-y="2023">2023</span><i></i><span class="yr" data-y="2024">2024</span><i></i><span class="yr" data-y="2025">2025</span><i></i><span class="yr" data-y="2026">2026</span><b class="traveler"></b></div>
+  <header class="year-head"><h2 class="slide-title">2024: estado, ciclos<br>e integrações com MCP</h2></header>
+  <div class="year-stage fill y24">
+    <article class="obj glass graph">
+      <div class="obj-head"><span class="logo-tile"><img class="logo" src="assets/img/logos/langgraph-icon-blue.svg" alt="LangGraph"></span><div><h3>LangGraph</h3><span class="date">Janeiro</span></div></div>
+      <div class="state-machine">
+        <span class="sm-label">Continuar, repetir ou encerrar</span>
+        <div class="sm-row"><div class="sm-node" data-node="state"><b>Estado</b><span>o que já aconteceu</span></div><div class="sm-node" data-node="decide"><b>Decisão</b><span>próximo passo</span></div></div>
+        <div class="sm-node end" data-node="end"><b>Encerrar</b></div>
+      </div>
+      <p class="obj-caption">O fluxo guarda o que já aconteceu.</p>
+    </article>
+    <article class="obj glass lf">
+      <div class="obj-head"><span class="logo-tile"><img class="logo" src="assets/img/logos/langflow-icon.svg" alt="Langflow"></span><div><h3>Langflow 1.0</h3><span class="date">24 de junho</span></div></div>
+      <div class="lf-canvas">
+        <span class="lf-block" data-node="lin">Entrada</span>
+        <span class="lf-block" data-node="lmodel">Modelo</span>
+        <span class="lf-block" data-node="ltool">Ferramenta</span>
+      </div>
+      <p class="obj-caption">A composição da aplicação também pode ser visual.</p>
+    </article>
+    <article class="obj glass mcp">
+      <div class="obj-head"><span class="logo-tile dark"><img class="logo" src="assets/img/logos/mcp-icon-white.svg" alt="Model Context Protocol"></span><div><h3>MCP</h3><span class="date">25 de novembro</span></div></div>
+      <div class="plug-stage">
+        <div class="plug-row">
+          <div class="mcp-box app-box"><b>Aplicação<br>de IA</b></div>
+          <i class="cord" aria-hidden="true"></i>
+          <span class="plug-head" aria-hidden="true"><i></i><i></i></span>
+          <span class="gap" aria-hidden="true"></span>
+          <span class="socket" aria-hidden="true"><i></i><i></i></span>
+          <div class="mcp-box server-box"><b>Servidor de<br>ferramentas</b></div>
+          <i class="spark" aria-hidden="true"></i>
+        </div>
+        <div class="tool-chips"><span>Arquivos</span><span>Banco</span><span>APIs</span></div>
+      </div>
+      <p class="obj-caption">Um protocolo para conectar ferramentas e dados.</p>
+    </article>
+  </div>
+  <p class="foot-note">Model Context Protocol padroniza a integração; as permissões continuam na implementação.</p>
+</section>
+<section class="slide s-year" data-id="ano-2025" data-year="2025" data-title="2025: a IA passa a trabalhar no projeto" data-chapter="2025 · CLIs e skills" data-accent="purple" data-accent2="cyan" data-transition="warp" aria-label="Slide 8: 2025, a IA passa a trabalhar no projeto">
+  <div class="year-giant layer" aria-hidden="true"><span class="yg-fixed">202</span><span class="yg-digit"><span class="yg-roll"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></div>
+  <div class="year-rail" aria-hidden="true"><span class="yr" data-y="2022">2022</span><i></i><span class="yr" data-y="2023">2023</span><i></i><span class="yr" data-y="2024">2024</span><i></i><span class="yr" data-y="2025">2025</span><i></i><span class="yr" data-y="2026">2026</span><b class="traveler"></b></div>
+  <header class="year-head"><h2 class="slide-title">2025: a IA passa a trabalhar no projeto</h2></header>
+  <div class="year-stage fill y25">
+    <article class="obj glass term25">
+      <div class="window-bar"><i></i><i></i><i></i><span>projeto · terminal</span></div>
+      <div class="term-grid">
+        <ul class="tree mono" aria-label="Arquivos do projeto">
+          <li data-f="root">projeto/</li>
+          <li data-f="src">├ src/busca.py</li>
+          <li data-f="tests">├ testes/test_busca.py</li>
+          <li data-f="skill">└ SKILL.md</li>
+        </ul>
+        <div class="term-out mono">
+          <p class="cmd">&gt; <span class="t" data-t="Corrija o bug e confira os testes."></span></p>
+          <p class="log l-read">lendo src/busca.py</p>
+          <div class="diff"><p class="minus">- if filtro and termo:</p><p class="plus">+ if filtro is not None and termo:</p></div>
+          <p class="log l-test">pytest · <b>12 passed</b></p>
+          <p class="log l-rev">diff pronto para revisão</p>
+        </div>
+      </div>
+      <p class="obj-caption">Representação didática: ler arquivos, alterar código, testar e revisar o diff.</p>
+    </article>
+    <div class="cli-milestones">
+      <div class="cli-card glass"><span class="logo-tile"><img class="logo" src="assets/img/logos/claude-code-lobe-color.svg" alt="Claude Code"></span><div><h3>Claude Code</h3><p>Preview em fevereiro.<br>Disponibilidade geral em maio.</p></div></div>
+      <div class="cli-card glass"><span class="logo-tile"><img class="logo" src="assets/img/logos/openai-lobe.svg" alt="OpenAI Codex CLI"></span><div><h3>Codex CLI</h3><p>Apresentado em abril.<br>Execução no terminal.</p></div></div>
+      <div class="cli-card glass skill-card"><span class="logo-tile folder"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7V4h7l3 3h10v14H2z"/></svg></span><div><h3>Agent Skills</h3><p>Procedimentos, scripts e referências<br>carregados conforme a tarefa.</p></div></div>
+    </div>
+  </div>
+  <p class="foot-note">A CLI é o aplicativo que conduz a execução. O modelo é uma escolha separada.</p>
+</section>
+<section class="slide s-year" data-id="ano-2026" data-year="2026" data-title="2026: assistentes pessoais com memória e canais" data-chapter="2026 · OpenClaw e Hermes Agent" data-accent="rose" data-accent2="yellow" data-transition="warp" aria-label="Slide 9: 2026, assistentes pessoais com memória e canais">
+  <div class="year-giant layer" aria-hidden="true"><span class="yg-fixed">202</span><span class="yg-digit"><span class="yg-roll"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></div>
+  <div class="year-rail" aria-hidden="true"><span class="yr" data-y="2022">2022</span><i></i><span class="yr" data-y="2023">2023</span><i></i><span class="yr" data-y="2024">2024</span><i></i><span class="yr" data-y="2025">2025</span><i></i><span class="yr" data-y="2026">2026</span><b class="traveler"></b></div>
+  <header class="year-head"><h2 class="slide-title">2026: assistentes pessoais<br>com memória e canais</h2></header>
+  <div class="year-stage fill y26">
+    <article class="obj glass era openclaw">
+      <span class="month-tag">Janeiro · popularização e renomeações</span>
+      <div class="rename"><span class="rn r1">Clawdbot</span><i class="rn-arrow" aria-hidden="true"></i><span class="rn r2">Moltbot</span><i class="rn-arrow" aria-hidden="true"></i><strong class="rn r3">OpenClaw</strong></div>
+      <div class="era-body"><img class="era-mascot" src="assets/img/logos/openclaw-official.svg" alt="Símbolo oficial do OpenClaw"><p>Um dos pioneiros desta onda de assistentes pessoais open source.</p></div>
+      <div class="chips"><span class="chip">Seu computador</span><span class="chip">Seus canais</span><span class="chip">Ferramentas autorizadas</span></div>
+    </article>
+    <article class="obj glass era hermes">
+      <span class="month-tag">25 de fevereiro · Nous Research</span>
+      <h3 class="hermes-name">Hermes Agent</h3>
+      <div class="era-body"><div class="hermes-reveal"><i class="bolt" aria-hidden="true"></i><img class="era-mascot" src="assets/img/logos/hermes-logo-dark.png" alt="Hermes Agent, projeto Nous Research"></div><p>Execução por ferramentas, memória persistida e criação de skills.</p></div>
+      <div class="chips"><span class="chip">Núcleo em Python</span><span class="chip">Continuidade</span><span class="chip">Auto skills</span></div>
+    </article>
+  </div>
+  <p class="foot-note">O projeto que se tornou OpenClaw começou em 2025. Hermes é um projeto independente, lançado depois.</p>
+</section>
+<section class="slide s-fronts" data-id="tres-movimentos" data-title="CLIs, skills, MCPs e agentes autônomos" data-chapter="CLIs · Skills e MCP · Agentes" data-accent="yellow" data-accent2="cyan" data-tick="1" aria-label="Slide 10: CLIs, skills, MCPs e agentes autônomos">
+  <span class="ghost" aria-hidden="true">JUNTOS</span>
+  <h2 class="slide-title">CLIs, skills, MCPs e agentes autônomos</h2>
+  <div class="fronts-stage fill">
+    <article class="front glass" data-node="cli" style="--c:#7dd3fc">
+      <div class="front-art"><div class="mini-term mono"><span class="p">$</span> <span class="t" data-t="claude &quot;corrija o teste&quot;"></span><i class="cur" aria-hidden="true"></i><span class="t2">editando src/ · rodando testes</span></div></div>
+      <h3>CLIs de programação</h3><p>A IA trabalha dentro do projeto.</p>
+    </article>
+    <article class="front glass" data-node="skills" style="--c:#ffd343">
+      <div class="front-art"><div class="skill-stack"><span class="sheet s1 mono">SKILL.md</span><span class="sheet s2 mono">publicar.md</span><span class="mcp-plug"><img src="assets/img/logos/mcp-icon-white.svg" alt=""><b>MCP</b></span></div></div>
+      <h3>Skills e MCPs</h3><p>Procedimentos reutilizáveis e integrações.</p>
+    </article>
+    <article class="front glass" data-node="agents" style="--c:#b7ff06">
+      <div class="front-art"><div class="agent-orbit"><img src="assets/img/logos/hermes-logo-dark.png" alt=""><span class="ch c1"><img src="assets/img/logos/whatsapp-color.svg" alt=""></span><span class="ch c2"><img src="assets/img/logos/telegram-si.svg" alt=""></span><span class="ch c3 term-ch mono">&gt;_</span></div></div>
+      <h3>Agentes autônomos</h3><p>Contexto e execução entre tarefas e canais.</p>
+    </article>
+    <div class="merge glass" data-node="merge">
+      <img src="assets/img/logos/hermes-logo-dark.png" alt="Hermes Agent">
+      <div><b>Combinados no mesmo processo</b><span>Um Hermes consulta uma skill, chama uma ferramenta MCP e usa uma CLI no código.</span></div>
+    </div>
+  </div>
+</section>
+<section class="slide s-exec" data-id="pedido-execucao" data-title="Linguagem natural para executar tarefas com o Hermes" data-chapter="Linguagem natural e ferramentas" data-accent="cyan" data-accent2="lime" aria-label="Slide 11: Linguagem natural para executar tarefas com o Hermes">
+  <span class="ghost" aria-hidden="true">LOOP</span>
+  <h2 class="slide-title">Linguagem natural para executar tarefas com o Hermes</h2>
+  <div class="exec-stage fill">
+    <div class="req glass" data-node="req">
+      <span class="tag mono">Pedido em linguagem natural</span>
+      <p class="req-text">“<span class="t" data-t="Crie uma apresentação, publique no site e adicione os downloads."></span>”</p>
+      <div class="chips"><span class="chip"><i class="dot"></i>Contexto</span><span class="chip"><i class="dot"></i>Regras</span><span class="chip"><i class="dot"></i>Permissões</span></div>
+    </div>
+    <div class="core" data-node="core">
+      <svg class="core-ring" viewBox="0 0 400 400" aria-hidden="true"><circle cx="200" cy="200" r="150"/><g class="ring-arrows"><path d="M200 50 l-12 -8 M200 50 l-12 8"/><path d="M350 200 l-8 -12 M350 200 l8 -12"/><path d="M200 350 l12 -8 M200 350 l12 8"/><path d="M50 200 l-8 12 M50 200 l8 12"/></g><circle class="arc" cx="200" cy="200" r="150"/></svg>
+      <span class="phase ph0">Observar</span><span class="phase ph1">Decidir</span><span class="phase ph2">Executar</span><span class="phase ph3">Verificar</span>
+      <div class="core-face"><img src="assets/img/logos/hermes-logo-dark.png" alt="Hermes Agent"><b>Hermes Agent</b></div>
+    </div>
+    <div class="trace glass" data-node="trace">
+      <div class="window-bar"><i></i><i></i><i></i><span>execução · ferramentas</span></div>
+      <ol class="trace-lines mono">
+        <li data-k="files"><span class="tool">read_file</span><span class="arg">conteúdo e estrutura do projeto</span><span class="st"></span></li>
+        <li data-k="term"><span class="tool">terminal</span><span class="arg">gerar a versão do site</span><span class="st"></span></li>
+        <li data-k="term" data-fail="1"><span class="tool">terminal</span><span class="arg">gerar o PDF</span><span class="st"></span></li>
+        <li data-k="term"><span class="tool">terminal</span><span class="arg">instalar a dependência que faltava</span><span class="st"></span></li>
+        <li data-k="term"><span class="tool">terminal</span><span class="arg">gerar o PDF de novo</span><span class="st"></span></li>
+        <li data-k="api"><span class="tool">publicar</span><span class="arg">site e downloads no destino autorizado</span><span class="st"></span></li>
+        <li data-k="check"><span class="tool">verificar</span><span class="arg">endereço final e versão servida</span><span class="st"></span></li>
+      </ol>
+      <div class="tool-legend"><span data-r="files"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/></svg>Arquivos e código</span><span data-r="term"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="2" width="18" height="9" rx="2"/><rect x="3" y="13" width="18" height="9" rx="2"/><path d="M6 6h1m3 0h8M6 17h1m3 0h8"/></svg>Terminal e APIs</span><span data-r="check"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 5"/></svg>Testes e conferência</span></div>
+    </div>
+  </div>
+  <p class="foot-note">O runtime executa as ferramentas e devolve os resultados; o modelo participa da escolha da próxima ação.</p>
+</section>
+<section class="slide s-memory" data-id="memoria" data-title="Memória e auto skills no Hermes" data-chapter="Memória, base de contexto e skills" data-accent="purple" data-accent2="lime" aria-label="Slide 12: Memória e auto skills no Hermes">
+  <span class="ghost" aria-hidden="true">SKILLS</span>
+  <h2 class="slide-title">Memória e auto skills no Hermes</h2>
+  <div class="mem-stage fill">
+    <div class="stores">
+      <article class="store glass" data-node="mem" style="--c:#b9a2f8">
+        <div class="store-top"><span class="store-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4c-4-5-11 0-8 5-5 5 0 12 5 10 1 4 5 3 6 0 6 1 9-6 5-10 2-5-4-9-8-5Zm0 0v15M5 10l4 2m10-2-4 3"/></svg></span><span class="file mono">MEMORY.md</span></div>
+        <h3>Fatos persistidos</h3><p>Informações selecionadas sobre você e sua operação.</p>
+        <span class="ex">Exemplo: formato e regras das entregas.</span>
+      </article>
+      <article class="store glass" data-node="ctx" style="--c:#7dd3fc">
+        <div class="store-top"><span class="store-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7V4h7l3 3h10v14H2z"/></svg></span><span class="file mono">Base de contexto</span></div>
+        <h3>Detalhes consultáveis</h3><p>Documentos, projetos e histórico recuperados quando fazem falta.</p>
+        <span class="ex">Exemplo: fontes e decisões de uma palestra.</span>
+      </article>
+      <article class="store glass skill-store" data-node="skill" style="--c:#b7ff06">
+        <div class="store-top"><span class="store-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/></svg></span><span class="file mono">SKILL.md</span></div>
+        <h3>Procedimentos revisados</h3>
+        <div class="skill-doc mono" aria-label="Trecho ilustrativo de uma skill de publicação">
+          <p>## Publicar uma página</p>
+          <p>1. Gerar os arquivos</p>
+          <p>2. Enviar ao destino autorizado</p>
+          <p class="new-line">3. <span class="t" data-t="Conferir a versão servida antes de concluir"></span></p>
+        </div>
+      </article>
+    </div>
+    <div class="story glass">
+      <div class="ctl-row" role="group" aria-label="Escolher a etapa do exemplo"><button class="ctl" data-phase="first" aria-pressed="true">Primeira tarefa</button><button class="ctl" data-phase="reuse" aria-pressed="false">Próxima tarefa</button></div>
+      <div class="board">
+        <div class="agent" data-node="agent"><img src="assets/img/logos/hermes-logo-dark.png" alt="Hermes Agent"><b>Hermes</b></div>
+        <ol class="steps"></ol>
+      </div>
+      <p class="story-msg" aria-live="polite"></p>
+    </div>
+  </div>
+  <p class="foot-note">O aprendizado fica em arquivos e contexto recuperáveis, sem alterar os pesos do modelo.</p>
+</section>
+<section class="slide s-arch" data-id="arquitetura-operacao" data-title="Infraestrutura de IA da PycodeBR" data-chapter="Arquitetura da operação" data-accent="lime" data-accent2="purple" data-tick="1" aria-label="Slide 13: Infraestrutura de IA da PycodeBR">
+  <div class="arch-head">
+    <h2 class="slide-title">Infraestrutura de IA da PycodeBR</h2>
+    <div class="ctl-row arch-ctl" role="group" aria-label="Explorar a arquitetura"><button class="ctl" data-focus="access" aria-pressed="false">Acessos</button><button class="ctl" data-focus="context" aria-pressed="false">Contexto</button><button class="ctl" data-focus="integrations" aria-pressed="false">Integrações</button><button class="ctl" data-focus="outputs" aria-pressed="false">Entregas</button></div>
+  </div>
+  <div class="arch-map fill">
+    <div class="col col-access">
+      <span class="col-label mono">Usuário e equipe</span>
+      <div class="anode" data-node="ssh" data-scope="access"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 17 6-6-6-6M12 19h8"/></svg><div><b>Terminal / SSH</b><span>CLI e acesso técnico</span></div></div>
+      <div class="anode" data-node="desktop" data-scope="access"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><div><b>Interfaces desktop</b><span>Hermes Desktop · Orca Desktop</span></div></div>
+      <div class="anode" data-node="mobile" data-scope="access"><img class="logo" src="assets/img/logos/tailscale-si.svg" alt="" style="filter:invert(1)"><div><b>Acesso móvel</b><span>Orca Mobile · Tailscale VPN</span></div></div>
+      <div class="anode" data-node="chat" data-scope="access"><img class="logo" src="assets/img/logos/whatsapp-color.svg" alt=""><div><b>Mensageria</b><span>Slack e WhatsApp · Telegram como opção</span></div></div>
+    </div>
+    <div class="col col-vps">
+      <span class="col-label mono">VPS · ambiente de execução</span>
+      <div class="vps-grid">
+        <div class="anode" data-node="gateway" data-scope="access"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Gateway e rotinas</b><span>Pedidos, agendas e eventos</span></div></div>
+        <div class="anode" data-node="context" data-scope="context"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7V4h7l3 3h10v14H2z"/></svg><div><b>Base de contexto</b><span>Documentos · memória e skills</span></div></div>
+        <div class="hermes-node" data-node="hermes"><i class="hn-ring" aria-hidden="true"></i><img src="assets/img/logos/hermes-logo-dark.png" alt="Hermes Agent"><b>Hermes Agent</b><span class="mono">observar · executar · verificar</span></div>
+        <div class="anode" data-node="projects" data-scope="context"><img class="logo" src="assets/img/logos/GitHub_Invertocat_White_Clearspace.svg" alt=""><div><b>Projetos e GitHub</b><span>Código e arquivos · CLIs opcionais</span></div></div>
+        <div class="anode" data-node="execution" data-scope="outputs"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="2" width="18" height="9" rx="2"/><rect x="3" y="13" width="18" height="9" rx="2"/><path d="M6 6h1m3 0h8M6 17h1m3 0h8"/></svg><div><b>Ferramentas de execução</b><span>Terminal, browser e código</span></div></div>
+        <div class="anode" data-node="state" data-scope="context"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 2 4 3 8 3s8-1 8-3V5M4 12c0 2 4 3 8 3s8-1 8-3"/></svg><div><b>Estado e dados</b><span>Sessões e bancos operacionais</span></div></div>
+      </div>
+    </div>
+    <div class="col col-out">
+      <span class="col-label mono">Serviços e entregas</span>
+      <div class="anode" data-node="models" data-scope="integrations"><img class="logo light" src="assets/img/logos/openai-lobe.svg" alt=""><div><b>Modelos</b><span>OpenAI e outros provedores · OpenCode Go/Zen como opção</span></div></div>
+      <div class="anode" data-node="integration" data-scope="integrations"><span class="logo-cluster"><img src="assets/img/logos/mcp-icon-white.svg" alt=""><img src="assets/img/logos/notion-simpleicons.svg" alt="" style="filter:invert(1)"><img src="assets/img/logos/clickup-si.svg" alt=""><img src="assets/img/logos/googledrive-si.svg" alt=""></span><div><b>MCPs · APIs · Composio</b><span>Notion, ClickUp, Google Workspace e contas autorizadas</span></div></div>
+      <div class="anode" data-node="central" data-scope="outputs"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg><div><b>Central de Operações</b><span>Dashboards, relatórios e materiais · HTTPS</span></div></div>
+    </div>
+  </div>
+  <p class="arch-explain" aria-live="polite"></p>
+  <p class="foot-note">Essa base pode ser replicada e adaptada a outras operações, conforme sistemas, recursos e permissões.</p>
+</section>
+<section class="slide s-radar" data-id="rotinas" data-title="Rotinas, eventos e pedidos na operação" data-chapter="Operação · gatilhos" data-accent="green" data-accent2="cyan" aria-label="Slide 14: Rotinas, eventos e pedidos na operação">
+  <h2 class="slide-title">Rotinas, eventos e pedidos na operação</h2>
+  <div class="radar-stage fill">
+    <div class="radar" aria-hidden="true">
+      <svg class="dial" viewBox="0 0 800 800"></svg>
+      <div class="sweep"></div>
+      <div class="blips"></div>
+      <div class="radar-core"><img src="assets/img/logos/hermes-logo-dark.png" alt=""><b>Hermes</b></div>
+    </div>
+    <div class="feed glass">
+      <div class="feed-head"><span class="mono">registro da operação</span><span class="clock mono">00:00</span></div>
+      <ol class="feed-list" aria-label="Exemplos de rotinas, eventos e pedidos"></ol>
+      <div class="legend"><span class="lg agenda"><i></i>Agenda · horário definido</span><span class="lg evento"><i></i>Evento · webhook</span><span class="lg pedido"><i></i>Pedido · conversa</span></div>
+    </div>
+  </div>
+  <p class="foot-note">Exemplos da operação PycodeBR. Cada rotina tem permissões, saída e verificação próprias.</p>
+</section>
+<section class="slide s-content" data-id="conteudo" data-title="Pipeline de conteúdo para o Instagram" data-chapter="Casos · conteúdo" data-accent="yellow" data-accent2="rose" aria-label="Slide 15: Pipeline de conteúdo para o Instagram">
+  <h2 class="slide-title">Pipeline de conteúdo para o Instagram</h2>
+  <div class="pipe">
+    <div class="pstation" data-node="research"><span class="pi"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></span><b>Pesquisa</b><span>web e X</span></div>
+    <div class="pstation" data-node="sources"><span class="pi"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></span><b>Fontes</b><span>leitura e seleção</span></div>
+    <div class="pstation" data-node="copy"><span class="pi"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></span><b>Texto</b><span>manchete e legenda</span></div>
+    <div class="pstation" data-node="art"><span class="pi"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></span><b>Arte</b><span>imagem 1080 × 1350</span></div>
+    <div class="pstation" data-node="review"><span class="pi"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 5"/></svg></span><b>Revisão</b><span>relatório na Central</span></div>
+    <div class="pstation" data-node="publish"><span class="pi"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4zM22 2 11 13"/></svg></span><b>Publicação</b><span>política de cada fluxo</span></div>
+  </div>
+  <div class="content-lower fill">
+    <div class="forge">
+      <div class="forge-frame">
+        <div class="forge-skeleton" aria-hidden="true"><span class="sk-src"><i>fonte oficial</i><i>blog do projeto</i><i>documentação</i></span><span class="sk-lines"><i></i><i></i><i></i></span></div>
+        <img class="forge-post" src="assets/img/posts/news-python-315.webp" alt="Post publicado pela PycodeBR: Python 3.15 muda como aplicações carregam módulos">
+        <span class="stamp mono">REVISADO</span>
+      </div>
+      <span class="forge-label mono">Posts publicados pela PycodeBR</span>
+    </div>
+    <div class="browser glass">
+      <div class="window-bar"><i></i><i></i><i></i><span>radarx.com.br/news</span></div>
+      <div class="browser-view"><img src="assets/img/radar-news.png" alt="Captura pública do relatório Radar-X News de 5 de outubro de 2026"></div>
+    </div>
+    <div class="lanes">
+      <div class="lane" data-lane="a"><b>Fluxo A</b><span>publica nos horários definidos</span><span class="lane-count mono">0</span><em class="lane-unit mono">posts</em></div>
+      <div class="lane" data-lane="b"><b>Fluxo B</b><span>aguarda a aprovação da equipe</span><span class="lane-count mono">0</span><em class="lane-unit mono">posts</em></div>
+      <p class="lane-note">Todos os dias, com pesquisa, texto e arte no mesmo pipeline.</p>
+    </div>
+  </div>
+  <p class="foot-note">Geração, revisão e publicação têm critérios próprios.</p>
+</section>
+<section class="slide s-panels" data-id="paineis" data-title="Painéis e materiais sob demanda" data-chapter="Casos · painéis e recursos" data-accent="orange" data-accent2="cyan" aria-label="Slide 16: Painéis e materiais sob demanda">
+  <h2 class="slide-title">Painéis e materiais sob demanda</h2>
+  <div class="panels-stage fill">
+    <div class="dash glass">
+      <div class="ask"><span class="ask-who mono">pergunta da operação</span><p><span class="t" data-t="Qual canal trouxe mais inscrições nesta semana?"></span></p></div>
+      <div class="dash-body">
+        <div class="filters"><span class="chip">Semana atual</span><span class="chip">Por canal</span><span class="chip">Inscrições</span></div>
+        <div class="bars" aria-label="Gráfico ilustrativo, sem dados da empresa">
+          <div class="bar" style="--h:.82;--c:#ffb56b"><i></i><span>Orgânico</span></div>
+          <div class="bar" style="--h:.58;--c:#7dd3fc"><i></i><span>E-mail</span></div>
+          <div class="bar fail" style="--h:.7;--c:#b9a2f8"><i></i><em class="fail-tag mono">fonte indisponível</em><span>Anúncios</span></div>
+          <div class="bar" style="--h:.36;--c:#b7ff06"><i></i><span>Indicação</span></div>
+        </div>
+        <div class="health"><span class="hb ok">Coleta: 3 de 4 fontes</span><span class="hb warn">Total parcial · não publicar como completo</span></div>
+      </div>
+      <p class="dash-lesson">Uma fonte indisponível aparece como indisponível, nunca como zero.</p>
+    </div>
+    <div class="materials">
+      <div class="artifact glass" data-a="deck"><div class="art-thumb deck-thumb"><b>AGENTES<br>AUTÔNOMOS</b></div><div class="art-info"><h3>Apresentações</h3><ul><li>links abrem</li><li>texto legível</li></ul></div></div>
+      <div class="artifact glass" data-a="guide"><div class="art-thumb guide-thumb mono"># Guia<br>## Passo 1<br>- instalar<br>- testar</div><div class="art-info"><h3>Guias</h3><ul><li>arquivos completos</li><li>fontes citadas</li></ul></div></div>
+      <div class="artifact glass" data-a="page"><div class="art-thumb page-thumb"><i></i><i></i><i></i></div><div class="art-info"><h3>Páginas e relatórios</h3><ul><li>acesso adequado</li><li>versão servida conferida</li></ul></div></div>
+    </div>
+  </div>
+  <p class="foot-note">Gráfico e cartões ilustrativos, sem métricas da empresa. Cada formato tem uma conferência própria.</p>
+</section>
+<section class="slide s-channels" data-id="canais" data-title="Atendimento e proatividade nos canais da operação" data-chapter="Casos · atendimento, multimodalidade e iniciativa" data-accent="green" data-accent2="rose" aria-label="Slide 17: Atendimento e proatividade nos canais da operação">
+  <h2 class="slide-title">Atendimento e proatividade nos canais da operação</h2>
+  <div class="channels-stage fill">
+    <div class="zone z-ingest">
+      <span class="zone-label mono">Contexto multimodal</span>
+      <div class="ingest">
+        <div class="ig-step" data-node="event"><b>Evento recebido</b><span>webhook guarda a mensagem</span></div>
+        <div class="ig-step" data-node="db"><b>Banco</b><span>registro persistido</span></div>
+        <div class="ig-step" data-node="media"><b>Mídia</b><span>transcrição no próprio servidor</span></div>
+        <div class="ig-step" data-node="select"><b>Seleção</b><span>o que merece análise</span></div>
+        <div class="ig-step model" data-node="model"><b>Modelo</b><span>só quando necessário</span></div>
+      </div>
+      <p class="zone-note">Algumas etapas rodam com código, sem chamar o modelo a cada mensagem.</p>
+    </div>
+    <div class="phone wa-phone" data-node="phone">
+      <div class="phone-notch" aria-hidden="true"></div>
+      <div class="phone-screen">
+        <div class="wa-head"><img src="assets/img/logos/whatsapp-color.svg" alt=""><div><b>Atendimento</b><span>experimento validado antes do público</span></div></div>
+        <div class="wa-chat">
+          <div class="wa-msg in m1">Como acesso o material?</div>
+          <div class="wa-msg out m2">Orientação ou encaminhamento humano.</div>
+          <div class="wa-msg in m3 audio"><i class="play" aria-hidden="true"></i><span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><em>0:07</em></div>
+          <div class="wa-msg sys m4 mono">áudio transcrito no servidor</div>
+          <div class="wa-msg in m5 shot"><span class="shot-img" aria-hidden="true"><i></i><i></i><i></i></span>Captura de tela</div>
+        </div>
+      </div>
+    </div>
+    <div class="zone z-initiative">
+      <span class="zone-label mono">Iniciativa autorizada</span>
+      <div class="team-chat glass">
+        <p class="tc-msg"><b>Equipe</b>A campanha precisa de criativos novos.</p>
+        <p class="tc-msg agent"><b>Kratos</b>Preparei dez propostas para revisão.</p>
+      </div>
+      <div class="creatives" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <span class="review-stamp mono">REVISÃO DA EQUIPE</span>
+      <p class="zone-note">Preparar a proposta era a ação permitida. Publicar e comprar mídia são decisões separadas.</p>
+    </div>
+  </div>
+  <p class="foot-note">Interfaces ilustrativas. A coleta e a iniciativa dependem das permissões de cada fluxo.</p>
+</section>
+<section class="slide s-video" data-id="cortes-video" data-title="Cortes de vídeo: da gravação ao aviso no WhatsApp" data-chapter="Casos · edição de vídeo" data-accent="rose" data-accent2="yellow" aria-label="Slide 18: Cortes de vídeo, da gravação ao aviso no WhatsApp">
+  <h2 class="slide-title">Cortes de vídeo: da gravação ao aviso no WhatsApp</h2>
+  <div class="belt">
+    <div class="bstation" data-node="rec" data-step="0"><span class="bi rec-ico"><i></i></span><b>Gravação</b><span>Felipe grava o encontro</span></div>
+    <div class="bstation" data-node="drivein" data-step="1"><span class="bi"><img src="assets/img/logos/google-drive-2020.svg" alt=""></span><b>Google Drive</b><span>vídeo e transcrição</span></div>
+    <div class="bstation" data-node="hermes" data-step="2"><span class="bi"><img src="assets/img/logos/hermes-logo-dark.png" alt=""></span><b>Transcrição</b><span>tempo por palavra</span></div>
+    <div class="bstation" data-node="cuts" data-step="3"><span class="bi"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg></span><b>Cortes</b><span>ideias completas</span></div>
+    <div class="bstation" data-node="edit" data-step="4"><span class="bi"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M7 4v5M12 4v5M17 4v5m-7 4 5 3-5 3z"/></svg></span><b>Edição</b><span>heditor</span></div>
+    <div class="bstation" data-node="qa" data-step="5"><span class="bi"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 5"/></svg></span><b>Conferência</b><span>áudio, legenda, quadros</span></div>
+    <div class="bstation" data-node="driveout" data-step="6"><span class="bi"><img src="assets/img/logos/google-drive-2020.svg" alt=""></span><b>Pasta de cortes</b><span>vídeos no Drive</span></div>
+    <div class="bstation" data-node="wa" data-step="7"><span class="bi"><img src="assets/img/logos/whatsapp-color.svg" alt=""></span><b>Aviso</b><span>link no WhatsApp</span></div>
+  </div>
+  <div class="video-lower fill">
+    <div class="detail glass">
+      <div class="pane" data-pane="0">
+        <div class="viewfinder"><span class="rec-badge mono"><i></i>REC</span><span class="tc mono">00:00:00</span><span class="vf-cross" aria-hidden="true"></span><span class="vf-label">Encontro gravado com tela e câmera</span></div>
+      </div>
+      <div class="pane" data-pane="1">
+        <div class="drive-ui"><div class="du-head"><img src="assets/img/logos/google-drive-2020.svg" alt=""><b>Encontros Elite</b></div>
+          <div class="du-file"><span class="ft mp4 mono">MP4</span><div><b>Encontro_Elite_11.mp4</b><span>gravação completa</span><i class="bar"><i></i></i></div></div>
+          <div class="du-file"><span class="ft pdf mono">PDF</span><div><b>Resumo e transcrição.pdf</b><span>texto da reunião</span><i class="bar"><i></i></i></div></div>
+        </div>
+      </div>
+      <div class="pane" data-pane="2">
+        <div class="asr"><div class="wave-big" aria-hidden="true"></div>
+          <div class="words mono"><span>00:41:12.480</span><b>a</b><b>página</b><b>não</b><b>saiu</b><b>de</b><b>um</b><b>único</b><b>prompt</b></div>
+          <p class="asr-note">faster-whisper local · alinhamento de cada palavra no áudio</p>
+        </div>
+      </div>
+      <div class="pane" data-pane="3">
+        <div class="cuts-ui"><div class="tl-bar"><span class="tl-start mono">00:00</span><span class="tl-end mono">02:22:08</span></div>
+          <div class="tl-marks"></div>
+          <div class="cut-cards"><span><b>R02</b>Serviço pronto ou mais um sistema?</span><span><b>R03</b>Qual júnior está sendo descrito?</span><span><b>R06</b>Inovar tornando algo acessível</span></div>
+        </div>
+      </div>
+      <div class="pane" data-pane="4">
+        <div class="edit-ui"><p class="edit-lead">Cada corte ganha um mundo visual próprio, montado em HTML com GSAP e renderizado com HyperFrames.</p>
+          <div class="styles"><span>Cinema</span><span>Game</span><span>Thriller</span><span>IDE</span><span>Aeroporto</span><span>Chat</span><span>Documentário</span><span>Podcast</span><span>Missão</span></div>
+          <p class="heditor-tag mono">heditor · skill pública da PycodeBR · github.com/pycodebr/heditor</p>
+        </div>
+      </div>
+      <div class="pane" data-pane="5">
+        <ul class="qa-list"><li>Pausas medidas e cortadas na emenda</li><li>Fim das palavras preservado</li><li>Voz em −14 LUFS, trilha por baixo</li><li>Quadros revisados por visão</li><li>Transcrição do áudio final conferida</li></ul>
+      </div>
+      <div class="pane" data-pane="6">
+        <div class="drive-ui out"><div class="du-head"><img src="assets/img/logos/google-drive-2020.svg" alt=""><b>cortes / encontro-11</b></div>
+          <div class="du-grid"><span class="vf-file"><i></i>R03_cinema_v4.mp4</span><span class="vf-file"><i></i>R06_cinema_v1.mp4</span><span class="vf-file"><i></i>R07_cinema_v1.mp4</span><span class="vf-file"><i></i>R10_cinema_v1.mp4</span></div>
+        </div>
+      </div>
+      <div class="pane" data-pane="7">
+        <div class="notify"><div class="lock-time mono">19:42</div>
+          <div class="toast"><img src="assets/img/logos/whatsapp-color.svg" alt=""><div><b>PycodeBR</b><p>Os cortes do encontro 11 estão no Drive. São quatro vídeos para você revisar.</p></div></div>
+          <p class="notify-note">A aprovação acontece no próprio WhatsApp; publicar continua sendo outra decisão.</p>
+        </div>
+      </div>
+    </div>
+    <div class="phone reel-phone">
+      <div class="phone-notch" aria-hidden="true"></div>
+      <div class="phone-screen">
+        <video class="reel" src="assets/video/reels-montage.mp4" poster="assets/video/reels-poster.jpg" muted loop playsinline preload="auto" aria-label="Trechos de cortes editados pelo Hermes, sem áudio"></video>
+        <span class="reel-style mono">Cinema</span>
+      </div>
+    </div>
+  </div>
+  <p class="foot-note">Fluxo usado nos cortes dos encontros Elite. Trechos reais editados pelo Hermes, exibidos sem áudio.</p>
+</section>
+<section class="slide s-workflow" data-id="workflow" data-title="Workflow de IA Assistida em cinco passos" data-chapter="Workflow de IA Assistida · PycodeBR" data-accent="yellow" data-accent2="lime" data-tick="1" aria-label="Slide 19: Workflow de IA Assistida em cinco passos">
+  <h2 class="slide-title">Workflow de IA Assistida em cinco passos</h2>
+  <div class="wf-steps" role="group" aria-label="Etapas do Workflow de IA Assistida">
+    <i class="wf-rail" aria-hidden="true"><i class="wf-fill"></i></i>
+    <button class="wf-step" data-step="0" aria-pressed="false"><span class="n mono">01</span><strong>Refinar o pedido</strong></button>
+    <button class="wf-step" data-step="1" aria-pressed="false"><span class="n mono">02</span><strong>Gerar o PRD.md</strong></button>
+    <button class="wf-step" data-step="2" aria-pressed="false"><span class="n mono">03</span><strong>Preparar o template</strong></button>
+    <button class="wf-step" data-step="3" aria-pressed="false"><span class="n mono">04</span><strong>Executar a sprint</strong></button>
+    <button class="wf-step" data-step="4" aria-pressed="false"><span class="n mono">05</span><strong>Revisar, corrigir e versionar</strong></button>
+  </div>
+  <div class="wf-stage fill">
+    <div class="wf-art glass">
+      <div class="art a0">
+        <p class="raw mono">quero salvar filtro de busca pra usar depois</p>
+        <div class="refined"><p><b>Objetivo</b>salvar e recuperar filtros de busca</p><p><b>Usuários</b>cada pessoa vê os próprios filtros</p><p><b>Regras</b>nome único por pessoa</p><p><b>Restrições</b>a busca atual continua igual</p></div>
+      </div>
+      <div class="art a1 doc mono">
+        <p class="h1"># PRD · Filtros salvos</p>
+        <p class="h2">## Requisitos</p><p>- salvar as condições da busca</p><p>- listar e aplicar um filtro salvo</p>
+        <p class="h2">## Critérios de aceite</p><p>- salvar e recuperar conserva as condições</p>
+        <p class="h2">## Sprints</p><p class="sprints"><span>S1 modelo</span><span>S2 telas</span><span>S3 testes de ponta a ponta</span></p>
+      </div>
+      <div class="art a2 tree2 mono">
+        <p>projeto/</p><p>├ app/filtros/</p><p>├ templates/</p><p>├ static/design-system.css</p><p>├ tests/</p><p class="hl">├ PRD.md</p><p class="hl">└ AGENTS.md</p>
+      </div>
+      <div class="art a3 code mono">
+        <p><span class="k">def</span> <span class="f">salvar_filtro</span>(usuario, nome, condicoes):</p>
+        <p>    filtro = FiltroSalvo(dono=usuario, nome=nome)</p>
+        <p>    filtro.condicoes = condicoes</p>
+        <p>    filtro.full_clean()</p>
+        <p>    filtro.save()</p>
+        <p>    <span class="k">return</span> filtro</p>
+      </div>
+      <div class="art a4 review mono">
+        <p class="minus">- condicoes = request.GET</p><p class="plus">+ condicoes = filtrar_campos(request.GET)</p>
+        <p class="ok">pytest · 18 passed</p>
+        <p class="git">$ git commit -m "feat: salva filtros de busca"</p>
+        <p class="git">$ git push</p>
+        <p class="next">↺ próxima sprint</p>
+      </div>
+    </div>
+    <div class="wf-detail">
+      <span class="big-n mono" data-step-number>01</span>
+      <h3 data-step-title></h3>
+      <p class="body" data-step-body></p>
+      <div class="artifact-card"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/></svg><div><b data-step-file></b><span data-step-output></span></div></div>
+    </div>
+  </div>
+  <p class="foot-note">O quinto passo se repete a cada sprint. O deploy é planejado no pedido e no PRD e acontece depois da validação.</p>
+</section>
+<section class="slide s-harness" data-id="harness" data-title="Hermes como harness e orquestrador de desenvolvimento" data-chapter="Harness e delegação" data-accent="purple" data-accent2="cyan" aria-label="Slide 20: Hermes como harness e orquestrador de desenvolvimento">
+  <h2 class="slide-title">Hermes como harness e orquestrador de desenvolvimento</h2>
+  <div class="harness-stage fill">
+    <div class="h-main glass" data-node="main">
+      <img src="assets/img/logos/hermes-logo-dark.png" alt="Hermes Agent">
+      <h3>Hermes principal</h3><p>PRD, contexto e skills.</p>
+      <code class="mono">delegate_task</code>
+    </div>
+    <div class="h-workers">
+      <div class="worker glass" data-node="w1"><div class="w-head"><span class="logo-tile"><img class="logo" src="assets/img/logos/claude-code-lobe-color.svg" alt="Claude Code"></span><div><b>Implementação</b><span>filho Hermes → Claude Code pela CLI</span></div></div>
+        <div class="w-term mono"><p class="c"><span class="t" data-t='$ claude -p "implemente a sprint 2"'></span></p><p class="o">editando app/filtros/views.py</p><p class="o">worktree: sprint-2</p></div></div>
+      <div class="worker glass" data-node="w2"><div class="w-head"><span class="logo-tile"><img class="logo" src="assets/img/logos/openai-lobe.svg" alt="Codex CLI"></span><div><b>Revisão e testes</b><span>filho Hermes → Codex CLI</span></div></div>
+        <div class="w-term mono"><p class="c"><span class="t" data-t='$ codex exec "revise o diff e rode os testes"'></span></p><p class="o">2 observações de revisão</p><p class="o ok">pytest · 18 passed</p></div></div>
+      <div class="worker glass" data-node="w3"><div class="w-head"><span class="logo-tile dark"><img class="logo" src="assets/img/logos/opencode-logo-dark.svg" alt="OpenCode"></span><div><b>Investigação delimitada</b><span>filho Hermes → OpenCode pela CLI</span></div></div>
+        <div class="w-term mono"><p class="c"><span class="t" data-t='$ opencode run "mapeie as consultas da busca"'></span></p><p class="o">3 consultas encontradas</p><p class="o">relatório entregue ao principal</p></div></div>
+    </div>
+    <div class="h-review glass" data-node="review">
+      <span class="rv-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 5"/></svg></span>
+      <h3>Integração conferida</h3><p>Diff, testes e critérios da sprint.</p>
+      <ul class="checks"><li>diff revisado</li><li>testes passando</li><li>critérios atendidos</li></ul>
+    </div>
+  </div>
+  <p class="foot-note">delegate_task cria filhos Hermes. As CLIs externas são chamadas pelo terminal, com ambientes e acessos preparados.</p>
+</section>
+<section class="slide s-stack" data-id="stack" data-title="Deploy e observabilidade da aplicação" data-chapter="Stack de deploy e observabilidade" data-accent="orange" data-accent2="lime" aria-label="Slide 21: Deploy e observabilidade da aplicação">
+  <h2 class="slide-title">Deploy e observabilidade da aplicação</h2>
+  <div class="stack-stage fill">
+    <div class="st-col">
+      <div class="snode" data-node="code"><img class="logo" src="assets/img/logos/GitHub_Invertocat_White_Clearspace.svg" alt=""><div><b>Código e imagem</b><span>GitHub → registry</span></div></div>
+      <div class="snode" data-node="users"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2 21c0-4 3-7 7-7s7 3 7 7M16 4a4 4 0 0 1 0 8m6 9c0-3-2-6-5-7"/></svg><div><b>Usuários</b><span>requisições HTTPS</span></div></div>
+    </div>
+    <div class="snode edge" data-node="edge"><img class="logo" src="assets/img/logos/traefik-proxy.svg" alt=""><div><b>Traefik</b><span>entrada HTTPS e TLS</span></div></div>
+    <div class="swarm glass" data-node="app">
+      <span class="swarm-label"><img src="assets/img/logos/docker-mark-white.svg" alt="">Docker Swarm · VPS</span>
+      <div class="svc-grid">
+        <div class="svc"><img src="assets/img/logos/django-negative.svg" alt=""><span>Django</span></div>
+        <div class="svc"><img src="assets/img/logos/postgresql.svg" alt=""><span>PostgreSQL</span></div>
+        <div class="svc"><img src="assets/img/logos/rabbitmq.svg" alt=""><span>RabbitMQ</span></div>
+        <div class="svc"><img src="assets/img/logos/redis.svg" alt=""><span>Redis</span></div>
+        <div class="svc wide"><span>Celery Worker + Beat para tarefas</span></div>
+      </div>
+    </div>
+    <div class="st-col">
+      <div class="snode" data-node="prom"><img class="logo" src="assets/img/logos/prometheus-logo.svg" alt=""><div><b>Prometheus</b><span>métricas por scrape</span></div></div>
+      <div class="snode" data-node="loki"><img class="logo" src="assets/img/logos/loki-logo.svg" alt=""><div><b>Loki</b><span>logs enviados pelo coletor</span></div></div>
+    </div>
+    <div class="grafana glass" data-node="grafana">
+      <div class="gf-head"><img src="assets/img/logos/grafana-icon.svg" alt=""><b>Grafana</b></div>
+      <div class="gf-panel"><span class="mono">latência</span><svg viewBox="0 0 200 60" aria-hidden="true"><path class="gf-line l1" d="M0 46 L20 40 L40 44 L60 30 L80 34 L100 22 L120 28 L140 18 L160 24 L180 12 L200 16"/></svg></div>
+      <div class="gf-panel"><span class="mono">erros</span><svg viewBox="0 0 200 60" aria-hidden="true"><path class="gf-line l2" d="M0 50 L20 50 L40 48 L60 50 L80 46 L100 50 L120 20 L140 44 L160 48 L180 50 L200 49"/></svg></div>
+      <div class="gf-panel"><span class="mono">logs</span><div class="gf-logs mono"><i></i><i></i><i></i><i></i></div></div>
+    </div>
+  </div>
+  <p class="foot-note">Base dos encontros Elite #03 e #04. cAdvisor e node-exporter complementam as métricas; Alloy é a recomendação atual para a coleta de logs.</p>
+</section>
+<section class="slide s-monitor" data-id="monitoria" data-title="Arquitetura de monitoria com Hermes e MCPs" data-chapter="Monitoria com IA · dois MCPs" data-accent="orange" data-accent2="purple" aria-label="Slide 22: Arquitetura de monitoria com Hermes e MCPs">
+  <h2 class="slide-title">Arquitetura de monitoria com Hermes e MCPs</h2>
+  <div class="mon-stage fill">
+    <div class="boundary b-app">
+      <span class="b-label mono">Aplicação e observabilidade</span>
+      <div class="signal glass" data-node="grafana">
+        <div class="sig-head"><b data-sig-title>Latência em alta</b><img src="assets/img/logos/grafana-icon.svg" alt="Grafana"></div>
+        <div class="ctl-row sig-tabs" role="group" aria-label="Escolher o sinal"><button class="ctl" data-signal="latency" aria-pressed="true">Latência</button><button class="ctl" data-signal="queue" aria-pressed="false">Fila</button><button class="ctl" data-signal="errors" aria-pressed="false">Erros</button></div>
+        <svg class="sig-chart" viewBox="0 0 520 210" aria-label="Telemetria ilustrativa"><path class="grid" d="M0 40h520M0 100h520M0 160h520"/><path class="threshold" d="M0 70h520"/><path class="plot" d="M5 180L515 20"/><circle class="alert-dot" cx="0" cy="0" r="9"/></svg>
+        <p class="sig-legend mono" data-sig-legend></p>
+        <p class="sig-log mono" data-sig-log></p>
+      </div>
+      <div class="mnode" data-node="domain"><b>MCP do sistema</b><span>MentorIA como exemplo: estado e dados do domínio</span></div>
+    </div>
+    <div class="boundary b-vps">
+      <span class="b-label mono">VPS · infraestrutura do Hermes</span>
+      <div class="mflow">
+        <div class="mnode" data-node="trigger"><b>Webhook ou rotina</b><span>entrada filtrada e deduplicada</span></div>
+        <div class="mnode" data-node="queue"><b>Fila de trabalho</b><span>uma demanda por vez</span></div>
+        <div class="mnode hermes" data-node="observer"><img src="assets/img/logos/hermes-logo-dark.png" alt=""><div><b>Hermes</b><span>contexto, skills e histórico</span></div></div>
+        <div class="mnode" data-node="gmcp"><img class="logo" src="assets/img/logos/grafana-icon.svg" alt=""><div><b>MCP do Grafana</b><span>consultar métricas e logs</span></div></div>
+      </div>
+      <div class="outcome">
+        <div class="oc" data-node="investigate"><b>Investigar</b><span data-investigation></span></div>
+        <div class="oc" data-node="act"><b>Preparar a ação</b><span data-action></span></div>
+        <div class="oc" data-node="notify"><b>Avisar e conferir</b><span>Diagnóstico e evidências em canal autorizado.</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="foot-note">Arquitetura de referência. O alerta inicia a análise; os MCPs fornecem consultas. Gráficos ilustrativos, sem dados de produção.</p>
+</section>
+<section class="slide s-reports" data-id="reports" data-title="Reports de usuários e propostas de correção" data-chapter="MentorIA · eventos, código e PRs" data-accent="rose" data-accent2="lime" aria-label="Slide 23: Reports de usuários e propostas de correção">
+  <h2 class="slide-title">Reports de usuários e propostas de correção</h2>
+  <div class="rep-stage fill">
+    <div class="rep-card glass" data-node="report">
+      <span class="tag mono">Report do usuário · MentorIA como exemplo</span>
+      <div class="ctl-row" role="group" aria-label="Tipo de report"><button class="ctl" data-report="bug" aria-pressed="true">Bug</button><button class="ctl" data-report="feature" aria-pressed="false">Melhoria</button></div>
+      <h3 data-report-title></h3>
+      <p data-report-description></p>
+      <span class="triage mono" data-report-triage></span>
+    </div>
+    <div class="rnode" data-node="entry"><img class="logo" src="assets/img/logos/mcp-icon-white.svg" alt=""><div><b>Evento + MCP do sistema</b><span>receber o sinal, consultar o report e verificar duplicidade</span></div></div>
+    <div class="rnode hermes" data-node="maint"><img src="assets/img/logos/hermes-logo-dark.png" alt=""><div><b>Hermes</b><span>fila, contexto, skills e critérios de aceite</span></div></div>
+    <div class="rnode" data-node="branch"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="4" r="2"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 6v12M18 10q0 5-6 6H6"/></svg><div><b>Branch / worktree</b><span>reproduzir o bug ou delimitar a melhoria</span></div></div>
+    <div class="rnode tests" data-node="tests"><div class="test-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><b>Código e testes</b><span>implementar, revisar e corrigir sem alterar produção</span></div></div>
+    <div class="rnode pr" data-node="pr"><img class="logo" src="assets/img/logos/GitHub_Invertocat_White_Clearspace.svg" alt=""><div><b>Pull Request</b><span data-pr-line>diff, testes e riscos para a revisão de Felipe</span></div></div>
+  </div>
+  <p class="foot-note">Arquitetura de referência proposta. Eventos e consultas são mecanismos separados; a cena não cria PRs nem altera serviços.</p>
+</section>
+<section class="slide s-approval" data-id="aprovacao" data-title="Aprovação da PR, merge e deploy da correção" data-chapter="Revisão humana e entrega" data-accent="lime" data-accent2="cyan" aria-label="Slide 24: Aprovação da PR, merge e deploy da correção">
+  <h2 class="slide-title">Aprovação da PR, merge e deploy da correção</h2>
+  <div class="approval-stage fill">
+    <div class="pr-panel glass">
+      <div class="pr-top"><img class="logo" src="assets/img/logos/GitHub_Invertocat_White_Clearspace.svg" alt="GitHub"><span class="pr-state mono">Aberta</span></div>
+      <h3 data-pr-title>Corrigir a combinação de filtros</h3>
+      <div class="pr-checks"><p>Teste do comportamento afetado</p><p>Diff revisável e riscos descritos</p><p>Versão vinculada à aprovação</p></div>
+      <div class="pr-diff mono"><p class="minus">- if filtro and termo:</p><p class="plus">+ if filtro is not None and termo:</p></div>
+    </div>
+    <div class="phone ap-phone">
+      <div class="phone-notch" aria-hidden="true"></div>
+      <div class="phone-screen">
+        <div class="wa-head"><img src="assets/img/logos/whatsapp-color.svg" alt=""><div><b>Privado de Felipe</b><span>mensagem do agente</span></div></div>
+        <div class="wa-chat"><div class="wa-msg in ap-msg" data-private-message>Preparei uma PR com a correção, os testes e os riscos. Você aprova esta revisão?</div><div class="wa-msg out ap-answer"></div></div>
+        <div class="ap-buttons"><button class="ap-btn approve" data-approve>Aprovar esta revisão</button><button class="ap-btn reject" data-reject>Pedir ajustes</button></div>
+      </div>
+    </div>
+    <div class="deploy-col">
+      <div class="dstep" data-d="merge"><span class="ds-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="4" r="2"/><circle cx="6" cy="20" r="2"/><circle cx="18" cy="4" r="2"/><path d="M6 6v12M18 6v3q0 5-5 5H6"/></svg></span><b data-merge-label>Merge após aprovação</b><i class="lock" aria-hidden="true"></i></div>
+      <div class="dstep" data-d="deploy"><span class="ds-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17v5h18v-5M12 17V2m-6 6 6-6 6 6"/></svg></span><b data-deploy-label>Deploy após o merge</b><i class="lock" aria-hidden="true"></i></div>
+      <div class="dstep" data-d="verify"><span class="ds-ico"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 5"/></svg></span><b data-verify-label>Verificar a entrega</b><i class="lock" aria-hidden="true"></i></div>
+      <div class="ctl-row"><button class="ctl" data-merge disabled>Simular a entrega</button><button class="ctl" data-reset-approval>Recomeçar</button></div>
+      <p class="approval-state" data-approval-state aria-live="polite"></p>
+    </div>
+  </div>
+  <p class="foot-note">Demonstração local, sem enviar mensagens nem alterar repositórios. Uma mudança na PR exige nova revisão.</p>
+</section>
+<section class="slide s-perm" data-id="permissoes" data-title="Permissões e limites para a execução autônoma" data-chapter="Permissões e autonomia" data-accent="yellow" data-accent2="rose" aria-label="Slide 25: Permissões e limites para a execução autônoma">
+  <h2 class="slide-title">Permissões e limites para a execução autônoma</h2>
+  <div class="perm-stage fill">
+    <div class="pzone free glass">
+      <h3>Dentro do escopo autorizado</h3>
+      <div class="plane"><span class="pitem" data-i="0">Consultar métricas e logs</span><span class="pitem" data-i="1">Investigar e testar em isolamento</span><span class="pitem" data-i="2">Preparar uma branch e uma PR</span></div>
+      <p class="caption">Orçamento, limites de tempo e rastreabilidade.</p>
+    </div>
+    <div class="gate" aria-hidden="true">
+      <div class="gate-arm"></div>
+      <div class="gate-post"><i class="gate-light"></i></div>
+      <span class="key"><svg class="icon" viewBox="0 0 24 24"><circle cx="7.5" cy="15.5" r="4.5"/><path d="m10.5 12.5 9-9M16 7l3 3M14 9l2 2"/></svg></span>
+      <span class="gate-label mono">aprovação</span>
+    </div>
+    <div class="pzone gated glass">
+      <h3>Com aprovação definida</h3>
+      <div class="plane"><span class="pitem" data-i="3">Merge da revisão aprovada</span><span class="pitem" data-i="4">Deploy no ambiente combinado</span><span class="pitem" data-i="5">Mudanças sensíveis de dados e acesso</span></div>
+      <p class="caption">Controles nas ferramentas, além das instruções.</p>
+    </div>
+    <div class="tokens" aria-hidden="true"><i class="tk t1"></i><i class="tk t2"></i><i class="tk t3"></i></div>
+  </div>
+  <p class="foot-note">Mensagens, reports e logs são entradas externas. O conteúdo deles ajuda na investigação e continua sujeito às regras de autorização.</p>
+</section>
+<section class="slide s-close" data-id="materiais" data-title="Continue com os materiais da palestra" data-chapter="Materiais e perguntas" data-accent="lime" data-accent2="cyan" data-transition="iris" data-tick="1" aria-label="Slide 26: Continue com os materiais da palestra">
+  <span class="ghost" aria-hidden="true">PERGUNTAS</span>
+  <div class="close-grid fill">
+    <div class="close-copy">
+      <h2 class="slide-title close-title">Continue com os<br>materiais da palestra.</h2>
+      <ul class="mat-list">
+        <li class="new"><b>Começando com Hermes do zero</b><span>instalação, primeiros prompts, Composio e base de contexto</span></li>
+        <li><b>Workflow de IA Assistida</b><span>os cinco passos e o ciclo por sprint</span></li>
+        <li><b>Arquitetura e observabilidade</b><span>operação, monitoria e manutenção com revisão humana</span></li>
+        <li><b>Laboratório em Python</b><span>simulação local de aprovação, merge e deploy</span></li>
+      </ul>
+      <a class="repo-btn" data-repository-link href="https://github.com/pycodebr/pycodebr_python_brasil_2026" target="_blank" rel="noopener noreferrer"><img src="assets/img/logos/GitHub_Invertocat_White_Clearspace.svg" alt=""><span class="mono">github.com/pycodebr/pycodebr_python_brasil_2026</span></a>
+      <p class="credits">Hermes Agent · Nous Research e comunidade<br>Felipe Azambuja · PycodeBR</p>
+    </div>
+    <div class="close-qr">
+      <div class="term-card glass mono"><p><span class="p">$</span> <span class="t" data-t="git clone https://github.com/pycodebr/pycodebr_python_brasil_2026"></span></p><p class="o">guia: materiais/comecando-com-hermes-do-zero.md</p></div>
+      <div class="qr-card big"><img src="assets/img/qr/qr-repo.svg" alt="QR Code: https://github.com/pycodebr/pycodebr_python_brasil_2026"><i class="vf tl" aria-hidden="true"></i><i class="vf tr" aria-hidden="true"></i><i class="vf bl" aria-hidden="true"></i><i class="vf br" aria-hidden="true"></i></div>
+      <p class="qr-cap">Repositório com slides, guias e código</p>
+    </div>
+  </div>
+  <p class="thanks mono" aria-hidden="true">obrigado · perguntas</p>
+</section>
+<div id="hud" aria-hidden="true"><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i><div class="top"><span class="live">Python Brasil 2026 · <b>Agentes Autônomos de IA</b></span><span>Felipe Azambuja · PycodeBR</span></div><div class="bottom"><span class="chapter"></span><span class="track"><i></i></span><span class="count"></span></div></div>
+<div id="glitch" aria-hidden="true"></div><div id="flash" aria-hidden="true"></div>
+</div></div>
+</main>
+<nav id="toolbar" aria-label="Controles da apresentação">
+<button id="previous" class="nav-arrow" aria-label="Slide anterior"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg></button>
+<span id="counter" aria-live="polite"></span>
+<button id="next" class="nav-arrow" aria-label="Próximo slide"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
+<select id="jump" class="wide-only" aria-label="Ir para o slide"></select>
+<button id="open-overview" aria-label="Índice de slides">Índice</button>
+<button id="timer" class="wide-only" aria-pressed="false" title="Clique para iniciar ou pausar; duplo clique zera">00:00</button>
+<button id="open-menu" aria-label="Opções">Opções</button>
+</nav>
+<dialog id="overview" aria-label="Índice de slides"><button id="close-overview" class="dialog-close">Fechar</button><h2>Escolha um slide</h2><div id="overview-list"></div></dialog>
+<dialog id="menu" aria-label="Opções da apresentação"><button id="close-menu" class="dialog-close">Fechar</button><h2>Apresentação e materiais</h2>
+<div class="menu-actions">
+<button id="fullscreen">Tela cheia</button>
+<button id="motion" aria-pressed="true">Pausar animações</button>
+<button id="replay">Recomeçar a animação deste slide</button>
+<a href="https://github.com/pycodebr/pycodebr_python_brasil_2026" target="_blank" rel="noopener noreferrer">Materiais no GitHub</a>
+<a href="https://github.com/pycodebr/pycodebr_python_brasil_2026/blob/main/materiais/comecando-com-hermes-do-zero.md" target="_blank" rel="noopener noreferrer">Guia: Começando com Hermes do zero</a>
+<a href="https://pycodebr.com.br/python-brasil-2026/">Versão original da apresentação</a>
+</div>
+<p id="fullscreen-help" class="keys" hidden>Este navegador não liberou a tela cheia pelo botão. Use F11 no computador ou o modo de apresentação do navegador.</p>
+<p class="keys"><kbd>→</kbd> <kbd>←</kbd> navegar · <kbd>Home</kbd> <kbd>End</kbd> início e fim · <kbd>O</kbd> índice · <kbd>F</kbd> tela cheia · <kbd>R</kbd> recomeçar a animação do slide · <kbd>M</kbd> pausar ou retomar animações · <kbd>T</kbd> cronômetro · <kbd>B</kbd> tela preta · <kbd>?</kbd> opções</p>
+<p class="keys">As animações dos fluxos ficam em loop enquanto o slide está aberto. Nos slides com botões, clicar em uma etapa assume o controle; <kbd>R</kbd> retoma a demonstração automática.</p>
+</dialog>
+<div id="blank" aria-hidden="true"></div>
+<noscript><p style="position:fixed;inset:auto 0 0 0;padding:16px;background:#000;color:#fff">Ative o JavaScript para navegar pela apresentação.</p></noscript>
+<script src="assets/js/vendor/gsap.min.js"></script>
+<script src="assets/js/fx.js?v=0e2b121f8a52"></script>
+<script src="assets/js/scenes-opening.js?v=e1bc35582650"></script>
+<script src="assets/js/scenes-timeline.js?v=32521ccffa4e"></script>
+<script src="assets/js/scenes-ops.js?v=04b51415fec8"></script>
+<script src="assets/js/scenes-dev.js?v=845e22ab79b5"></script>
+<script src="assets/js/deck.js?v=9b90a6952ed2"></script>
+</body>
+</html>
