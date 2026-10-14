@@ -10,7 +10,7 @@ Os assets são usados para identificar pessoas, projetos e tecnologias na palest
 
 ## Tecnologias
 
-As origens, hashes, licenças declaradas e transformações dos recursos usados nas revisões estão em [src/assets.json](src/assets.json), [src/assets-supplement.json](src/assets-supplement.json) e [src/assets-v3.json](src/assets-v3.json).
+As origens, hashes, licenças declaradas e transformações dos recursos usados nas revisões estão em [src/proveniencia/assets.json](src/proveniencia/assets.json), [src/proveniencia/assets-supplement.json](src/proveniencia/assets-supplement.json), [src/proveniencia/assets-v3.json](src/proveniencia/assets-v3.json) e, para os arquivos adicionados na revisão 4, em [src/ASSETS.md](src/ASSETS.md).
 
 A revisão 3 usa símbolos em espaços quadrados para evitar comprimir lockups horizontais. MCP, LangChain e LangGraph foram isolados por ajuste do viewport da raiz de seus SVGs oficiais, sem modificar paths, cores ou proporções da arte. A variante histórica do LangChain foi mantida na cronologia. O símbolo OpenClaw veio do favicon do site oficial e não foi transformado.
 

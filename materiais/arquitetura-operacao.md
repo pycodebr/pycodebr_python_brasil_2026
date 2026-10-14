@@ -2,7 +2,7 @@
 
 Quando você pede um relatório, uma alteração de código ou um material de estudo, a execução depende de mais do que a conversa com o modelo. Alguém precisa definir onde o agente roda, quais documentos ele consulta, quais sistemas pode acessar e como conferir a entrega. Este guia ajuda você a desenhar essas relações antes de conectar ferramentas.
 
-O desenho adapta a arquitetura conceitual ensinada por Felipe Azambuja na Imersão Agentes Autônomos, da PycodeBR, e apresentada na revisão 3 da palestra **Agentes Autônomos de IA com Hermes Agent**. Ele preserva os papéis dos componentes, sem certificar uma instalação ativa ou expor configurações privadas. Para aplicá-lo em outra operação, você precisa adaptar aplicações, permissões, infraestrutura e critérios de validação.
+O desenho adapta a arquitetura conceitual ensinada por Felipe Azambuja na Imersão Agentes Autônomos, da PycodeBR, e apresentada na palestra **Agentes Autônomos de IA com Hermes Agent**. Ele preserva os papéis dos componentes, sem certificar uma instalação ativa ou expor configurações privadas. Para aplicá-lo em outra operação, você precisa adaptar aplicações, permissões, infraestrutura e critérios de validação.
 
 Comece pelo [guia da palestra](guia-da-palestra.md) se ainda estiver conhecendo o ciclo do agente. A [linha do tempo](linha-do-tempo.md#openclaw-e-hermes-na-onda-de-assistentes-pessoais) explica as renomeações Clawdbot → Moltbot → OpenClaw e o lançamento posterior do Hermes como projeto independente da Nous Research.
 

@@ -14,7 +14,7 @@ Este guia acompanha a palestra de Felipe Azambuja, professor de programação e 
 - Estude a arquitetura e o fluxo de reports em [observabilidade e manutenção](observabilidade-e-manutencao.md).
 - Use as [fontes públicas agrupadas](fontes.md) para conferir mecanismos e versões.
 
-A revisão 3 da palestra tem 23 slides e reserva 40 minutos para a exposição e 5 minutos para perguntas. Estes materiais desenvolvem os assuntos para estudo posterior, sem exigir contas ou acesso aos sistemas da PycodeBR. Para executar integrações além do laboratório local, você precisará configurar seus próprios acessos autorizados.
+A revisão 4 da palestra tem 26 slides e reserva 40 minutos para a exposição e 5 minutos para perguntas. Estes materiais desenvolvem os assuntos para estudo posterior, sem exigir contas ou acesso aos sistemas da PycodeBR. Para executar integrações além do laboratório local, você precisará configurar seus próprios acessos autorizados.
 
 ## O que acontece entre o pedido e a entrega
 

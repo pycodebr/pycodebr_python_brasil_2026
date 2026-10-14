@@ -1,257 +1,377 @@
 [
   {
     "path": ".htaccess",
-    "bytes": 658,
-    "sha256": "5738571bdafd62719b8712096e8a7aeb0de12f7cfdf823f4a636bade92cfaa39"
+    "bytes": 710,
+    "sha256": "b8d746f6ee6af9850beabe1f311044a25e3fba3164c843ec5a59d2b4e6067e18"
   },
   {
-    "path": "assets/Geist-Latin-300.woff2",
-    "bytes": 28388,
-    "sha256": "a29f900a6d603e989449327956e7ac61ea3e6b26ca7426f64e7cccf2cd4aed37"
+    "path": "assets/css/deck.css",
+    "bytes": 17681,
+    "sha256": "9a0dba0ed8b7df2e5b55a1d57e460a0937c9d17e0ad93b29e4a8c479f16aeea9"
   },
   {
-    "path": "assets/GeistMono-Latin.woff2",
-    "bytes": 14792,
-    "sha256": "825db55e585a137a9f0544a033ba129576efd48b58abba7c871014e9a3b04707"
+    "path": "assets/css/scenes.css",
+    "bytes": 109929,
+    "sha256": "20fa1b455360127da4738a51ed00e4aef9ddc5a9aef7dce930e733c494d5340c"
   },
   {
-    "path": "assets/GitHub_Invertocat_White_Clearspace.svg",
+    "path": "assets/fonts/Anton-Regular.woff2",
+    "bytes": 21264,
+    "sha256": "9923eb800e6253fbaabd436854185713c1f49312e2a15e74df3a874ed08d89f7"
+  },
+  {
+    "path": "assets/fonts/Fraunces-VF.woff2",
+    "bytes": 124996,
+    "sha256": "b0ffbcb9fd044872fc743e26a0bb1160ed0c7a3ff1ff5a67cc98c90d96b54ad1"
+  },
+  {
+    "path": "assets/fonts/Geist-VF.woff2",
+    "bytes": 34940,
+    "sha256": "c928db85b867f1e5ac3a134cb3739ba3fb1b2f54b965f0e72fb194dc750c4e53"
+  },
+  {
+    "path": "assets/fonts/JetBrainsMono-VF.woff2",
+    "bytes": 43228,
+    "sha256": "290f96790d8291403ea5f465091c48eaf9f171e50af9b2ae8e6f2386bfe70285"
+  },
+  {
+    "path": "assets/img/logos/GitHub_Invertocat_White_Clearspace.svg",
     "bytes": 1313,
     "sha256": "ed102562e49ca3ea6e7d79ea10d54360dbecc5beb33de6a60fa578b6c0fac803"
   },
   {
-    "path": "assets/architecture-v3.css",
-    "bytes": 14404,
-    "sha256": "5f98930d5f4507ef6fb156dd9e42b549f58673ece6abbb23a399f30957ae2d4e"
-  },
-  {
-    "path": "assets/audience-qr.png",
-    "bytes": 3726,
-    "sha256": "4c9b73f823b87d1ac70b6e66edd6bf7e21890729001a07770788fef32e14590d"
-  },
-  {
-    "path": "assets/claude-code-lobe-color.svg",
+    "path": "assets/img/logos/claude-code-lobe-color.svg",
     "bytes": 424,
     "sha256": "670b3d8d749d0815ad8f7e62a59d51cb5e2053cb19403f3541a8aed7036a877f"
   },
   {
-    "path": "assets/claude-simpleicons.svg",
-    "bytes": 1921,
-    "sha256": "2d6fda79eb18ddccca35b799eeb3cece0dfabc22520ce3b10abd25668df9fa93"
+    "path": "assets/img/logos/clickup-si.svg",
+    "bytes": 355,
+    "sha256": "35c7c2c13ece5c57f823929aeb6924da276500be0e5aa1897574952b7831b5f1"
   },
   {
-    "path": "assets/deck.css",
-    "bytes": 31840,
-    "sha256": "ac3df91b2371ea507c08c0bdafc2382a7efe1913c55b64faff667271acf67eb8"
+    "path": "assets/img/logos/cloudflare-si.svg",
+    "bytes": 1193,
+    "sha256": "32876bda81542203316d67b9623818ac60986897cac79f70e03e8f31f7b7f160"
   },
   {
-    "path": "assets/deck.js",
-    "bytes": 10187,
-    "sha256": "c2b45d6253873c2a23e73c282752c3500892337b52b37dd2f9a895826b10bb26"
-  },
-  {
-    "path": "assets/django-negative.svg",
+    "path": "assets/img/logos/django-negative.svg",
     "bytes": 3475,
     "sha256": "4433a5209b51ddce33a9214203733eb47aa61832f70559539ea5913632d18f44"
   },
   {
-    "path": "assets/docker-mark-white.svg",
+    "path": "assets/img/logos/docker-mark-white.svg",
     "bytes": 1222,
     "sha256": "67abdc0a4b48f9ad283e85839c849911af9bdc7e93797a0c477a488687583a0b"
   },
   {
-    "path": "assets/felipe-microfone.webp",
-    "bytes": 46610,
-    "sha256": "ee49478535a7f73292c7ed581eb97977adedb8a178e45ba6fdaa8857ddaaf09f"
+    "path": "assets/img/logos/ffmpeg-si.svg",
+    "bytes": 434,
+    "sha256": "5a607fb736b612e265c47e4653da657f1bc8f1441a8e6b58a00b17d285222c34"
   },
   {
-    "path": "assets/felipe.webp",
-    "bytes": 91192,
-    "sha256": "6aabfeb6763cd01444762b8a1697c8642974db2d19273baeffddf79ac14b8416"
+    "path": "assets/img/logos/git-si.svg",
+    "bytes": 441,
+    "sha256": "ae0cc33bc3fc7c29c500c90a029e32f21fdb9297e0b3d59948da27b2607e8a2c"
   },
   {
-    "path": "assets/github-simpleicons.svg",
-    "bytes": 822,
-    "sha256": "3bf8cceead820aec50d4ee825a3fd02c5a1cd6665cc9cf4cbf3d9c8861a204bb"
+    "path": "assets/img/logos/githubactions-si.svg",
+    "bytes": 1742,
+    "sha256": "68e27a7570b9e0f18a1f85d84d211f3328d845dfac8ce7e101ec16576c67db5b"
   },
   {
-    "path": "assets/grafana-icon.svg",
+    "path": "assets/img/logos/gmail-si.svg",
+    "bytes": 354,
+    "sha256": "21b263638deb769267d610a85382792624bdae2fc47c1bc2f8ae6fb6a50413e9"
+  },
+  {
+    "path": "assets/img/logos/google-drive-2020.svg",
+    "bytes": 755,
+    "sha256": "3d14c519af7b2252c512d0113759c2ff5ea22ff99bf52de0e4421af5b87c3ad4"
+  },
+  {
+    "path": "assets/img/logos/googlecalendar-si.svg",
+    "bytes": 1225,
+    "sha256": "aaebe4378bc647bccdeef7477e51a15fd634b281546e3def5f4d7596bc72ff83"
+  },
+  {
+    "path": "assets/img/logos/googledrive-si.svg",
+    "bytes": 614,
+    "sha256": "39d5cc5f524c7e8fa1788d447a0a083a3abe882cbf9b955ac55747fb167c1cc8"
+  },
+  {
+    "path": "assets/img/logos/googlesheets-si.svg",
+    "bytes": 459,
+    "sha256": "2f15c51ea48cac508b16f589a53522fe060c7ed60c6ab483f78ac3b08b663b63"
+  },
+  {
+    "path": "assets/img/logos/grafana-icon.svg",
     "bytes": 9435,
     "sha256": "d0fbc8a8d751f89876a05f13a1dbf3a31cdcd6a8541f3d35c715f8e5b4d8f1cc"
   },
   {
-    "path": "assets/hermes-icon.svg",
-    "bytes": 116350,
-    "sha256": "6c4968c1a46f104559684826ed8061fad6052711ff0af9c6b36a6ce674536684"
-  },
-  {
-    "path": "assets/hermes-logo-dark.png",
+    "path": "assets/img/logos/hermes-logo-dark.png",
     "bytes": 154961,
     "sha256": "b76ed32dd5ffdf842db696dc6dc0992529acfe12903ec1b2128251a41dfd31d2"
   },
   {
-    "path": "assets/instagram-qr.png",
-    "bytes": 3026,
-    "sha256": "65c0be0da04a377087c38611176ba0980d4da7f80782f08e295f17008bfb13fd"
-  },
-  {
-    "path": "assets/instagram-simpleicons.svg",
+    "path": "assets/img/logos/instagram-simpleicons.svg",
     "bytes": 2101,
     "sha256": "f53af2d1fc5292ba1433b5c1faf50005ce6a997fa302d1816989929f379a59dc"
   },
   {
-    "path": "assets/langchain-icon-legacy-blue.svg",
+    "path": "assets/img/logos/langchain-icon-legacy-blue.svg",
     "bytes": 4062,
     "sha256": "52b37fe23c0ff710d4ae99949bf17f12981f758f30a51b6768d3386d1ab0510e"
   },
   {
-    "path": "assets/langchain-logo-dark.svg",
-    "bytes": 4026,
-    "sha256": "52a940d301023ee2175897bcee546715ee86f968e8a4bf69290f002d330740fa"
-  },
-  {
-    "path": "assets/langflow-icon.svg",
+    "path": "assets/img/logos/langflow-icon.svg",
     "bytes": 2029,
     "sha256": "fd2e8cb873e0de708044b7719417b7220b0a79d5f20087431b87002a56ac9d5b"
   },
   {
-    "path": "assets/langgraph-icon-blue.svg",
+    "path": "assets/img/logos/langgraph-icon-blue.svg",
     "bytes": 4817,
     "sha256": "fbffa86bfa67ede40a4939536b3bf442e06a7ad3a1fb8aa64fa6a07fb3b61a90"
   },
   {
-    "path": "assets/loki-logo.svg",
+    "path": "assets/img/logos/loki-logo.svg",
     "bytes": 4964,
     "sha256": "f80204863f46cda4ef4f5da0ced6457358df3773e6599ae2bd12189c9d4e3414"
   },
   {
-    "path": "assets/mcp-icon-white.svg",
+    "path": "assets/img/logos/mcp-icon-white.svg",
     "bytes": 16835,
     "sha256": "dc621e1ceae70d0a8c82d45f3b31e09af40cf4c754735568cf22eb8f7e4254e2"
   },
   {
-    "path": "assets/mcp-logo-dark.svg",
-    "bytes": 16772,
-    "sha256": "ae239dea9d037a331575487390bf900d6baacf896991185b3dd861ac4b9941d5"
-  },
-  {
-    "path": "assets/n8n-icon.svg",
+    "path": "assets/img/logos/n8n-icon.svg",
     "bytes": 4354,
     "sha256": "fea58f324bd105a5d8a054e6cb80940c1e63fc51b606b780b73e9187e5bfdfa9"
   },
   {
-    "path": "assets/notion-simpleicons.svg",
+    "path": "assets/img/logos/notion-simpleicons.svg",
     "bytes": 978,
     "sha256": "b17d2a2b592a06252efef522d5205f0c7a958f748d40df1011ed081417e42f85"
   },
   {
-    "path": "assets/openai-lobe.svg",
+    "path": "assets/img/logos/openai-lobe.svg",
     "bytes": 1687,
     "sha256": "a595df6b423920c67a7f8f73c063e4bfb72d415948097b6cac063a2366bb5186"
   },
   {
-    "path": "assets/openai.svg",
-    "bytes": 1687,
-    "sha256": "a595df6b423920c67a7f8f73c063e4bfb72d415948097b6cac063a2366bb5186"
-  },
-  {
-    "path": "assets/openclaw-official.svg",
+    "path": "assets/img/logos/openclaw-official.svg",
     "bytes": 1194,
     "sha256": "fa7e2ec07ebfa696bcc8c27d7e36425cbb7b1772f6f7f04ce390cf5f1c35cf0e"
   },
   {
-    "path": "assets/opencode-logo-dark.svg",
+    "path": "assets/img/logos/opencode-logo-dark.svg",
     "bytes": 593,
     "sha256": "5dd4abb4de60204510edf140bbe74b3580d07ebdda79fdb0081cd45acb53d44b"
   },
   {
-    "path": "assets/postgresql.svg",
+    "path": "assets/img/logos/postgresql.svg",
     "bytes": 9178,
     "sha256": "f220a436258ed014c512ba4f9c0de6b9e5c2c4b55331a0a29f8c7a1a12c36443"
   },
   {
-    "path": "assets/presentation.css",
-    "bytes": 50136,
-    "sha256": "2e43ed230d9a069da5a7ffe5fdd014f425bab2fde42e296ab4c6bbcfd6bf7afb"
-  },
-  {
-    "path": "assets/presentation.js",
-    "bytes": 19796,
-    "sha256": "7c080c23faf7664a6d6bcbe35f018e8e772f080efe2e13c135ea8c25bf6b30c3"
-  },
-  {
-    "path": "assets/prometheus-logo.svg",
+    "path": "assets/img/logos/prometheus-logo.svg",
     "bytes": 1028,
     "sha256": "dc02224d9e9ded04bbf105770b558880e8b55c04a5209f822be4cd3d103976bc"
   },
   {
-    "path": "assets/pycodebr-icon-official.png",
+    "path": "assets/img/logos/pycodebr-icon-official.png",
     "bytes": 8189,
     "sha256": "98d1ca6204cfd6060e12567d30f36d71a378dcb33dec4f826b9fded6797b86e5"
   },
   {
-    "path": "assets/pycodebr.webp",
-    "bytes": 806,
-    "sha256": "ee53488761429e63d36cc6da2be1661f8d7078792254722470888a639a829feb"
-  },
-  {
-    "path": "assets/python-brasil-2026-header.svg",
+    "path": "assets/img/logos/python-brasil-2026-header.svg",
     "bytes": 15467,
     "sha256": "9e36ee15b95e48e517991c00eb1994da01483a0129aae2dd5e8525c5137bca4b"
   },
   {
-    "path": "assets/python-icon.svg",
+    "path": "assets/img/logos/python-icon.svg",
     "bytes": 9605,
     "sha256": "baec8662a1461c2cacc326b54d2727cb2f1ce07ba02d00f5b826d035104f649f"
   },
   {
-    "path": "assets/rabbitmq.svg",
+    "path": "assets/img/logos/rabbitmq.svg",
     "bytes": 634,
     "sha256": "3aad30605375d85bd2fc293880be7e1b07def3f7191c8f063feb775cca5b7006"
   },
   {
-    "path": "assets/radar-news.png",
-    "bytes": 180368,
-    "sha256": "9052dc02b83500ff57c38a1c02af68d48f261607adb091afd25c2e36cda57c21"
-  },
-  {
-    "path": "assets/redis.svg",
+    "path": "assets/img/logos/redis.svg",
     "bytes": 1728,
     "sha256": "4707378b190878f36f7e6e1c01fa3ee7e7884c76101809d191dddd943a2e6bdb"
   },
   {
-    "path": "assets/revision-v3.css",
-    "bytes": 12132,
-    "sha256": "ba0f84e2f28d90b481049d512370fc0e7d79dac1f59b00aad329899264202bb7"
+    "path": "assets/img/logos/tailscale-si.svg",
+    "bytes": 645,
+    "sha256": "f61910f5e210bef108365284512a6aa04d5753dbacd1ee8be98a59d37c26bc1e"
   },
   {
-    "path": "assets/slides-qr.png",
-    "bytes": 3660,
-    "sha256": "0bab6937c0d792d7fd9f4946352b1d4635f1449ad2d03990c0617a2cf3d345c6"
+    "path": "assets/img/logos/telegram-si.svg",
+    "bytes": 757,
+    "sha256": "4435c9a57e165a1c3b7f27e0b5b11b82b10d674ea4fff7f6748cb67b7fcb994e"
   },
   {
-    "path": "assets/traefik-proxy.svg",
+    "path": "assets/img/logos/traefik-proxy.svg",
     "bytes": 1509,
     "sha256": "e2885459d44d08f4debd515f1ad0399710902302af1e6691d851544b5ad01bee"
   },
   {
-    "path": "assets/whatsapp-simpleicons.svg",
+    "path": "assets/img/logos/whatsapp-color.svg",
+    "bytes": 2501,
+    "sha256": "dd6a4db2c394ca11aa8ab087369f2f50a12e6f874e49db7b1d5609d0a8fb28ca"
+  },
+  {
+    "path": "assets/img/logos/whatsapp-simpleicons.svg",
     "bytes": 1216,
     "sha256": "8fb209a53a61618c3483594b3e070481a35575d6aaecbe00a6fe386670c8fb1c"
   },
   {
+    "path": "assets/img/logos/x-si.svg",
+    "bytes": 314,
+    "sha256": "07099f0e2eea46fe8cef6a2422dee63e1aa98c3cab07f3edf9a0b333314f758b"
+  },
+  {
+    "path": "assets/img/logos/youtube-si.svg",
+    "bytes": 474,
+    "sha256": "7f5156448b9c1b65156e34e4443f0eff8b85f5afa783fc8a8d09f49380fed424"
+  },
+  {
+    "path": "assets/img/photos/felipe-microfone-cutout.webp",
+    "bytes": 60268,
+    "sha256": "6bd4986bdd52086a50672369bed044e7c65890863c8b451662eaee7cf2ed5a1d"
+  },
+  {
+    "path": "assets/img/photos/felipe-microfone.webp",
+    "bytes": 46610,
+    "sha256": "ee49478535a7f73292c7ed581eb97977adedb8a178e45ba6fdaa8857ddaaf09f"
+  },
+  {
+    "path": "assets/img/posts/news-cloudflare.webp",
+    "bytes": 37254,
+    "sha256": "35e2e79ca32bbd0bf0f48cca5fd301db644064948e4bbb90d45d4f8db8f32faa"
+  },
+  {
+    "path": "assets/img/posts/news-foresight.webp",
+    "bytes": 32488,
+    "sha256": "96ebce0de10955e2e1e123e9dc96fe6ca6aa268f37ceb5351dfe9d5ceb0d20ac"
+  },
+  {
+    "path": "assets/img/posts/news-genkit-dart.webp",
+    "bytes": 28414,
+    "sha256": "f9010c61fe2205b77882e079d2f89655293cc2a9ad469923a27e17062e6d1f82"
+  },
+  {
+    "path": "assets/img/posts/news-python-315.webp",
+    "bytes": 49500,
+    "sha256": "8750e0d9a8ddb1c31427c03523086d844f1d7bee1ee08271843324d483b49c06"
+  },
+  {
+    "path": "assets/img/qr/qr-instagram.svg",
+    "bytes": 3953,
+    "sha256": "821369b444adbd43754b6a7a7de4d4da733e81dbf4df013506aca22731b2568a"
+  },
+  {
+    "path": "assets/img/qr/qr-repo.svg",
+    "bytes": 4841,
+    "sha256": "3b501f3c51499a0a5d10aa28e3c478fd956e0dc6348a3b3bb4d607f9be389d13"
+  },
+  {
+    "path": "assets/img/qr/qr-slides.svg",
+    "bytes": 3870,
+    "sha256": "6053d6e2f78c88be97f2bd9803f8bee347907d8f65130c96452ac5b130d1767c"
+  },
+  {
+    "path": "assets/img/radar-news.png",
+    "bytes": 180368,
+    "sha256": "9052dc02b83500ff57c38a1c02af68d48f261607adb091afd25c2e36cda57c21"
+  },
+  {
+    "path": "assets/js/deck.js",
+    "bytes": 16556,
+    "sha256": "9b90a6952ed2e45d8f7d6e67408f39e0815ce49276195b36a54a7ec79f629632"
+  },
+  {
+    "path": "assets/js/fx.js",
+    "bytes": 13104,
+    "sha256": "0e2b121f8a528d7081d1a78a570870f2c52b92dbb58c9663d541b61c133fb737"
+  },
+  {
+    "path": "assets/js/scenes-dev.js",
+    "bytes": 22986,
+    "sha256": "845e22ab79b5c098caf3aa3aa98548d41d13ba6ce9934221819d06177ffaa4af"
+  },
+  {
+    "path": "assets/js/scenes-opening.js",
+    "bytes": 11028,
+    "sha256": "e1bc35582650e2c03758f93e2e820a6976e109cd00ab6a3e1ef78c02e90c574c"
+  },
+  {
+    "path": "assets/js/scenes-ops.js",
+    "bytes": 30166,
+    "sha256": "04b51415fec8ef72b0c11e8a1c6d46c42664641e250cb70bc46130cf4f776efa"
+  },
+  {
+    "path": "assets/js/scenes-timeline.js",
+    "bytes": 12379,
+    "sha256": "32521ccffa4eb557db7e023701533f0cbe42b62ac2c6d88a1eaa4f9a77509fcd"
+  },
+  {
+    "path": "assets/js/vendor/gsap.min.js",
+    "bytes": 72779,
+    "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280"
+  },
+  {
+    "path": "assets/licenses/OFL-anton.txt",
+    "bytes": 4484,
+    "sha256": "ee67e6ee22790b7929f1a3769ca2801d565c64b5a9096942c1adf5596de9c9e4"
+  },
+  {
+    "path": "assets/licenses/OFL-fraunces.txt",
+    "bytes": 4391,
+    "sha256": "bdf4c22802eaf804f998195871c6b8938aac2ac14b2d78a8bd66a6f1eced833b"
+  },
+  {
+    "path": "assets/licenses/OFL-geist.txt",
+    "bytes": 4387,
+    "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
+  },
+  {
+    "path": "assets/licenses/OFL-jetbrainsmono.txt",
+    "bytes": 4399,
+    "sha256": "b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d"
+  },
+  {
+    "path": "assets/licenses/simple-icons-CC0.md",
+    "bytes": 6569,
+    "sha256": "9046848b63a5c92bff14e4accca80bd987e0623b74adf9226ce5198d312b79d5"
+  },
+  {
+    "path": "assets/video/reels-montage.mp4",
+    "bytes": 517066,
+    "sha256": "757a3c42a0e62950f5fc1a3fb7c5f468888f7ef04bdc5255bd644ffebd1939a2"
+  },
+  {
+    "path": "assets/video/reels-poster.jpg",
+    "bytes": 38258,
+    "sha256": "f92504b382a2db80c4cdeae574e849f0526ab22bf8acb71f1e4e1f2335cbcc77"
+  },
+  {
     "path": "downloads/agentes-autonomos-hermes-python-brasil-2026.pdf",
-    "bytes": 9081923,
-    "sha256": "02f7b8b046c24bc593234e37bd8abee3717be0706225590a9b0343a2dc6c44ac"
+    "bytes": 5404387,
+    "sha256": "ddb19614fe0af7d08b3998d8abc6c9a0ee97736f2fd46f7e90a0fd81678a6aba"
   },
   {
     "path": "downloads/agentes-autonomos-hermes-python-brasil-2026.pptx",
-    "bytes": 13935725,
-    "sha256": "277a81b54ecc265b5c04c42c83b71d9589dcb659e2af5cbb147e7d01376ac769"
+    "bytes": 4884916,
+    "sha256": "1a6335326a0deb290882eabea02d467625621403d235dd5f096264482477b0c3"
   },
   {
     "path": "index.html",
-    "bytes": 63200,
-    "sha256": "7954dcca826ab5cf86c7e0fa10fafd902c98e260a6804ffe0124da78be174a84"
+    "bytes": 81171,
+    "sha256": "7ffb17f1c82c6fabdc1b4f5adf156582085c7553b13cd0f643ddc42198b05fa5"
   }
 ]

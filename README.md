@@ -4,11 +4,9 @@ Slides e materiais da palestra de **Felipe Azambuja**, programador, professor de
 
 **[Abrir a apresentação](https://pycodebr.com.br/python-brasil-2026/#1)** · **[Começando com Hermes do zero](materiais/comecando-com-hermes-do-zero.md)** · **[Materiais de estudo](#materiais)** · **[Laboratório local](exemplos/README.md)**
 
-> **Versão 2 em avaliação:** uma nova direção visual da mesma palestra, com fluxos animados das automações, linha do tempo imersiva e o caso de edição de vídeo. [Abrir a v2](https://pycodebr.com.br/python-brasil-2026-v2/#1) ou rodar localmente a partir da pasta [`site-v2/`](site-v2/). A apresentação oficial continua sendo a da pasta `site/` até a aprovação.
-
 ![Capa da palestra](docs/capa.webp)
 
-A palestra mostra como pedidos em linguagem natural podem se transformar em arquivos, comandos, integrações e entregas verificáveis. A revisão 3 situa OpenClaw e Hermes na linha do tempo, explica a arquitetura conceitual da operação antes dos casos e separa memória, base de contexto e skills. O percurso inclui o Workflow de IA Assistida de cinco passos, a observabilidade de sistemas e uma proposta de manutenção com revisão humana.
+A palestra mostra como pedidos em linguagem natural podem se transformar em arquivos, comandos, integrações e entregas verificáveis. A revisão 4, versão oficial desde 14/10/2026, situa OpenClaw e Hermes na linha do tempo, explica a arquitetura conceitual da operação antes dos casos e separa memória, base de contexto e skills. As automações da PycodeBR aparecem como fluxos animados, incluindo rotinas da operação e o caso de cortes de vídeo. O percurso inclui o Workflow de IA Assistida de cinco passos, a observabilidade de sistemas e uma proposta de manutenção com revisão humana.
 
 **Hermes Agent é um projeto da Nous Research e de sua comunidade.** Felipe utiliza e ensina a ferramenta; não é seu criador.
 
@@ -30,25 +28,26 @@ Os guias foram escritos para quem assistiu à palestra e quer aprofundar o assun
 ## Apresentação e downloads
 
 - [Apresentação interativa](https://pycodebr.com.br/python-brasil-2026/#1)
-- [PDF da revisão 3](https://pycodebr.com.br/python-brasil-2026/downloads/agentes-autonomos-hermes-python-brasil-2026.pdf?v=3)
-- [PowerPoint da revisão 3](https://pycodebr.com.br/python-brasil-2026/downloads/agentes-autonomos-hermes-python-brasil-2026.pptx?v=3)
+- [PDF da revisão 4](https://pycodebr.com.br/python-brasil-2026/downloads/agentes-autonomos-hermes-python-brasil-2026.pdf?v=4)
+- [PowerPoint da revisão 4](https://pycodebr.com.br/python-brasil-2026/downloads/agentes-autonomos-hermes-python-brasil-2026.pptx?v=4)
 - [Arquivos de download no repositório](site/downloads/)
 
-A revisão 3 tem **23 slides**, com planejamento de **40 minutos de conteúdo e 5 minutos para perguntas**. A duração depende da condução e do ensaio do palestrante. Os arquivos publicados foram conferidos por comparação com a fonte local; os downloads usam `v=3` para evitar uma versão antiga em cache.
+A revisão 4 tem **26 slides**, com planejamento de **40 minutos de conteúdo e 5 minutos para perguntas**. A duração depende da condução e do ensaio do palestrante. Os arquivos publicados foram conferidos por comparação com a fonte local; os downloads usam `v=4` para evitar uma versão antiga em cache.
 
-O HTML mantém as animações e as demonstrações interativas. O PDF possui texto pesquisável. O PowerPoint preserva o design como **imagens por slide**, com resumos e fontes nas notas; ele não contém texto editável como objetos nem as interações do site.
+O HTML mantém as animações e as demonstrações interativas. O PDF e o PowerPoint registram o estado final de cada slide: o PDF tem uma camada de texto pesquisável, e o PowerPoint preserva o design como **imagens por slide**, com o texto do slide e os links nas notas. Nenhum dos dois contém texto editável como objetos nem as interações do site.
 
 ### Navegação
 
 - Setas ou PageUp/PageDown: slide anterior e próximo.
 - Home/End: capa e encerramento.
 - **Índice** ou tecla **O**: selecionar um slide.
-- **Opções**: tela cheia, animações e downloads.
+- **Opções** ou tecla **?**: tela cheia, animações, downloads e materiais.
 - **F**: tela cheia quando o navegador permite.
-- **B**: escurecer a tela; Escape restaura.
+- **R**: recomeçar a animação do slide; **M**: pausar ou retomar as animações.
+- **T**: cronômetro; **B**: escurecer a tela, e Escape restaura.
 - Links como `#11` ou `#workflow` abrem diretamente uma cena.
 
-Em celulares e tablets na vertical, os componentes se reorganizam em uma leitura vertical, em vez de reduzir todo o slide a uma miniatura. Cada pessoa navega no próprio dispositivo; não há sincronização remota automática com o computador do palestrante.
+As animações dos fluxos ficam em loop enquanto o slide está aberto. Nos slides com botões, clicar em uma etapa assume o controle, e **R** retoma a demonstração automática. Em celulares e tablets na vertical, os componentes se reorganizam em uma leitura vertical, em vez de reduzir todo o slide a uma miniatura. Cada pessoa navega no próprio dispositivo; não há sincronização remota automática com o computador do palestrante.
 
 ## O que é ensinado e o que é proposto
 
@@ -80,21 +79,7 @@ cd pycodebr_python_brasil_2026
 python3 -m http.server 8000 --bind 127.0.0.1 --directory site
 ```
 
-Abra `http://127.0.0.1:8000`. Os assets e as fontes estão no repositório; os links de documentação e os materiais no GitHub dependem de conexão à internet.
-
-### Versão 2 (em avaliação)
-
-![Capa da versão 2](docs/capa-v2.webp)
-
-A v2 também é estática e roda offline, com fontes, logos, animações e o vídeo de exemplo dentro do repositório:
-
-```bash
-python3 -m http.server 8001 --bind 127.0.0.1 --directory site-v2
-```
-
-Abra `http://127.0.0.1:8001`. No palco, use as setas para navegar, `F` para tela cheia, `R` para recomeçar a animação do slide, `M` para pausar ou retomar as animações e `O` para o índice. Em telas largas o slide mantém 16:9; em celulares e janelas estreitas, cada cena se reorganiza em leitura vertical.
-
-Para editar a v2, altere os arquivos em `src-v2/` (slides e CSS de cenas) e em `site-v2/assets/js/`, depois rode `python scripts/build_v2.py`. O QA em navegador fica em `python scripts/qa_v2.py`, com `--engine firefox` ou `--engine webkit` para outros motores. Proveniência e licenças dos assets novos: [src-v2/ASSETS.md](src-v2/ASSETS.md).
+Abra `http://127.0.0.1:8000`. Fontes, logos, animações e o vídeo de exemplo estão no repositório, e a apresentação roda offline; os links de documentação e os materiais no GitHub dependem de conexão à internet. Em telas largas o slide mantém 16:9; em celulares e janelas estreitas, cada cena se reorganiza em leitura vertical.
 
 ## Rodar o laboratório
 
@@ -110,9 +95,9 @@ O laboratório cobre dez percursos fictícios, incluindo testes falhos, silênci
 
 ## Reconstruir e validar a apresentação
 
-A apresentação pronta está em `site/`. As fontes editoriais e visuais ficam em `src/`, separadas dos scripts de build, testes e exportação.
+A apresentação pronta está em `site/`. Os slides (`src/slides/`), o shell HTML (`src/shell.html`) e o CSS das cenas (`src/css/`) são as fontes editáveis; o motor e as cenas animadas ficam em `site/assets/js/`. O build monta `site/index.html` e o CSS de cenas, e a exportação gera o PDF e o PPTX a partir do site.
 
-Para gerar novamente os artefatos, use Python 3.12 ou superior, crie um ambiente virtual e instale as dependências de desenvolvimento. O laboratório, separado desse tooling, funciona com Python 3.10 ou superior.
+Para gerar novamente os artefatos, use Python 3.12 ou superior, crie um ambiente virtual e instale as dependências de desenvolvimento. O build usa apenas a biblioteca padrão. O laboratório, separado desse tooling, funciona com Python 3.10 ou superior.
 
 ```bash
 python3 -m venv .venv
@@ -121,29 +106,27 @@ python -m pip install -r requirements-dev.txt
 python -m playwright install chromium
 python scripts/build.py
 python -B -m unittest discover -s testes -p 'test_*.py' -v
-python scripts/qa_deck.py
+python scripts/qa.py
 python scripts/export.py
-python scripts/build.py
+python scripts/check_materials.py
 python scripts/check_public.py
-ruff check scripts src exemplos testes
+ruff check scripts exemplos testes
 ```
 
 No Windows, ative o ambiente com `.venv\Scripts\Activate.ps1` no PowerShell. Dependências de sistema dos navegadores devem ser instaladas conforme a documentação do Playwright e a política da sua máquina.
 
-Para testar outros motores, instale-os com `python -m playwright install firefox webkit` e execute `qa_deck.py --engine firefox` ou `--engine webkit`. Os relatórios locais ficam em `qa/`, fora do versionamento público. O comando `node --check site/assets/presentation.js` acrescenta validação sintática quando Node.js estiver disponível.
+Para testar outros motores, instale-os com `python -m playwright install firefox webkit` e execute `qa.py --engine firefox` ou `--engine webkit`. Os relatórios locais ficam em `qa/`, fora do versionamento público. Com Node.js disponível, `node --check site/assets/js/deck.js` (e os demais scripts de `site/assets/js/`) acrescenta validação sintática.
 
-O QA percorre todas as cenas, verifica limites de layout, imagens, estados interativos, aprovação antes de merge, navegação, movimento e recuperação de posição. As exportações conferem páginas, texto pesquisável, QR Codes e correspondência visual do PDF com os slides.
+O QA percorre todos os slides em nove viewports, verifica limites de layout, imagens, interações (navegação, link por id, vídeo, etapas clicáveis, fluxo de aprovação, abas, pausa e índice), QR Codes, canonical da URL oficial, indexação e downloads. A exportação confere páginas, texto pesquisável, QR Codes e correspondência visual do PDF com cada slide.
 
 ## Estrutura do repositório
 
 ```text
-site/          Apresentação pronta, assets e PDF/PPTX
-site-v2/       Versão 2 em avaliação, estática e offline
-src/           Conteúdo, estados interativos e proveniência de assets
-src-v2/        Slides, CSS de cenas e proveniência da versão 2
+site/          Apresentação oficial, assets, animações e PDF/PPTX
+src/           Slides, shell HTML, CSS de cenas e proveniência de assets
 materiais/     Guias, diagramas e fontes públicas
 exemplos/      Laboratório local sem rede
-testes/        Testes automatizados do laboratório
+testes/        Testes do laboratório e da narrativa da apresentação
 scripts/       Build, QA, exportação e revisão de conteúdo público
 LICENSES/      Licenças de recursos de terceiros
 docs/          Imagens de apresentação do repositório
@@ -155,7 +138,7 @@ docs/          Imagens de apresentação do repositório
 - **`v2.0.0`**: revisão de 18 slides, materiais de estudo e laboratório local.
 - **`v2.0.1`**: preserva a navegação por setas e PageUp/PageDown após usar os controles interativos.
 - **`v3.0.0`**: 23 slides, cronologia OpenClaw/Hermes, arquitetura da operação, memória e auto skills, monitoria, reports e aprovação. Os logos usam símbolos em espaços quadrados, com proveniência e transformações registradas.
-- **Versão 2 de design (em avaliação, pasta `site-v2/`)**: 26 slides com a mesma base da `v3.0.0`, cenas animadas das automações da PycodeBR, slide de rotinas, caso de edição de vídeo e guia “Começando com Hermes do zero”. A pasta `site/` não foi alterada.
+- **`v4.0.0`** (oficial): 26 slides com a mesma base da `v3.0.0` e nova direção visual, avaliada antes como “versão 2 de design”. Inclui cenas animadas das automações da PycodeBR, slide de rotinas, caso de edição de vídeo, downloads regenerados e o guia “Começando com Hermes do zero”. A apresentação, as fontes e os scripts da revisão 3 continuam disponíveis na tag `v3.0.0`.
 
 O histórico público começou com os arquivos que já estavam publicados. Nenhum histórico Git da base privada, roteiro de bastidor, dado de aluno, log de produção ou credencial foi importado.
 

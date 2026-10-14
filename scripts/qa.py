@@ -1,9 +1,9 @@
-"""QA automatizado da apresentação v2 (site-v2).
+"""QA automatizado da apresentação (site).
 
-Uso: python scripts/qa_v2.py [--out qa/v2]
+Uso: python scripts/qa.py [--out qa/current]
 
 Requer playwright (Chromium instalado). Opcionalmente usa opencv-python-headless
-para decodificar os QR Codes renderizados. Serve site-v2 em loopback, percorre
+para decodificar os QR Codes renderizados. Serve site em loopback, percorre
 todos os slides em vários viewports e grava um relatório JSON com as falhas.
 """
 
@@ -22,7 +22,7 @@ from pathlib import Path
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = ROOT / "site-v2"
+SITE = ROOT / "site"
 VIEWPORTS = [
     (1920, 1080), (2560, 1440), (1366, 768), (1280, 800), (1024, 768),
     (768, 1024), (390, 844), (844, 390), (360, 740),
@@ -32,6 +32,11 @@ QR_EXPECTED = {
     "acompanhe": "https://pycodebr.com.br/python-brasil-2026",
     "materiais": "https://github.com/pycodebr/pycodebr_python_brasil_2026",
 }
+OFFICIAL = "https://pycodebr.com.br/python-brasil-2026/"
+DOWNLOADS = [
+    "downloads/agentes-autonomos-hermes-python-brasil-2026.pdf",
+    "downloads/agentes-autonomos-hermes-python-brasil-2026.pptx",
+]
 CHECK_JS = """
 () => {
   const slide = document.querySelector('.slide.active');
@@ -165,10 +170,29 @@ def run(out: Path, engine: str = "chromium", viewports: list[tuple[int, int]] | 
             ok = expected in decoded
             report["qr"][slide_id] = {"expected": expected, "decoded": decoded, "ok": ok}
             failures += 0 if ok else 1
+
+        page.goto(base + "#1")
+        page.wait_for_function("document.documentElement.dataset.ready === 'true'")
+        meta = page.evaluate("""() => ({
+          canonical: document.querySelector('link[rel=canonical]')?.href,
+          og: document.querySelector('meta[property="og:url"]')?.content,
+          robots: document.querySelector('meta[name=robots]')?.content || '',
+          downloads: [...document.querySelectorAll('#menu a[download]')].map(a => a.getAttribute('href'))
+        })""")
+        contract = {
+            "canonical_official": meta["canonical"] == OFFICIAL and meta["og"] == OFFICIAL,
+            "indexable": "noindex" not in meta["robots"],
+            "downloads_linked": sorted(h.split("?")[0] for h in meta["downloads"]) == sorted(DOWNLOADS),
+        }
+        for href in meta["downloads"]:
+            response = page.request.get(base + href)
+            contract["download_" + href.split("?")[0].rsplit(".", 1)[-1]] = response.ok and len(response.body()) > 100_000
+        report["publication"] = contract
+        failures += sum(1 for v in contract.values() if not v)
         browser.close()
     out.mkdir(parents=True, exist_ok=True)
-    (out / f"qa-v2-{engine}.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(json.dumps({"failures": failures, "interactions": report["interactions"], "qr": {k: v["ok"] for k, v in report["qr"].items()}}, ensure_ascii=False))
+    (out / f"qa-{engine}.json").write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(json.dumps({"failures": failures, "publication": report.get("publication"), "interactions": report["interactions"], "qr": {k: v["ok"] for k, v in report["qr"].items()}}, ensure_ascii=False))
     for vp, data in report["viewports"].items():
         if data["results"] or data["errors"]:
             print(vp, json.dumps(data["results"][:6], ensure_ascii=False)[:1200], data["errors"][:3])
@@ -177,7 +201,7 @@ def run(out: Path, engine: str = "chromium", viewports: list[tuple[int, int]] | 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--out", default=str(ROOT / "qa" / "v2"))
+    parser.add_argument("--out", default=str(ROOT / "qa" / "current"))
     parser.add_argument("--engine", choices=["chromium", "firefox", "webkit"], default="chromium")
     parser.add_argument("--viewports", default="", help="Lista como 1920x1080,390x844")
     args = parser.parse_args()

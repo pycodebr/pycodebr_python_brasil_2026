@@ -1,6 +1,6 @@
-# Assets da versão 2
+# Assets da revisão 4
 
-Este arquivo registra a origem e a licença dos arquivos adicionados em `site-v2/`. Os logos e as fotografias reaproveitados da versão original mantêm a proveniência registrada em `src/assets.json`.
+Este arquivo registra a origem e a licença dos arquivos adicionados em `site/` na revisão 4 (antes publicada para avaliação como “versão 2 de design”). Os logos e as fotografias reaproveitados das revisões anteriores mantêm a proveniência registrada em `proveniencia/assets.json`, `proveniencia/assets-supplement.json` e `proveniencia/assets-v3.json`.
 
 ## Bibliotecas e fontes
 
