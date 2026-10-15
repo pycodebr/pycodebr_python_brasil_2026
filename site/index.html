@@ -16,6 +16,39 @@
 <link rel="preload" href="assets/fonts/Geist-VF.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/deck.css?v=9a0dba0ed8b7">
 <link rel="stylesheet" href="assets/css/scenes.css?v=20fa1b455360">
+  <!-- Google Tag Manager (padrão PycodeBR: srv.pycodebr.com.br, carga única após window.load) -->
+  <link rel="preconnect" href="https://srv.pycodebr.com.br" crossorigin>
+  <link rel="dns-prefetch" href="https://srv.pycodebr.com.br">
+  <script>
+    (function (window, document, tagName, layerName, containerId) {
+      window[layerName] = window[layerName] || [];
+      var loaded = false;
+
+      function loadGtm() {
+        if (loaded) return;
+        loaded = true;
+        window[layerName].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var firstScript = document.getElementsByTagName(tagName)[0];
+        var gtmScript = document.createElement(tagName);
+        gtmScript.async = true;
+        gtmScript.fetchPriority = 'low';
+        gtmScript.src = 'https://srv.pycodebr.com.br/7lz8uzbxvbzi.js?' + containerId;
+        firstScript.parentNode.insertBefore(gtmScript, firstScript);
+      }
+
+      function scheduleGtm() {
+        if (typeof window.requestIdleCallback === 'function') {
+          window.requestIdleCallback(loadGtm, { timeout: 2500 });
+          return;
+        }
+        window.setTimeout(loadGtm, 0);
+      }
+
+      if (document.readyState === 'complete') scheduleGtm();
+      else window.addEventListener('load', scheduleGtm, { once: true });
+    })(window, document, 'script', 'dataLayer', '8r=AB5fMSwvVz4uSFY1ICwqUx9HUFhJRB4bVAobFRcGHxcbVAEZFUwYBw%3D%3D');
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
 <canvas id="bg-canvas" aria-hidden="true"></canvas>

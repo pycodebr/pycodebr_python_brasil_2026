@@ -90,11 +90,27 @@ def decode_qr(png: bytes) -> list[str]:
     return [d for d in decoded if d] if ok else []
 
 
+GTM_HOST = "https://srv.pycodebr.com.br/**"
+
+
+def stub_gtm(browser) -> None:
+    """Responde o loader do GTM com um stub vazio em todo contexto, para o QA não disparar tags reais."""
+    original = browser.new_context
+
+    def new_context(**kwargs):
+        context = original(**kwargs)
+        context.route(GTM_HOST, lambda route: route.fulfill(status=200, content_type="application/javascript", body=""))
+        return context
+
+    browser.new_context = new_context
+
+
 def run(out: Path, engine: str = "chromium", viewports: list[tuple[int, int]] | None = None) -> int:
     report: dict = {"viewports": {}, "errors": [], "interactions": {}, "qr": {}}
     failures = 0
     with serve(SITE) as base, sync_playwright() as p:
         browser = getattr(p, engine).launch()
+        stub_gtm(browser)
         for w, h in viewports or VIEWPORTS:
             ctx = browser.new_context(viewport={"width": w, "height": h})
             page = ctx.new_page()
